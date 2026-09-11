@@ -1,7 +1,14 @@
 <script lang="ts">
 	import Seo from '$lib/seo/Seo.svelte';
 	import { organizationSchema, seriesListSchema, webSiteSchema } from '$lib/seo/jsonld';
-	import { bookPath, coverPath, readAloudMinutes, storyPath, tales } from '$lib/tales/data';
+	import {
+		bookPath,
+		coverPath,
+		liveTales,
+		readAloudMinutes,
+		storyPath,
+		tales
+	} from '$lib/tales/data';
 	import { teachingNotes } from '$lib/tales/teaching';
 </script>
 
@@ -9,7 +16,7 @@
 	title="Korean Folktales for Children — Read All Seven Free | Seori Tales"
 	description="Seven classic Korean folktales retold in read-aloud English for ages 4–8. Read every story free, with notes on where each tale comes from."
 	path="/"
-	jsonLd={[organizationSchema(), webSiteSchema(), seriesListSchema(tales)]}
+	jsonLd={[organizationSchema(), webSiteSchema(), seriesListSchema(liveTales)]}
 />
 
 <h1>Korean folktales for children</h1>
@@ -58,8 +65,14 @@
 				</p>
 				<p>{teachingNotes[tale.slug].pick}</p>
 				<p class="links">
-					<a href={storyPath(tale)}>Read it free</a> ·
-					<a href={bookPath(tale)}>The picture book</a>
+					<a href={storyPath(tale)}
+						>{tale.kdpSelect.enrolled ? 'Read the opening' : 'Read it free'}</a
+					>
+					{#if tale.asinEbook}
+						· <a href={bookPath(tale)}>The picture book</a>
+					{:else}
+						· <span class="soon">picture book coming soon</span>
+					{/if}
 				</p>
 			</div>
 		</li>
@@ -139,6 +152,10 @@
 	.links {
 		font-size: 0.95rem;
 		margin-bottom: 0;
+	}
+	.soon {
+		color: var(--muted);
+		font-style: italic;
 	}
 	@media (max-width: 34rem) {
 		.list li {

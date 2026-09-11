@@ -6,6 +6,7 @@
 		bookPath,
 		buyUrl,
 		coverPath,
+		liveTales,
 		ogPath,
 		series,
 		spreadPath,
@@ -54,11 +55,13 @@
 		<p>{tale.backBlurb}</p>
 		{#if buy}
 			<p><a class="buy" href={buy} rel="noopener">Get it on Amazon</a></p>
-		{:else}
-			<p class="meta">Store listing coming soon.</p>
 		{/if}
 		<p class="meta">
-			Or <a href={storyPath(tale)}>read the whole story free</a> first.
+			{#if tale.kdpSelect.enrolled}
+				Or <a href={storyPath(tale)}>read the opening</a> first.
+			{:else}
+				Or <a href={storyPath(tale)}>read the whole story free</a> first.
+			{/if}
 		</p>
 	</div>
 </div>
@@ -113,7 +116,7 @@
 
 <h2>More in the series</h2>
 <ul class="grid">
-	{#each tales.filter((other) => other.slug !== tale.slug) as other (other.slug)}
+	{#each liveTales.filter((other) => other.slug !== tale.slug) as other (other.slug)}
 		<li class="card">
 			<a href={bookPath(other)}>
 				<img

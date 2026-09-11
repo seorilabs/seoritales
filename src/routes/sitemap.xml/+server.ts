@@ -1,5 +1,5 @@
 import { site } from '$lib/site';
-import { bookPath, storyPath, tales } from '$lib/tales/data';
+import { bookPath, liveTales, storyPath, tales } from '$lib/tales/data';
 
 export const prerender = true;
 
@@ -23,8 +23,8 @@ const entries: Entry[] = [
 		lastmod: tale.liveDate ?? CONTENT_UPDATED
 	})),
 
-	// 상품 페이지.
-	...tales.map((tale) => ({
+	// 상품 페이지. 라이브 도서만 존재한다.
+	...liveTales.map((tale) => ({
 		path: bookPath(tale),
 		priority: '0.7',
 		lastmod: tale.liveDate ?? CONTENT_UPDATED

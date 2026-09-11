@@ -26,9 +26,16 @@ export type Tale = {
 	interiorPages: number;
 	status: string;
 	liveDate: string | null;
-	/** 아직 기록되지 않았으면 null. 이 경우 구매 링크를 만들지 않는다. */
+	/** 아직 출간되지 않았으면 null. 이 경우 구매 링크와 상품 페이지를 만들지 않는다. */
 	asinEbook: string | null;
+	asinPaperback: string | null;
 	isbn13Paperback: string | null;
+	/**
+	 * KDP Select 는 디지털 독점이다. 등록 기간에는 본문을 웹에 전문 공개할 수 없다
+	 * — KDP 공식 문구: "you cannot distribute your book digitally anywhere else,
+	 * including on your website". 사이트는 이 값을 보고 발췌 모드로 내려간다.
+	 */
+	kdpSelect: { enrolled: boolean; termEnds: string | null };
 	priceEbookUsd: number;
 	/** KDP 상품 설명 원문(HTML). 심사를 통과한 문구라 새로 쓰지 않는다. */
 	descriptionHtml: string;

@@ -9,7 +9,7 @@ Seori Tales는 아마존 밖에서 검색에 전혀 잡히지 않는다. 미국 
 `Korean folktales for kids` 같은 **읽을거리**를 검색한다. 그래서 이 사이트의 주력은 상품
 소개가 아니라 **이야기 전문 무료 공개**(`/stories/`)다.
 
-## 페이지 (17개)
+## 페이지 (14개)
 
 | 경로                         | 역할                                          |
 | ---------------------------- | --------------------------------------------- |
@@ -57,10 +57,35 @@ sitemap의 `lastmod` 날짜 형식과 `loc` 실존을 검사한다.
 `main` push → `.github/workflows/deploy.yaml` → GitHub Pages.
 커스텀 도메인은 Settings → Pages에서 지정한다. GitHub Actions 배포이므로 `CNAME` 파일은 두지 않는다.
 
+## KDP Select 와 본문 공개
+
+1·2권은 KDP Select(디지털 독점)에 등록돼 있다. KDP 공식 문구는 "you cannot distribute
+your book digitally anywhere else, including on your website" 이므로, 등록 기간에는
+본문을 전문 공개할 수 없다.
+
+사이트는 `tales.json` 의 `kdpSelect.enrolled` 를 보고 자동으로 발췌 모드로 내려간다.
+
+- 본문은 1스프레드만 (`EXCERPT_SPREADS`, `src/lib/tales/data.ts`)
+- eBook 안에 든 문화 노트와 용어 풀이도 싣지 않는다
+- 대신 `teaching.ts` 의 자체 원고(주제·토론 질문)와 복귀 예정일을 보여준다
+
+등록이 끝나면 원본 `book.json` 의 `kdp_select` 를 `false` 로 바꾸고 export 를 다시
+돌리는 것만으로 전문이 돌아온다. 코드 수정은 필요 없다.
+
+| 권 | Select | 만료 |
+|---|---|---|
+| 1 The Sun and the Moon | 등록됨 | 2026-10-04 |
+| 2 The Rabbit and the Dragon King | 등록됨 | 2026-10-05 |
+| 3 Heungbu and Nolbu | 미등록 | — |
+| 4 The Fairy and the Woodcutter | 미등록 | — |
+
 ## 아직 남은 것
 
-- `src/lib/site.ts`의 `amazonAttributionTag`가 비어 있다. 발급받아 채우면 외부 유입 추적과
-  Brand Referral Bonus가 적용된다. 비어 있어도 링크는 정상 동작한다.
-- 3~7권 ASIN이 `tales.json`에 `null`이다. 원본 `books/NN-*/book.json`의
-  `distribution.asin_ebook`이 아직 `"TBD"`이기 때문이다. 채우고 export를 다시 돌리면
-  구매 링크와 `offers` 구조화 데이터가 자동으로 붙는다.
+- **1·2권 KDP Select 자동갱신을 끄지 않으면** 90일이 자동 연장되어 전문 공개가 계속 막힌다.
+  마감은 각각 2026-10-04, 2026-10-05.
+- `src/lib/site.ts` 의 `amazonAttributionTag` 가 비어 있다. advertising.amazon.com 에
+  KDP 계정으로 로그인해 발급받아 채우면 외부 유입 추적과 Brand Referral Bonus 가 적용된다.
+  비어 있어도 링크는 정상 동작한다.
+- 5~7권(콩쥐팥쥐·금도끼·호랑이와 곶감)은 제작은 끝났지만 아직 업로드되지 않았다.
+  이야기 페이지는 있고 상품 페이지는 만들지 않는다. 업로드 후 `book.json` 에 ASIN 을
+  적고 export 를 다시 돌리면 상품 페이지가 생긴다.

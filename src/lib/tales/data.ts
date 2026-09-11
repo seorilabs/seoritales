@@ -9,8 +9,36 @@ export const tales = data.books;
 
 export const taleBySlug = new Map(tales.map((tale) => [tale.slug, tale]));
 
-/** ASIN이 기록된 책만. 구매 링크가 필요한 자리에서 쓴다. */
-export const purchasable = tales.filter((tale) => tale.asinEbook !== null);
+/** 실제로 아마존에 올라간 책만. 상품 페이지는 이것만 만든다. */
+export const liveTales = tales.filter((tale) => tale.asinEbook !== null);
+
+/**
+ * KDP Select 등록 중에 공개할 수 있는 스프레드 수.
+ * eBook 은 19쪽이고 허용치는 샘플 10%(약 1.9쪽)다. 1스프레드면 확실히 그 안이다.
+ * 등록이 끝나 book.json 의 kdp_select 가 false 가 되면 자동으로 전문이 돌아온다.
+ */
+const EXCERPT_SPREADS = 1;
+
+/** Select 등록 중이면 발췌만 내보낸다. 아니면 14스프레드 전문. */
+export function visibleStory(tale: Tale) {
+	return tale.kdpSelect.enrolled ? tale.story.slice(0, EXCERPT_SPREADS) : tale.story;
+}
+
+/**
+ * 본문 외에 책에서 가져온 것(문화 노트, 용어 풀이)도 Select 중에는 싣지 않는다.
+ * 이것들도 eBook 안에 든 페이지이기 때문이다.
+ */
+export const showsBookExtras = (tale: Tale) => !tale.kdpSelect.enrolled;
+
+/** 'October 4, 2026' 처럼 읽히는 형태로. */
+export function formatDate(iso: string): string {
+	return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+		timeZone: 'UTC'
+	});
+}
 
 export function amazonUrl(asin: string): string {
 	const base = `https://www.amazon.com/dp/${asin}`;
