@@ -1,4 +1,4 @@
-import { amazonAttributionTag } from '$lib/site';
+import { attributionUrls } from './attribution';
 import bundle from './tales.json';
 import type { Tale, TalesBundle } from './types';
 
@@ -40,17 +40,27 @@ export function formatDate(iso: string): string {
 	});
 }
 
-export function amazonUrl(asin: string): string {
-	const base = `https://www.amazon.com/dp/${asin}`;
-	return amazonAttributionTag ? `${base}?tag=${amazonAttributionTag}` : base;
+/**
+ * Attribution 링크와 원장이 어긋나면 조용히 엉뚱한 책의 매출로 집계된다.
+ * 빌드 때 한 번 확인하고, 틀리면 prerender 를 실패시킨다.
+ */
+for (const [slug, url] of Object.entries(attributionUrls)) {
+	const tale = taleBySlug.get(slug);
+	if (!tale) throw new Error(`attribution: 알 수 없는 slug "${slug}"`);
+	if (!tale.asinEbook || !url.includes(`/dp/${tale.asinEbook}`)) {
+		throw new Error(`attribution: "${slug}" 링크가 ASIN ${tale.asinEbook} 과 다릅니다 -> ${url}`);
+	}
 }
 
-/** 책의 구매 링크. ASIN이 없으면 null — 호출부가 링크를 숨긴다. */
+/**
+ * 책의 구매 링크. Attribution 링크가 있으면 그것을 쓴다 — 외부 유입 추적과
+ * Brand Referral Bonus 가 거기에 달려 있다. 없으면 일반 상품 링크로 떨어진다.
+ * ASIN 자체가 없으면 null 이고, 호출부가 링크를 숨긴다.
+ */
 export function buyUrl(tale: Tale): string | null {
-	return tale.asinEbook ? amazonUrl(tale.asinEbook) : null;
+	if (!tale.asinEbook) return null;
+	return attributionUrls[tale.slug] ?? `https://www.amazon.com/dp/${tale.asinEbook}`;
 }
-
-export const seriesUrl = amazonUrl(series.seriesPageAsin);
 
 export const storyPath = (tale: Tale) => `/stories/${tale.slug}/`;
 export const bookPath = (tale: Tale) => `/books/${tale.slug}/`;

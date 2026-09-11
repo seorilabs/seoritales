@@ -57,6 +57,21 @@ sitemap의 `lastmod` 날짜 형식과 `loc` 실존을 검사한다.
 `main` push → `.github/workflows/deploy.yaml` → GitHub Pages.
 커스텀 도메인은 Settings → Pages에서 지정한다. GitHub Actions 배포이므로 `CNAME` 파일은 두지 않는다.
 
+## 구매 링크와 Amazon Attribution
+
+구매 링크는 `src/lib/tales/attribution.ts` 의 책별 Attribution URL 을 쓴다. 이게 있어야
+외부 유입 추적과 Brand Referral Bonus(참조 수수료 약 10% 환급)가 붙는다.
+
+값은 Amazon Ads 콘솔이 내려준 URL 을 **그대로** 둔다(캠페인 `seoritales-website`,
+ad group 은 책당 하나). 조립하지 않으므로 형식이 바뀌어도 다시 받아 붙이면 된다.
+비밀값이 아니라 사이트에 노출되는 공개 링크다.
+
+링크가 엉뚱한 책을 가리키면 조용히 다른 책 매출로 집계되므로, `data.ts` 가 빌드 때
+slug 와 ASIN 일치를 확인하고 어긋나면 prerender 를 실패시킨다.
+
+새 ad group 을 만들려면 콘솔 > Campaign Manager > Measurement & Reporting >
+Amazon Attribution 에서 CSV 를 받아 `attribution.ts` 를 다시 만든다.
+
 ## KDP Select 와 본문 공개
 
 1·2권은 KDP Select(디지털 독점)에 등록돼 있다. KDP 공식 문구는 "you cannot distribute
@@ -72,20 +87,19 @@ your book digitally anywhere else, including on your website" 이므로, 등록 
 등록이 끝나면 원본 `book.json` 의 `kdp_select` 를 `false` 로 바꾸고 export 를 다시
 돌리는 것만으로 전문이 돌아온다. 코드 수정은 필요 없다.
 
-| 권 | Select | 만료 |
-|---|---|---|
-| 1 The Sun and the Moon | 등록됨 | 2026-10-04 |
+| 권                               | Select | 만료       |
+| -------------------------------- | ------ | ---------- |
+| 1 The Sun and the Moon           | 등록됨 | 2026-10-04 |
 | 2 The Rabbit and the Dragon King | 등록됨 | 2026-10-05 |
-| 3 Heungbu and Nolbu | 미등록 | — |
-| 4 The Fairy and the Woodcutter | 미등록 | — |
+| 3 Heungbu and Nolbu              | 미등록 | —          |
+| 4 The Fairy and the Woodcutter   | 미등록 | —          |
 
 ## 아직 남은 것
 
 - **1·2권 KDP Select 자동갱신을 끄지 않으면** 90일이 자동 연장되어 전문 공개가 계속 막힌다.
   마감은 각각 2026-10-04, 2026-10-05.
-- `src/lib/site.ts` 의 `amazonAttributionTag` 가 비어 있다. advertising.amazon.com 에
-  KDP 계정으로 로그인해 발급받아 채우면 외부 유입 추적과 Brand Referral Bonus 가 적용된다.
-  비어 있어도 링크는 정상 동작한다.
+- 5~7권을 출간하면 Amazon Attribution 링크도 함께 만들어야 한다. `attribution.ts` 에
+  없는 책은 일반 상품 링크로 떨어져 유입 집계가 빠진다.
 - 5~7권(콩쥐팥쥐·금도끼·호랑이와 곶감)은 제작은 끝났지만 아직 업로드되지 않았다.
   이야기 페이지는 있고 상품 페이지는 만들지 않는다. 업로드 후 `book.json` 에 ASIN 을
   적고 export 를 다시 돌리면 상품 페이지가 생긴다.

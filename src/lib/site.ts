@@ -9,10 +9,3 @@ export const site = {
 	/** 기본 공유 이미지. 시리즈 1권 표지 아트를 쓴다. */
 	image: '/images/the-sun-and-the-moon/og.jpg'
 } as const;
-
-/**
- * Amazon Attribution 태그. 발급받으면 여기에 넣는다.
- * 태그가 있어야 외부 유입 추적과 Brand Referral Bonus가 적용된다.
- * 값이 비어 있으면 일반 상품 링크로 떨어진다 — 링크는 살아 있고 집계만 빠진다.
- */
-export const amazonAttributionTag = '';
