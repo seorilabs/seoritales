@@ -1,0 +1,1341 @@
+{
+  "series": {
+    "name": "Seori Tales — Korean Folktales for Children",
+    "author": "Seori Tales",
+    "publisher": "Seori Books",
+    "descriptionHtml": "<p><b>Timeless Korean folktales, retold and illustrated for children everywhere.</b></p><p>For hundreds of years, Korean grandparents have told these stories at bedtime — tales of brave sisters and clever brothers, hungry tigers and magic ropes, kindness rewarded and greed undone. <i>Seori Tales</i> brings them to a new generation of readers around the world, in warm, read-aloud English paired with rich, hand-crafted illustrations that blend gentle storybook art with the bold spirit of Korean folk painting.</p><p>Each book is a complete story you can read in one sitting — perfect for bedtime, story time, or quiet afternoons together. Along the way, little touches of Korean culture appear naturally in the pictures and words, with a friendly culture note and a \"Korean Words in This Story\" page in the back, so children discover a new part of the world while they enjoy a wonderful tale.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud.</li><li><b>Beautiful illustrations</b> on every page.</li><li><b>A gentle window into Korea</b> — culture notes and simple Korean words.</li><li><b>Stories that travel</b> — beloved in Korea, new to the world.</li></ul><p>Start the collection and share the magic of Korea's best-loved folktales, one story at a time.</p>",
+    "seriesPageAsin": "B0H7QCTW8M"
+  },
+  "books": [
+    {
+      "slug": "the-sun-and-the-moon",
+      "sourceDir": "01-sun-and-moon",
+      "number": 1,
+      "title": "The Sun and the Moon",
+      "subtitle": "A Korean Folktale of a Sister and Her Brother",
+      "koreanTitle": "해와 달이 된 오누이",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "live",
+      "liveDate": "2026-07-06",
+      "asinEbook": "B0H7QQ9KZT",
+      "isbn13Paperback": "9798185514122",
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>When a hungry tiger follows Mother home over the hills, a brave big sister and her giggly little brother must outwit him — up a tall tree, past a trick and a giggle, all the way to a rope let down from the sky.</p><p>This warm, dramatic retelling of one of Korea's most beloved folktales explains how the sun and the moon came to be — and why, even now, you can't look straight at the sun.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — a short “About This Story” note on rice cakes, sorghum, and the folktale tradition</li><li><b>Perfect for ages 4–8</b> — bedtime, story time, or a quiet afternoon together</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who love stories from around the world.</p><p><b>Book 1 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "When a hungry tiger follows Mother home over the hills, a brave big sister and her giggly little brother must outwit him — all the way to a rope let down from the sky. A warm, dramatic retelling of one of Korea's best-loved folktales, and how the sun and the moon came to be.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "diverse story time book kindergarten",
+        "lunar new year gift book",
+        "books about bravery and courage",
+        "sibling adventure story"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Animals > More Animals > Lions, Tigers & Leopards"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Tteok — chewy cakes made of steamed rice.",
+        "Songpyeon — pretty half-moon rice cakes, often colored.",
+        "Hanbok — traditional Korean clothing.",
+        "Sorghum — a tall grain with reddish stalks.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "The Sun and the Moon is one of Korea’s most beloved folktales, told to children for centuries.",
+          "Rice cakes (tteok) are chewy cakes of steamed rice — an everyday treat and a gift of care in Korea.",
+          "Sorghum is a tall grain with reddish stalks. This story playfully explains their color — a kind of tale storytellers call a “why story.”",
+          "The rope from Heaven reflects an old belief in a just sky that answers those who ask with a good heart.",
+          "Like many folktales, it carries a quiet lesson: courage, care for family, and the hope that the sky is watching over children."
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "High on a green mountain lived a mother with her two children — a big sister and her little brother.",
+            "They had very little, but they had each other, and that was warm enough."
+          ],
+          "alt": "A mother and her two young children in Korean hanbok stand outside their small thatched cottage high on a green mountain.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "One morning Mother tied on her scarf. “I must cross the hills to work,” she said. “Lock the door tight, and open it for no one — no one but me.”",
+            "“Yes, Mother,” said the children. And off she went, over hill after hill."
+          ],
+          "alt": "The mother, wearing a headscarf, waves goodbye to her big-sister daughter and little son at the cottage door as she sets off over the green hills.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "At dusk Mother started home with a basket of rice cakes. On the first hill, a great Tiger rose from the grass.",
+            "“Give me a rice cake,” he growled, “and I won’t eat you.”",
+            "With shaking hands, she gave him one."
+          ],
+          "alt": "At dusk a large striped tiger, drawn in bold Korean folk-art style, rises from the grass on a hillside before the frightened mother, who clutches a basket of colorful rice cakes.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "But on the next hill, the Tiger rose again. “One more, or I’ll eat you!” And again on the next. And the next.",
+            "Hill by hill, the basket grew lighter... and lighter... until not one cake was left. And the Tiger was still hungry."
+          ],
+          "alt": "The tiger looms again on the next hill while the mother's basket of rice cakes grows emptier as she backs away across the darkening hills.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "On the last dark hill, the basket was empty. The Tiger licked his lips.",
+            "The children waited and waited by the door. But that night, Mother did not come home."
+          ],
+          "alt": "The tiger licks its lips beside an empty basket on a dark hilltop, while far away the two children wait by their lamplit cottage door.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "Late that night came a knock. “Children, open the door. Mother is home.”",
+            "But the voice was low and growly — not soft like Mother’s. The sister held her brother close."
+          ],
+          "alt": "At night a large shadowy tiger knocks at the cottage door while the big sister holds her little brother close inside.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "“Mother’s voice is soft,” said the sister. “Show me your hand.”",
+            "Through the gap slid a great, hairy paw — with claws like knives.",
+            "“It’s the Tiger!” the children cried."
+          ],
+          "alt": "A huge hairy paw with long claws pushes through the gap in the door as the two wide-eyed children pull back in alarm.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "Quick as rabbits, the children slipped out the back door.",
+            "They ran to the old tree by the well and climbed — up, up, up — as high as they could go."
+          ],
+          "alt": "The two children slip out the back door and climb high into an old tree beside a stone well under a starry night sky.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "The Tiger prowled below. Then he looked in the well — and there were the children, shining back at him!",
+            "But that was only their picture in the water. He pawed and pawed at it, puzzled... until at last he looked up."
+          ],
+          "alt": "The tiger peers into the well at the children's reflection in the water while they hide high in the tree branches above.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "“How did you climb so high?” the Tiger called sweetly.",
+            "“We rubbed oil on the trunk!” the sister said.",
+            "The Tiger tried it — and slid right back down. Thump!"
+          ],
+          "alt": "The tiger slips off the oiled tree trunk and tumbles to the ground as the children watch from the branches.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "But the little brother giggled. “Silly Tiger! You cut steps with an axe!”",
+            "Oh no — now the Tiger knew! Chop. Chop. Chop. Up he came, closer and closer."
+          ],
+          "alt": "The little brother giggles from the treetop while the tiger chops footholds into the trunk with an axe and climbs upward.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "The children climbed to the very top and looked up to the sky.",
+            "“Please, Heaven! If you want us to live, send us a strong new rope. If not, send an old, rotten one.”",
+            "And down from the stars came a rope of light — strong and golden. Up, up they climbed, into the sky."
+          ],
+          "alt": "At the treetop the two children reach toward the sky as a glowing golden rope of light descends from the stars to carry them up.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "The Tiger begged too. “Heaven, send me a rope!” But he did not ask kindly — he did not even say please.",
+            "Down dropped a rope, old and frayed. He climbed... it snapped... and down, down, down he fell, into a field of sorghum far below.",
+            "And that is why, to this day, sorghum stalks are stained red."
+          ],
+          "alt": "The tiger falls from a snapped, frayed rope down toward a field of red sorghum far below.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "Up in the sky, the sister was to be the Moon, and the brother the Sun. But the sister was afraid of the dark, quiet night.",
+            "So they traded. The brother became the gentle Moon, who shines at night — and the sister became the bright, blazing Sun, who shines all day.",
+            "And because she felt shy with everyone looking up, she shines so brightly that — even now — no one can look straight at her for long."
+          ],
+          "alt": "High in the starry sky the sister becomes the blazing golden sun and her little brother the gentle crescent moon.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "the-rabbit-and-the-dragon-king",
+      "sourceDir": "02-rabbit-dragon-king",
+      "number": 2,
+      "title": "The Rabbit and the Dragon King",
+      "subtitle": "A Korean Folktale of a Clever Rabbit and the Palace Under the Sea",
+      "koreanTitle": "별주부전",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "live",
+      "liveDate": "2026-07-07",
+      "asinEbook": "B0H7HC9CH1",
+      "isbn13Paperback": "9798186004301",
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>The Dragon King of the East Sea is sick, and only one medicine can help — a rabbit's liver! So the loyal Turtle paddles all the way to the green mountains to fetch the cleverest rabbit of all... who is about to need every bit of his cleverness to hop his way home again.</p><p>This warm, funny retelling of one of Korea's best-loved folktales is a trickster tale where quick wits save the small — and a faithful heart is rewarded too.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art — from a shimmering palace under the sea to a moonlit mountaintop</li><li><b>A gentle window into Korea</b> — an “About This Story” note introducing the Dragon Palace, pansori story-singing, and wild mountain ginseng</li><li><b>Perfect for ages 4–8</b> — bedtime, story time, or a quiet afternoon together</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who love stories from around the world.</p><p><b>Book 2 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "The Dragon King of the East Sea is sick, and only one medicine can help — a rabbit's liver! So the loyal Turtle paddles all the way to the green mountains to fetch the cleverest rabbit of all... who is about to need every bit of his cleverness to hop his way home again. A warm, funny retelling of one of Korea's best-loved folktales, from a shimmering palace under the sea to a moonlit mountaintop.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "books about quick thinking",
+        "underwater kingdom adventure story",
+        "turtle picture book kindergarten",
+        "diverse story time books"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Animals > Rabbits"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Yongwang — the Dragon King who rules the sea.",
+        "Yonggung — the Dragon Palace under the waves.",
+        "Byeoljubu — the loyal terrapin turtle of the palace.",
+        "Pansori — Korea's traditional sung storytelling.",
+        "Sansam — wild mountain ginseng, a precious medicine.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "The Rabbit and the Dragon King (Byeoljubu-jeon) is one of Korea's best-loved folktales. It is also sung: as Sugungga, it is one of the five great surviving story-songs of pansori, Korea's traditional sung storytelling.",
+          "The Dragon King (Yongwang) rules the sea in Korean folklore, from a palace called Yonggung — “the Dragon Palace.”",
+          "The Turtle is traditionally called Byeoljubu, a loyal terrapin official of the palace.",
+          "The Mountain Spirit (Sansillyeong) watches over Korea's mountains — and admires a faithful heart.",
+          "The glowing herb is sansam, wild mountain ginseng — the most precious medicine in old Korea.",
+          "Like many folktales, this one smiles at both of its heroes: the quick wit that saves the small, and the steady loyalty that never gives up. In Korea, people still say a clever escape is like “the rabbit leaving his liver at home.”"
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "Deep, deep down under the East Sea stood the Dragon King's palace, with coral gates and roofs of shining pearl.",
+            "But the halls were quiet and still, and the lanterns burned low.",
+            "The great Dragon King was sick — so sick that even his magic pearl had gone grey and dim."
+          ],
+          "alt": "An undersea palace with coral towers and pearl domes glows dimly while a pale dragon king lies curled inside beside a grey, faded pearl.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "“Only one medicine can help,” said the doctor fish. “The liver of a rabbit — a little something every rabbit keeps deep inside its tummy. And rabbits live on the far green land.”",
+            "The court fell silent. The land! No one had ever gone so far.",
+            "Then a small, steady voice spoke. “I will go,” said the Turtle. “I can swim in the sea, and I can walk on the land.”"
+          ],
+          "alt": "In the dim throne hall a small turtle steps bravely forward in a beam of light before the sick dragon king, the doctor fish, and rows of worried sea creatures.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "The court painter painted a picture: long ears, quick eyes, a round white tail.",
+            "“That is a rabbit,” said the King. “Bring him to me — and hurry!”",
+            "So the Turtle swam up, up, up, until he pushed his nose out of the waves — into the bright, windy world."
+          ],
+          "alt": "The turtle bursts out of the sparkling sea into morning sunlight with a small paper scroll tied to his shell, green mountains rising beyond the shore.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "On a green mountainside, the Turtle found him at last — long ears, quick eyes, a round white tail, just like the picture.",
+            "“Good day!” said the Turtle. “You must be the famous Rabbit. They say you are the cleverest rabbit on the whole mountain.”",
+            "“The cleverest?” The Rabbit smoothed his ears. “Well — yes. That is true.”"
+          ],
+          "alt": "On a sunny mountainside the turtle holds up an unrolled scroll with a painted rabbit, comparing it to the real white rabbit posing proudly beside it.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "“Then you should live like a king,” said the Turtle. “Come to the Dragon Palace under the sea! Coral gardens, pearl roofs, feasts and music — and a fine high seat, grand as a throne, for a clever fellow like you.”",
+            "The Rabbit's whiskers trembled. “A fine high seat,” he whispered. “Yes! Take me there!”"
+          ],
+          "alt": "At the rocky shore the turtle points a flipper at a shimmering dream-vision of the undersea palace glowing in the spray while the wide-eyed rabbit stares in wonder.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "So the Rabbit climbed onto the Turtle's smooth round shell, and down they dove — down, down, down.",
+            "Silver fish flashed by. Coral towers glowed pink and gold.",
+            "The Rabbit held on tight and laughed. “It's true! It's all true!”"
+          ],
+          "alt": "The laughing rabbit rides the turtle's shell down through glowing water past schools of silver fish and towers of pink and gold coral.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "The coral gates swung wide. Crab guards stood in rows, and lantern-fish lit the way like little moons.",
+            "The whole court had come out to see him.",
+            "“They must know how clever I am!” thought the Rabbit, and he held his ears up high — as high as they would go."
+          ],
+          "alt": "The rabbit rides proudly through grand coral gates between rows of crab guards and glowing lantern-fish as sea creatures bow and peer.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "But in the great hall, the Dragon King lay pale and tired, and his magic pearl was dim.",
+            "“Little Rabbit,” he sighed, “I am sorry. To be well again, I need a medicine that only you can give — a rabbit's liver.”",
+            "The guards stepped closer. The Rabbit's ears dropped flat."
+          ],
+          "alt": "In the shadowy throne hall the small rabbit stands alone with his ears pressed flat while guards step inward and the weary dragon king looks down sadly.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "The Rabbit's heart went thump, thump, thump. Then — ting! — an idea.",
+            "He bowed low and smiled his very best smile. “Oh no, Your Majesty! Rabbit livers are so precious that we take them out, wash them, and dry them in the sunshine.”",
+            "“Mine is at home — under a smooth grey rock. We must go back and fetch it!”"
+          ],
+          "alt": "The rabbit bows low with a confident showman's smile while a little imagined picture of a bundle drying on a sunny rock floats above his head and the court leans in.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "“He left his liver at home?” whispered the court. “Can that be true?”",
+            "But the old King believed him. He always told the truth himself — so he thought everyone else did too.",
+            "“Forgive me for rushing you, dear Rabbit. Turtle! Carry our guest home to fetch his liver — swift as you can!”"
+          ],
+          "alt": "The great dragon king bows his head in apology to the small bowing rabbit while courtiers whisper and one old octopus squints with suspicion.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "So up they rose — up, up, up through the silver water, toward the morning light.",
+            "The Turtle paddled with hope in his heart.",
+            "The Rabbit hugged the smooth round shell... and hid his smile."
+          ],
+          "alt": "The turtle swims hopefully up toward the bright surface while the rabbit on his shell hides a giggle behind one paw.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "The moment his paws touched the sand, the Rabbit sprang away — hop, hop, HOP! — up onto the grey rocks.",
+            "“Oh, Turtle!” he laughed. “No one can take out their liver! Mine is inside me — where it has always been, and where it will stay!”",
+            "And with a flick of his round white tail, he was gone into the pines."
+          ],
+          "alt": "On the morning beach the rabbit leaps joyfully between smooth grey boulders, laughing back over his shoulder, while the stunned turtle stares from the waterline.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "The Turtle stood alone on the empty shore, and his eyes filled with tears. How could he go home with nothing?",
+            "Then the air began to glow. Before him stood the Mountain Spirit — the kind old spirit who watches over the mountain — white-bearded, leaning on a staff of twisted pine.",
+            "“Faithful Turtle,” he said gently, “a true heart never goes home with nothing. Take this herb from my mountain — it will make your King well.”"
+          ],
+          "alt": "On the dusk shore a glowing white-bearded mountain spirit in flowing robes gently offers a shining green herb to the small tearful turtle.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "And the herb was true. The Dragon King rose strong and shining, and his magic pearl blazed like a little sun. The palace sang, and the loyal Turtle sat in a fine high seat at the King's right side — the seat of honor.",
+            "And high on the green mountain, under the round bright moon, the cleverest rabbit nibbled sweet grass in peace —",
+            "his liver right where it had always been."
+          ],
+          "alt": "Below the waves the healed dragon king coils joyfully around his blazing golden pearl beside the honored turtle, while above, on a moonlit mountain, the rabbit nibbles grass under the full moon.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "heungbu-and-nolbu",
+      "sourceDir": "03-heungbu-nolbu",
+      "number": 3,
+      "title": "Heungbu and Nolbu",
+      "subtitle": "A Korean Folktale of Two Brothers, a Grateful Swallow, and the Magic Gourds",
+      "koreanTitle": "흥부와 놀부",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "in_production",
+      "liveDate": null,
+      "asinEbook": null,
+      "isbn13Paperback": null,
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>Kind Heungbu has nothing at all — nothing but a tiny hut, a houseful of hungry children, and a heart as warm as spring. So when a baby swallow falls from its nest, of course he mends its little leg with a bit of red silk thread.</p><p>Next spring the grateful swallow returns with one small, shining seed... and soon Heungbu's roof is full of giant magic gourds — gourds that pour out rice like a waterfall! But when his greedy big brother Nolbu hurts a swallow on purpose to get a seed of his own, what bursts out of HIS gourds is a wild, stamping crowd of Korean goblins — with a noisy lesson to deliver.</p><ul><li><b>Read-aloud English</b> — swallow-song, sawing songs, and gleeful goblin chaos, written to sound lovely out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an “About This Story” note on pansori story-singing, lucky swallows, gourd bowls, and the mischievous <i>tokkaebi</i></li><li><b>Perfect for ages 4–8</b> — bedtime, story time, or a quiet afternoon together</li></ul><p>A warm, funny tale of kindness rewarded, greed undone, and a brother forgiven — a wonderful gift for curious kids, multicultural classrooms, and families who love stories from around the world.</p><p><b>Book 3 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "Kind Heungbu has nothing at all — nothing but a tiny hut, a houseful of hungry children, and a heart as warm as spring. So when a baby swallow falls from its nest, of course he mends its little leg with a bit of red silk thread. Next spring the grateful swallow brings back one small, shining seed... and soon Heungbu's roof is full of magic gourds — while his greedy big brother Nolbu is about to learn a noisy lesson from the goblins. A warm, funny retelling of one of Korea's best-loved folktales, sung with swallows, sawing songs, and the sweetest treasure of all: sharing.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "kindness and sharing book kindergarten",
+        "tokkaebi goblin story",
+        "books about greed and generosity",
+        "diverse story time books"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Growing Up & Facts of Life > Family Life > Siblings"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Jebi — the swallow, a lucky guest under a Korean roof.",
+        "Jiji-baebae — the sound Korean swallows make: jee-jee-bay-bay!",
+        "Bak — the giant gourd that grows on thatched roofs.",
+        "Bagaji — a bowl or dipper made from a dried gourd.",
+        "Tokkaebi — Korea's wild, playful goblins. They cannot stand a cheater!",
+        "Pansori — Korea's traditional sung storytelling.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "Heungbu and Nolbu (say HUNG-boo and NOHL-boo) is one of Korea's best-loved folktales. It is even sung: as Heungbuga, “the Song of Heungbu,” it is one of the five great story-songs of pansori, Korea's traditional sung storytelling.",
+          "In Korea, a swallow (jebi) nesting under your eaves is a sign of good luck — and jiji-baebae (say jee-jee-bay-bay) is how Korean swallows sing, the way birds say “tweet-tweet” in English.",
+          "The gourd (bak) grows huge on thatched roofs. Koreans dried and halved gourds to make bowls called bagaji — so a roof full of gourds really was a kind of treasure.",
+          "The goblins are tokkaebi — Korea's wild, playful spirits. Their magic clubs can knock riches into being or knock them away, and they cannot stand a cheater. You will meet them again in Seori Tales.",
+          "Calling someone “a Nolbu” in Korea still means greedy — and Heungbu's name still means a kind and giving heart. What will you do with what you have?"
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "Long ago, in a green valley in Korea, there lived two brothers.",
+            "Nolbu, the older brother, kept the big tiled house, the fat ox, and every last sack of rice — all for himself.",
+            "Heungbu, the younger brother, was as kind as the spring rain. He got nothing at all — nothing but a tiny straw hut and a houseful of hungry children."
+          ],
+          "alt": "In an autumn valley a rich brother watches from the gate of his grand tiled house as the poor brother's family walks close together toward a tiny patched thatched hut.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "Winter came, and the little hut grew cold and hungry.",
+            "“Brother,” said Heungbu at Nolbu's gate, “just one bowl of rice for the children? I'll work for it.”",
+            "“Rice? MY rice?!” cried Nolbu. And his wife waved her big sticky rice paddle — shoo! shoo! shoo!",
+            "So Heungbu walked home through the snow, with nothing but snowflakes in his hands."
+          ],
+          "alt": "At a snowy winter gate a scowling rich man and his wife wave a big sticky rice paddle to shoo away the poor brother, who bows with open, empty hands.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "But spring always comes, even to the poorest roof.",
+            "One bright morning, two swallows swooped in under the roof of Heungbu's hut and began to build a nest of mud and straw.",
+            "“Welcome, little guests!” laughed Heungbu. And the children clapped as the swallows sang — jiji-baebae! jiji-baebae!"
+          ],
+          "alt": "Two swallows build a mud nest under the thatched roof while the laughing family points and claps from below among spring blossoms.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "Soon the nest was full of baby swallows, all beaks and cheeping.",
+            "Then one day — sssss! — a hungry snake came sliding up the wall toward the nest!",
+            "The baby swallows flapped and tumbled, and the littlest one fell — down, down — and hurt its tiny leg."
+          ],
+          "alt": "A dark snake slides up the wall toward a nest of panicking baby swallows as the littlest one tumbles through the air and a man runs in with open arms.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "Heungbu ran up waving his arms — “Shoo, snake, shoo!” — and the snake slid away into the grass.",
+            "Then he scooped up the little bird in two gentle hands. “There now. You're safe.”",
+            "Softly, softly, he wound a bit of red silk thread around the tiny leg — round and round, just right.",
+            "All summer long the children fed the little swallow, until it could hop, then flutter, then fly."
+          ],
+          "alt": "Inside the hut gentle hands wind a red silk thread around a tiny swallow's leg while the wife and children lean close with soft, worried faces.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "When autumn winds turned the leaves gold, the swallows gathered to fly away south, where the winters are warm.",
+            "The little swallow with the red thread circled the hut once, twice, three times.",
+            "“Jiji-baebae!” it sang — which surely meant thank you — and away it flew, over the mountains."
+          ],
+          "alt": "At amber dusk the family waves as swallows fly south and the little swallow with the red thread circles low, eye to eye with the children.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "All winter Heungbu's family huddled and hoped. And when spring came back — jiji-baebae! — so did their swallow, with the little red thread still on its leg!",
+            "It dropped something small and shining into Heungbu's hand.",
+            "A seed. One small, shining seed."
+          ],
+          "alt": "In bright spring light the swallow with the red thread drops one small shining seed into Heungbu's open hand as his family gasps with joy.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "They planted the seed by the door, and oh, how it grew!",
+            "The vine climbed the wall, crawled up over the top, and by autumn, three ENORMOUS gourds sat on the roof — round and pale as full moons.",
+            "“One seed,” whispered Heungbu, “and look! Our roof is full of moons.”"
+          ],
+          "alt": "A great green vine covers the little hut and three enormous pale gourds rest on the roof like full moons while the tiny family marvels below.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "They rolled the first gourd down and took the long saw, one handle each.",
+            "“Saw, saw, saw the gourd — zzzk, zzzk, zzzk!” they sang.",
+            "CRACK! The gourd split wide — and out poured white rice like a waterfall, more rice than the children had ever, ever seen!"
+          ],
+          "alt": "A man and his wife saw open a giant gourd that cracks with golden light as white rice pours out like a waterfall and children leap to catch it in bowls.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "The second gourd spilled soft silk cloth of every color, and strings of shining coins.",
+            "From the third — whoosh! — up rose walls and doors and a brand-new roof, until a fine new house stood where the old hut had leaned.",
+            "And do you know what Heungbu did first? He filled every neighbor's bowl with rice. Kind hearts stay kind — even rich ones."
+          ],
+          "alt": "Colored silks and coins spill from split gourds before a fine new house while Heungbu ladles rice into the bowls of smiling neighbors.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "When Nolbu heard that a thankful swallow had made his brother rich, his eyes went narrow and greedy.",
+            "He watched his own roof until — at last! — a swallow built a nest there.",
+            "Then he grabbed a baby bird — and oh! — he hurt its little leg, on purpose, just to wrap it in a big showy bandage.",
+            "“There, birdie,” he said with a big pretend smile. “Now fly south, and don't forget my seed!”"
+          ],
+          "alt": "At his tiled house the greedy brother holds a cross little swallow wrapped in a huge grey rag bandage, grinning a wide false grin while other swallows scatter.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "Sure enough, the swallow brought Nolbu a seed too — and next autumn, giant gourds sat on his roof. “Gold!” he sang, sawing fast. “Saw, saw, saw the gourd — all for ME, for ME, for ME!”",
+            "CRACK! But no rice poured out. No silk. No gold.",
+            "Out tumbled GOBLINS — wild-haired, stamping, swinging their magic clubs! They whirled up his coins, his fat ox, even the tiles off his roof — and rumbled away into the night.",
+            "And the last goblin turned and said, “That — was for the little bird.”"
+          ],
+          "alt": "On a stormy night wild grinning goblins burst from a split gourd, whirling coins, roof tiles and a startled ox into the sky as Nolbu tumbles onto his bottom.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "In the cold rain stood Nolbu and his wife — no house, no ox, not even a rice paddle. Nowhere to go... but one door.",
+            "Nolbu hung his head. “Brother... I'm sorry. For everything.”",
+            "And Heungbu ran out into the rain — no umbrella, no scolding — and hugged him hard. “Brother! You're home.”"
+          ],
+          "alt": "In the falling rain before a warm open door Heungbu hugs his soaked, empty-handed brother hard while the family beckons from the golden doorway.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "After that, the two brothers lived together under one wide roof, and they shared everything in it.",
+            "Nolbu learned to give — and found out it felt better than gold. And every spring, the swallows came back to nest above their door.",
+            "Jiji-baebae! Jiji-baebae! — the sweetest song in Korea, sung for two brothers who shared everything."
+          ],
+          "alt": "In spring sunshine both families share one long table in the courtyard as swallows swoop above nests under every eave, the red-thread swallow nearest.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "the-fairy-and-the-woodcutter",
+      "sourceDir": "04-fairy-woodcutter",
+      "number": 4,
+      "title": "The Fairy and the Woodcutter",
+      "subtitle": "A Korean Folktale of a Winged Robe, a Grateful Deer, and the Well of the Sky",
+      "koreanTitle": "선녀와 나무꾼",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "in_production",
+      "liveDate": null,
+      "asinEbook": null,
+      "isbn13Paperback": null,
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>High in the Diamond Mountains of Korea lives a kind young woodcutter with one bowl, one spoon, and one quiet heart. Then one full-moon night, seven sky fairies fly down to play in a hidden mountain pond — and the lonely woodcutter hides one shimmering winged robe, even though he knows, oh he knows, that hiding what is not yours is wrong.</p><p>The youngest fairy stays. Love grows, real and warm — two children, four bowls, a happy house. But the sky always calls its children home... and one moonlit night, the woodcutter must find the bravest kind of love: the kind that gives back what was never his. Then the sky itself sends down a great silver bucket on a rope of moonlight — because in the world's most beloved tales, what you set free with love always finds its way back.</p><ul><li><b>Read-aloud English</b> — chantable refrains, a SPLASH to shout, and a moonlit ride to the sky, written to sound lovely out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an “About This Story” note on sky fairies, the winged robe, the well of the sky, and how older tellings end</li><li><b>Perfect for ages 4–8</b> — a Korean cousin of the world's swan-maiden tales, with a reunion ending that soothes at bedtime</li></ul><p>A magical gift for curious kids, multicultural classrooms, and families who love stories from around the world — and a story that ends with a ritual your child can keep: next full moon, find the moon in the water, and look closely.</p><p><b>Book 4 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "High in the Diamond Mountains lives a kind young woodcutter with one bowl, one spoon, and one quiet heart. Then one full-moon night, seven sky fairies fly down to play in a hidden pond — and when the youngest cannot fly home, his lonely wish comes true... though hiding what is not yours never stays hidden forever. A tender, magical retelling of one of Korea's best-loved folktales — a story of a winged robe, a grateful golden deer, a silver bucket on a rope of moonlight, and the bravest kind of love: the kind that lets go.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "swan maiden legend for kids",
+        "books about the moon for kids",
+        "books about honesty for kids",
+        "magical adventure books for kids"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Growing Up & Facts of Life > Family Life > Parents"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Seonnyeo — a sky fairy, a heavenly maiden from the sky palace.",
+        "Nalgae-ot — the winged robe that carries a fairy between sky and earth.",
+        "Durebak — a bucket on a rope, for drawing water from a well.",
+        "Jige — the wooden A-frame carrier a woodcutter wears on his back.",
+        "Omma — Korean for “mom.”",
+        "Geumgangsan — the Diamond Mountains, where this tale is set.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "The Fairy and the Woodcutter (say sun-NYUH wah nah-moo-KKOON in Korean: Seonnyeowa Namukkun) is one of Korea's best-loved folktales, told all across Korea — and most famously among the peaks of Geumgangsan, the Diamond Mountains.",
+          "A seonnyeo is a sky fairy. Her winged robe (nalgae-ot) carries her between sky and earth. No robe, no flying!",
+          "The silver bucket is a durebak, a rope-bucket for drawing well water. So when the sky draws from a mountain pond, that pond is the sky's own well.",
+          "Omma is Korean for “mom.”",
+          "In older tellings the deer warns: wait until three children are born — with three little ones, she could never fly away. And some tellings go on: the woodcutter rides down to see his old mother, is left behind, and becomes the rooster that crows at the sky each dawn.",
+          "In our telling, the woodcutter gives the robe back the moment his heart understands — because giving back what was never yours is the bravest kind of love. It is the tale's oldest promise: what you set free with love is never truly lost."
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "High in the Diamond Mountains of Korea, where the pine trees drink the morning clouds, there lived a young woodcutter.",
+            "All day he chopped and stacked his wood, and he was kind to every living thing. He stepped around the beetles. He left berries for the birds.",
+            "But at night, his little hut held just one bowl, one spoon, and one quiet heart."
+          ],
+          "alt": "A young woodcutter beside his wooden carrier of brushwood offers berries to a small bird on a warm mountain morning, his tiny thatched hut on the slope below.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "One morning — crash! crackle! — a golden deer burst from the bushes, its eyes wide with fear. A hunter's horn sounded down the hill.",
+            "Quick as a wink, the woodcutter hid the deer under his big pile of brushwood.",
+            "Along stomped the hunter. “Ho there! Which way did the deer run?”",
+            "The woodcutter pointed far, far away, over the mountain. And the hunter huffed away — stomp, stomp, stomp."
+          ],
+          "alt": "A golden deer hides under a pile of brushwood with one eye peeking out while the woodcutter points a stomping hunter far away over the mountain.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "Then the deer did something deer never, ever do. It spoke.",
+            "“Kind woodcutter, you saved my life, so I will tell you the mountain's secret. Tonight, when the moon is full, seven sky fairies will fly down to play in the hidden pond. And it is said — if a winged robe is hidden, that fairy cannot fly home...”",
+            "And as it bounded away, the deer called back — “But remember, woodcutter! The sky always calls its children home.”"
+          ],
+          "alt": "In golden forest dusk a luminous golden deer turns its head to speak to the amazed woodcutter as a pale full moon rises between the pines.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "That night, the woodcutter waited behind the pines, hardly breathing.",
+            "Down the moonbeams they came — seven sky fairies, bright as falling stars, laughing like little bells far across the silver water. They laid their winged robes over a pine branch and stepped into the shining pond.",
+            "And from the smallest robe, one feather of light slipped loose, and drifted, and landed — right in the woodcutter's hand."
+          ],
+          "alt": "Under a huge full moon glowing winged robes hang over a pine branch while sky fairies play far across a misty pond and a tiny feather of light drifts into the hidden woodcutter's open hand.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "Oh, the woodcutter knew — he knew — that hiding what is not yours is wrong.",
+            "But his lonely heart was louder. And he slipped the feather's robe behind a rock.",
+            "When the sky turned pale before dawn, six fairies rose like petals blowing home. But the youngest searched the shore, and searched, and searched... Without her robe, she could not fly.",
+            "And the morning star watched her cry beside the water, all alone."
+          ],
+          "alt": "At pale dawn six fairies rise into the sky like white petals while the youngest searches the empty shore below and the woodcutter watches with a torn face, a glowing bundle hidden behind a rock at his feet.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "The woodcutter stepped out softly and wrapped his warm patched coat around her shoulders.",
+            "“Don't cry,” he said. “Come — share my fire, and my rice, and my roof, for as long as you like.”",
+            "The sky fairy looked at him a long, long time. “Just until I find my way home,” she said at last. And she took his hand.",
+            "But he never told her where her winged robe lay hidden. And that secret sat in his chest like a small, cold stone."
+          ],
+          "alt": "At dawn beside the pond the woodcutter gently wraps his patched brown coat around the shoulders of the weeping sky fairy as she looks up at him.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "The seasons turned, and turned again — and little by little, her smile came home.",
+            "Then one bright morning she took his hand, laughing this time, and there was a wedding, and there was spring.",
+            "Soon two children filled the hut with noise: a girl who sang like her mother, and a baby boy with his father's round cheeks.",
+            "Now the little hut held four bowls, four spoons — and not one quiet heart in the whole happy house!"
+          ],
+          "alt": "In spring sunshine the mother laughs as her little girl chases a butterfly and the baby boy rides the woodcutter's shoulders, with four bowls in a sunny row on the porch.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "But on full-moon nights, the mother would step into the yard, wrap herself in the old patched coat, and look up... and up... and up.",
+            "“Tell us about the sky, Omma!” the children begged. So she told them of cloud gardens, and star fields, and her six sisters in the palace beyond the moon.",
+            "“The moon is my mother's lantern,” she whispered. “And oh, it is a long, long way home.”"
+          ],
+          "alt": "Wrapped in the old patched coat, the mother gazes up at the huge full moon with her two children while the woodcutter watches her face from the warm doorway; a small feather glows in an open box on the windowsill.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "That night, the woodcutter climbed up to the robe's secret hiding place, high under the roof, and brought it down — soft and shining, as bright as the night he hid it.",
+            "“This is yours,” he said, though his voice shook. “It was always yours. I'm sorry I hid it. The sky always calls its children home — I know that now. And it is calling you.”",
+            "His wife held the robe... and held him... and cried, both sad and glad at once.",
+            "“For the fire, for the rice — and for this,” she whispered."
+          ],
+          "alt": "By the hearth the kneeling woodcutter offers the unfolded winged robe, blooming with silver light, up to his tearful smiling wife while the two children watch wide-eyed from their sleeping mat.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "The winged robe settled over her shoulders like moonlight — and oh, how she shone.",
+            "She kissed her woodcutter. She tucked the old patched coat around his shoulders. Then she gathered up the laughing children, one arm each, and rose into the silver air.",
+            "“Find us, Papa! Find us in the sky!” the children called down. And around the little hut they circled — once for the fire, once for the rice, once for love — and away they flew, up and up, until they were one bright spark among the stars.",
+            "And the woodcutter stood in the empty yard, waving, until the moon went down."
+          ],
+          "alt": "The fairy in her glowing winged robe rises into the night sky with a laughing child on each arm, circling the little hut in a trail of light, while the woodcutter waves from the yard below.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "Moon after moon, the woodcutter climbed to the hidden pond and watched the sky. In his hand he held the small feather of light — still soft, still warm, still pointing up.",
+            "And one night, the golden deer stepped out of the pines.",
+            "“You gave back what was not yours,” said the deer. “So the mountain will tell you one more secret. The sky fairies come down no more — now the sky lowers a great silver bucket, to scoop up water from this pond. For this pond is the sky's own well.”",
+            "“When the bucket comes down, woodcutter — climb in!”"
+          ],
+          "alt": "By the bare autumn pond the golden deer leans close to the woodcutter, who holds a small glowing feather pointing up toward the cloudy sky.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "He didn't have to wait long. The full moon rolled up over the mountain, the clouds opened like a door — and down, down, down came a great silver bucket on a rope of braided moonlight.",
+            "It dipped into the pond and began to fill.",
+            "The woodcutter took a breath, tucked the feather into his headband, and climbed in — SPLASH! — and the rope pulled tight.",
+            "Up went the bucket! Up went the woodcutter — higher than the pines, higher than the peaks, higher than the wild geese fly!"
+          ],
+          "alt": "Under a full moon a great silver-banded bucket on a glowing rope of moonlight dips into the pond as the laughing woodcutter climbs in, a small feather shining in his headband.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "Up through the cool white clouds he rose. Wild geese flew beside him. The mountains below curled up like sleeping cats, and the stars leaned close to look.",
+            "And then he heard it — high and clear, and sweeter than any birdsong:",
+            "“PAPA! PAPA'S COMING!”",
+            "There, on the cloud-steps of a shining palace, his two children were jumping and waving with all their might."
+          ],
+          "alt": "The bucket rises through moonlit clouds beside white cranes and wild geese toward a shining cloud palace where two small children jump and wave beside their glowing mother.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "Oh, what a hugging there was at the top of the sky!",
+            "The children swung on his arms. His wife spun him around, laughing her little-bell laugh. And the six sisters welcomed him home — home to the palace beyond the moon, where no one is lonely, and no heart is quiet, ever.",
+            "And on full-moon nights, when the silver bucket dips down to the mountain pond, they say the water ripples with laughter.",
+            "Next full moon, find the moon in the water — a pond, a puddle, any shining water will do. Look closely, closely. A whole happy family may be waving up at you... from the well of the sky."
+          ],
+          "alt": "In a golden cloud courtyard the reunited family spins in one laughing embrace as six fairies and white cranes welcome them home, the mountain pond shining far below through the clouds.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "kongjwi-and-the-flower-shoe",
+      "sourceDir": "05-kongjwi-patjwi",
+      "number": 5,
+      "title": "Kongjwi and the Flower Shoe",
+      "subtitle": "A Korean Folktale of a Black Ox, a Kind Toad, and One Lost Flower Shoe",
+      "koreanTitle": "콩쥐팥쥐",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "in_production",
+      "liveDate": null,
+      "asinEbook": null,
+      "isbn13Paperback": null,
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>Under a plum tree in old Korea lives Kongjwi, a girl who is kind to every living thing. But when a cold new stepmother fills her days with impossible chores — a stony field, a wooden hoe, a jar that will not fill — kindness comes back in wonderful ways: a great black ox plows the field, a fat old toad plugs the leaky jar, and a thousand sparrows swoop down to help.</p><p>Then a sky maiden brings a gift — a beautiful hanbok and two little flower shoes — and Kongjwi runs to the great festival at last. But hopping across the stream... oh! One little shoe floats away, straight toward the magistrate's parade. Whose shoe is this? Korea's own Cinderella, told long before glass slippers — and it ends not with a punishment, but with the kindest feast of all.</p><ul><li><b>Read-aloud English</b> — a CRACK to gasp at, a shoe-hop to giggle at, and a refrain of kindness, written to sound lovely out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on flower shoes, onggi jars, and how older tellings end</li><li><b>Perfect for ages 4–8</b> — a fairy-tale plot children already love, in a world that is new</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who collect Cinderella stories from around the world.</p><p><b>Book 5 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "Under a plum tree in old Korea lives Kongjwi, a girl who is kind to every living thing. But when a cold new stepmother fills her days with impossible chores, kindness comes back in wonderful ways — a great black ox plows the stony field, a fat old toad plugs the leaky jar, and a thousand sparrows come down to help. Then a sky maiden brings a gift: two little flower shoes... and one of them is about to float away and change everything. Korea's own Cinderella, told with warmth, humor, and one glowing flower shoe — a story about how kindness, shared, only grows.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "cinderella stories from around the world",
+        "books about kindness for kids",
+        "stepmother stepsister fairy tale",
+        "books about helping animals for kids"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Growing Up & Facts of Life > Friendship, Social Skills & School Life > Manners"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Kongjwi — the kind girl's name; kong means \"bean.\"",
+        "Patjwi — her stepsister's name; pat means \"red bean.\"",
+        "Kkotsin — flower shoes: silk shoes with upturned toes and flower embroidery.",
+        "Hanbok — traditional Korean clothes, worn every day and on happy days alike.",
+        "Onggi — the big brown earthenware jar Korean families keep in the yard.",
+        "Bagaji — a water dipper made from half a dried gourd.",
+        "Wonnim — the magistrate, the chief of a village or county.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "Kongjwi and Patjwi (say KONG-jwee and PAHT-jwee) is one of Korea's best-loved folktales — often called Korea's Cinderella, told with flower shoes instead of glass slippers. Kongjwi's name means \"bean,\" and Patjwi's means \"red bean.\"",
+          "Instead of a fairy godmother, Kongjwi is helped by friends she was kind to first: a black ox, a toad who plugs the leaky jar, and a cloud of sparrows.",
+          "Her flower shoes (kkotsin) are traditional Korean silk shoes with upturned toes and flower embroidery — worn on the happiest days.",
+          "The big brown jar is an onggi, an earthenware jar Korean families still use.",
+          "In older tellings the story goes on much longer, and Patjwi's tricks are punished harshly. In our telling, Kongjwi does what she has done all along — she is kind first, and shares her feast with everyone.",
+          "It is the tale's oldest promise: kindness comes back — sometimes on small wings, sometimes on four hooves, and sometimes in one little flower shoe."
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "Long ago in Korea, under a plum tree, lived a girl named Kongjwi, who was kind to every living thing."
+          ],
+          "alt": "On a golden morning a girl in a patched green hanbok scatters grain for a flock of sparrows beside a well, a toad watching from a sunny stone, under a blossoming plum tree.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "One day her father brought home a new wife and her daughter, Patjwi. The new stepmother looked at Kongjwi… and did not smile."
+          ],
+          "alt": "At the farmhouse gate a tall stepmother in purple and her smug daughter arrive with bundles while Kongjwi bows a polite greeting and her father beams.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "\"Weed the stony field with this wooden hoe,\" said the stepmother. But at the very first stone — CRACK! — the hoe broke in two."
+          ],
+          "alt": "In a wide stony field Kongjwi holds up the two snapped halves of a wooden hoe while far away Patjwi skips off with a sturdy iron hoe over a soft green meadow.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "Then out of the mountain mist stepped a great black ox. \"You are kind, Kongjwi. Rest,\" it said — and it plowed the whole field for her."
+          ],
+          "alt": "A great black folk-art ox with mist at its hooves plows the stony field while Kongjwi rests one hand on its cheek in wonder, warm light breaking through the grey sky.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "\"Fill the big jar before dark,\" said the stepmother. But the jar had a hole, and the water ran out as fast as Kongjwi poured it in."
+          ],
+          "alt": "At dusk Kongjwi pours water from a gourd dipper into a big earthenware jar while a thin silver trickle escapes from a hole near its base.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "\"Never fear, Kongjwi!\" croaked a friendly voice. A fat old toad sat down on the hole inside the jar — and up rose the water, right to the top!"
+          ],
+          "alt": "Under the first stars a golden-brown toad grins from the rim of the brimming jar as Kongjwi laughs and pours sparkling water in the lamplight.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "One morning, drums sounded — the great festival! \"Peel every grain of this rice first,\" said the stepmother. And off she went with Patjwi."
+          ],
+          "alt": "The stepmother and Patjwi in fine hanbok walk away down a blossom road toward distant festival flags while Kongjwi stands by a huge mound of rice, watching them go.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "Then the sky rustled — sparrows! Hundreds she had fed all winter swooped down and peeled every grain with their quick little beaks."
+          ],
+          "alt": "A joyful swirl of hundreds of sparrows streams down around laughing Kongjwi as white rice piles up like snow in the farmhouse yard.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "And down a sunbeam came a sky maiden, smiling. \"Kindness comes back, Kongjwi.\" She held out a beautiful hanbok — and two little flower shoes."
+          ],
+          "alt": "A radiant sky maiden descends a broad sunbeam holding out a folded rainbow-silk hanbok topped with two glowing rose-pink flower shoes as Kongjwi gazes up in awe.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "Off to the festival ran Kongjwi, quick as a swallow. But hopping across the stream — oh! — one little flower shoe slipped off and floated away."
+          ],
+          "alt": "Kongjwi in her festival hanbok hops across stepping stones, looking back with one foot bare as her single glowing flower shoe bobs away on the sparkling stream.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "Down the road came the magistrate, the village chief, with his grand parade. On the water glowed one little flower shoe. \"Whose shoe is this?\""
+          ],
+          "alt": "A kind young magistrate in a blue robe kneels on the stream bank holding up the glowing flower shoe while his colorful procession halts behind him to look.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "At the festival, every girl tried the shoe. Patjwi pushed and pulled and hopped on one foot — but the little shoe would not fit her, not even a bit."
+          ],
+          "alt": "At the bright festival Patjwi hops on one foot trying to jam on the little shoe while her mother pushes to help, village girls giggle, and the magistrate waits with his cushion.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "Then Kongjwi stepped quietly forward — and the flower shoe slipped onto her foot like a blossom coming home. And from her sleeve, she drew its twin."
+          ],
+          "alt": "Kongjwi sits on the festival bench with one glowing flower shoe fitting perfectly on her foot as she raises its twin from her sleeve, the magistrate and crowd lit with wonder.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "So Kongjwi was loved through all the land — and at her feast she filled every bowl herself, even Patjwi's. For kindness, shared, only grows."
+          ],
+          "alt": "At a feast under the blossoming plum tree Kongjwi ladles rice into Patjwi's bowl with her old gourd dipper while the softened family, the magistrate, sparrows, the toad, and the black ox share the table.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "the-golden-axe",
+      "sourceDir": "06-golden-axe",
+      "number": 6,
+      "title": "The Golden Axe",
+      "subtitle": "A Korean Folktale of an Honest Woodcutter and the Spirit of the Pond",
+      "koreanTitle": "금도끼 은도끼",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "in_production",
+      "liveDate": null,
+      "asinEbook": null,
+      "isbn13Paperback": null,
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>At the foot of a green mountain lives a poor but honest woodcutter, and his old iron axe is his whole living. One day it slips from his hands and sinks deep into a mountain pond. As he weeps, the water begins to glow — and a kind Mountain Spirit rises up, holding a gleaming <b>gold</b> axe. \"Is this your axe?\"</p><p>The woodcutter shakes his head. Not the gold axe, not the silver axe — only his own plain iron one. And because he tells the truth, he is given all three. But when a greedy neighbor hears the tale and tries the very same trick... he learns what a lie is really worth.</p><ul><li><b>Read-aloud English</b> — a WHOOSH to gasp at, a SPLASH to giggle at, and a gentle rule-of-three that little listeners can say along with you</li><li><b>Rich illustrations</b> in a warm painterly style with the glow of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on the woodcutter's <i>jige</i>, the mountain <i>sansillyeong</i>, and how the tale is told around the world</li><li><b>Perfect for ages 4–8</b> — a clear, kind lesson about honesty, with no scary bits and a happy ending</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and any family teaching that the truth is worth more than gold.</p><p><b>Book 6 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "At the foot of a green mountain lives a poor but honest woodcutter, and his old iron axe is his whole living. One day it slips from his hands and sinks deep into a mountain pond. As he weeps, the water begins to glow — and a kind Mountain Spirit rises up, holding a gleaming GOLD axe. \"Is this your axe?\" Will the woodcutter tell the truth? And what happens when a greedy neighbor tries the very same trick? A beloved Korean folktale about honesty, told with warmth and gentle humor — and the quiet proof that truth is worth more than gold.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "books about telling the truth",
+        "character education stories",
+        "stories about greed and kindness",
+        "social emotional learning books kindergarten"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Growing Up & Facts of Life > Values"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Namukkun — a woodcutter, someone who gathers firewood in the mountains.",
+        "Jige — a wooden A-frame carried on the back to haul firewood.",
+        "Dokki — an axe. Geumdokki means \"gold axe\"; eundokki means \"silver axe.\"",
+        "Sansillyeong — a kind mountain spirit who watches over the mountain and its pond.",
+        "Hanbok — traditional Korean clothes, worn every day and on special days.",
+        "Chogajip — a small house with a roof made of thatched straw.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "The Golden Axe (say GEUM-do-kki EUN-do-kki, which means \"gold axe, silver axe\") is one of Korea's best-loved folktales, told to children for hundreds of years to teach the value of honesty.",
+          "The woodcutter is a namukkun, a person who gathered firewood in the mountains and carried it home on a wooden A-frame called a jige. For a poor woodcutter, his axe was his whole living — that is why losing it mattered so much.",
+          "The kind spirit of the pond is a sansillyeong, a mountain spirit who watches over the mountain, its animals, and its water. In Korean tales he is wise and fair, rewarding good hearts.",
+          "Many other countries tell a cousin of this tale — in one old telling, a river god tests a woodman in the very same way.",
+          "In our telling, the greedy neighbor is not punished harshly. He simply goes home with nothing, and we trust children to see that the honest woodcutter got the better end.",
+          "It is the tale's oldest promise: tell the truth, and you keep something worth more than gold."
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "Long ago in Korea, a poor woodcutter lived at the foot of a green mountain. He was honest and kind, and cared for his old mother."
+          ],
+          "alt": "At a thatched farmhouse below a green mountain at golden hour, the honest woodcutter kneels offering a bowl of rice to his smiling old mother on the wooden porch, his plain iron axe leaning by the door.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "Every morning he climbed the mountain with his old iron axe, singing all the way. He cut firewood beside a deep, quiet pond."
+          ],
+          "alt": "The woodcutter climbs a green pine-mountain trail singing, a firewood-loaded jige on his back and his iron axe in hand, above a clear deep blue-green pond.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "One day, as he swung at a tall pine — WHOOSH! — the axe flew from his hands and splashed deep into the pond."
+          ],
+          "alt": "Beside the pond the woodcutter's iron axe flies out of his hands mid-swing and splashes into the deep water, ripple rings spreading across the surface.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "The woodcutter knelt by the water and cried. \"That was my only axe. How will I cut wood now?\""
+          ],
+          "alt": "The woodcutter kneels sorrowfully at the mossy edge of the still deep pond with empty open hands and his empty jige beside him; his axe is gone under the water.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "Suddenly the water began to glow! Up rose the Mountain Spirit, holding a golden axe. \"Is this your axe?\" he asked."
+          ],
+          "alt": "The pond glows silver-gold as a white-bearded Mountain Spirit in pale jade robes rises from the water holding up a radiant glowing golden axe, while the woodcutter kneels at the bank in awe.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "\"No, sir,\" said the woodcutter. \"That golden axe is far too fancy. It is not mine.\""
+          ],
+          "alt": "The glowing Mountain Spirit holds out the golden axe as the honest woodcutter gently raises one hand and shakes his head with a modest smile, refusing politely.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "The Spirit dipped down and lifted a silver axe. \"Is this one yours?\" \"No, that is not mine either,\" said the woodcutter."
+          ],
+          "alt": "The Mountain Spirit holds up a bright silver axe over the shining pond while the woodcutter, at the bank, again shakes his head honestly.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "At last the Spirit raised the woodcutter's own old iron axe. \"Yes! That one is mine!\" he cried, with a big smile."
+          ],
+          "alt": "The Mountain Spirit lifts the woodcutter's own plain old iron axe from the water, and the woodcutter's whole face lights up with joy as he reaches for it.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "\"You told the truth,\" said the Spirit with a smile. \"Honest hands may keep all three.\" So he gave the woodcutter every axe."
+          ],
+          "alt": "The beaming Mountain Spirit holds out all three axes — the glowing gold, the shining silver, and the plain iron — as the honest woodcutter bows low and reaches out to receive them.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "The woodcutter carried the axes home and shared them with his neighbors. Soon everyone in the village loved him."
+          ],
+          "alt": "The woodcutter walks home into his village with the three axes on his jige, warmly greeted by his old mother and cheerful villagers as he shares grain and coins.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "A greedy neighbor heard the story. \"I want gold too!\" he said, and hurried up the mountain with his axe."
+          ],
+          "alt": "A plump, sly greedy neighbor in a rust-orange jacket and mustard trousers hurries up the mountain trail clutching his own axe, the village small below and behind him.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "He tossed his own axe into the pond — SPLASH! — then he sat down and pretended to cry great big tears."
+          ],
+          "alt": "At the pond the greedy neighbor has thrown his own axe into the water and sits cross-legged pretending to cry great exaggerated tears, peeking slyly at the ripples.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "Up rose the Spirit with the golden axe. \"Is this yours?\" \"Yes, yes! The gold axe is mine!\" the greedy man lied."
+          ],
+          "alt": "The Mountain Spirit rises from the glowing water holding the golden axe as the greedy neighbor leaps up grabbing eagerly for it with an open-mouthed lie, the spirit's kind face gently disappointed.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "The Spirit sank away with the golden axe. But the honest woodcutter chopped wood happily ever after. Truth is worth more than gold."
+          ],
+          "alt": "Back home at golden hour the honest woodcutter happily splits firewood with his plain old iron axe on a chopping block while his old mother and two village children smile nearby.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "the-tiger-and-the-dried-persimmon",
+      "sourceDir": "07-tiger-and-persimmon",
+      "number": 7,
+      "title": "The Tiger and the Dried Persimmon",
+      "subtitle": "A Korean Folktale of a Tiger, a Thief, and a Very Scary Sweet",
+      "koreanTitle": "호랑이와 곶감",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "in_production",
+      "liveDate": null,
+      "asinEbook": null,
+      "isbn13Paperback": null,
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>The biggest, hungriest tiger in the mountains has never been afraid of anything — until tonight. Creeping into a snowy village, he hears a mother hush her crying baby: \"A tiger is coming!\" The baby keeps crying. But one little word — <b>gotgam!</b> — and the crying stops at ONCE.</p><p>The tiger goes pale under his stripes. <i>What is a gotgam? It must be the most terrible monster in all of Korea!</i> He doesn't know it's just a sweet dried persimmon... and when a sneaky ox thief climbs onto his back in the dark barn, the wildest, funniest ride in Korean folklore begins.</p><ul><li><b>Read-aloud English</b> — a barn that's \"dark, dark, dark\" to chant along, a THUMP! to shout, and the giggle-guaranteed cry of \"The gotgam has GOT me!\"</li><li><b>Rich illustrations</b> in a warm painterly style with the bold spirit of Korean <i>minhwa</i> folk art — starring the silliest, most lovable tiger in the mountains</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on how families dry persimmons under the eaves in winter, and why the tiger is the great star of Korean tales</li><li><b>Perfect for ages 4–8</b> — big laughs, zero real danger: every \"monster\" turns out to be a misunderstanding, and the ending is pure warmth</li></ul><p>A wonderful gift for giggly bedtimes, multicultural classrooms, and every child who is a little scared of the dark.</p><p><b>Book 7 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "On a cold winter night, the biggest, hungriest tiger in the mountains creeps into a sleepy village — and hears a mother hush her crying baby with one little word: gotgam! The baby stops crying at ONCE. \"What is a gotgam?\" the tiger trembles. \"It must be the scariest beast in all of Korea!\" Then a sneaky ox thief climbs onto the tiger's back in the dark, and the wildest, funniest ride in Korean folklore begins. A beloved Korean folktale about fear, mix-ups, and one very sweet surprise — perfect for reading aloud, again and again.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "funny animal books for kids",
+        "books about overcoming fears",
+        "lunar new year books for children",
+        "trickster stories for kids"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Animals > Lions, Tigers & Leopards"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Gotgam — a dried persimmon, Korea's favorite winter sweet: soft, chewy, and dusted with its own white sugar.",
+        "Gam — a persimmon, the bright-orange autumn fruit that becomes gotgam when dried.",
+        "Horangi — the Korean word for tiger, the biggest star of Korean folktales.",
+        "Chogajip — a small house with a roof made of thatched straw.",
+        "Saekdong — the happy rainbow stripes on the sleeves of a Korean child's jacket.",
+        "Maru — the wooden porch of a Korean house, warm and sunny in the morning.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "The Tiger and the Dried Persimmon (say ho-rang-i-wa GOT-gahm) is one of Korea's favorite funny folktales, told for hundreds of years — the story of the fiercest animal in the land defeated by a sweet.",
+          "A gotgam is a dried persimmon, Korea's beloved winter treat. In late autumn, families peel ripe persimmons and hang them in rows under the eaves. Over the cold weeks they turn soft, chewy, and honey-sweet, with a fine white dusting of natural sugar.",
+          "In Korean folktales the tiger is the biggest star of all — sometimes fearsome, often fooled. Many old stories even begin, \"long, long ago, back when tigers smoked pipes.\" A tiger who runs from a snack fits him perfectly.",
+          "Korean parents once hushed crying children just as the mother does here — and the joke is that the tiger, listening through the wall, thinks a gotgam must be a monster even scarier than he is. The scariest things, the tale winks, are the ones we have never seen.",
+          "It is the tale's oldest joke: the great tiger was chased away by a little sweet."
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "One cold winter night, a big hungry tiger came down from the mountain. Far below, one small light glowed in the village."
+          ],
+          "alt": "On a moonlit snowy ridge at night, the big tiger stands on a rocky outcrop looking down at a tiny village of snow-covered thatched roofs, where one small orange window light glows.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "The tiger slipped into a farmyard, quiet as a shadow. In the barn slept a fat brown ox. \"Mmm,\" thought the tiger. \"Dinner!\""
+          ],
+          "alt": "The tiger creeps across the snowy farmyard at night toward the barn where a brown ox sleeps, while strings of orange dried persimmons hang under the eaves of the glowing farmhouse.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "But inside the house, a baby was crying. \"Hush!\" said the mother. \"A tiger is coming!\" The baby cried on and on."
+          ],
+          "alt": "Inside the warm lamplit room, the mother rocks her crying baby while the huge striped shadow of a tiger's head looms on the paper door behind them.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "The tiger froze. \"That baby is not afraid of me?\" He pressed his ear close to the wall and listened."
+          ],
+          "alt": "Outside in the snow, the huge tiger crouches comically small with one big ear pressed against the house wall beside the glowing paper door, listening.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "\"Look, a gotgam!\" said the mother — a sweet dried persimmon treat. Right away, the baby stopped crying."
+          ],
+          "alt": "The mother holds up a small orange dried persimmon on a string as her baby beams and reaches for it, while the tiger's shadow on the paper door leans in to listen.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "The tiger began to shake. \"A gotgam stopped the crying, just like that? It must be scarier than ME!\""
+          ],
+          "alt": "In the snowy yard the huge tiger recoils in comic terror, fur puffed out and tail fluffed like a bottle-brush, imagining the unseen gotgam.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "Just then, a sneaky thief climbed over the wall to steal the farmer's ox. He did not see the tiger creep into the barn to hide."
+          ],
+          "alt": "A lanky thief with a rope coil tiptoes along the top of the snowy stone wall in the moonlight while, across the yard, the trembling tiger creeps into the dark barn to hide; neither sees the other.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "The barn was dark, dark, dark. The thief patted something big and warm and furry. \"What a nice fat ox!\" he said, and climbed on."
+          ],
+          "alt": "In the dark barn, the thief happily pats the flank of the huge striped shape he cannot see — the tiger, whose round amber eyes glow with silent fright — while the real ox sleeps in the far corner.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "The tiger's heart went THUMP! \"The gotgam! The gotgam has GOT me!\" And he ran."
+          ],
+          "alt": "The tiger bursts out of the barn in a panic, all four paws off the ground, with the thief flattened onto his back and snow and straw flying everywhere.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "Away they raced, over fields and over hills. \"Wow, what a fast ox!\" shouted the thief, holding on tight."
+          ],
+          "alt": "The tiger gallops at full stretch across moonlit snowy hills with the thief clinging flat to his back, the village tiny and far behind them.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "Morning came. The thief looked down and saw stripes. \"This is not an ox,\" he gasped. \"I am riding a TIGER!\""
+          ],
+          "alt": "In the first pink dawn light, the thief stares down in horror at the bold black stripes under his hands as the tiger runs on with his eyes squeezed shut.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "Quick as a wink, the thief grabbed a branch and swung up into a tall tree. The tiger did not even look back."
+          ],
+          "alt": "The thief swings up onto the low bough of a snowy pine tree, legs kicking in the air, as the tiger races on down the trail without looking back.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "The tiger ran and ran, deep into the mountains. \"Phew! I got away from the terrible gotgam!\""
+          ],
+          "alt": "Deep in the sunny morning mountains, the exhausted tiger flops against a mossy snow-dusted boulder with one paw over his pounding heart, hugely relieved.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "Back home, the baby laughed and ate the sweet gotgam. And they say tigers never came down to that village again."
+          ],
+          "alt": "On the sunlit porch in the morning, the baby sits on the mother's lap happily chewing the sweet dried persimmon while the ox stands safe in the snowy yard and orange persimmon strings glow under the eaves.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    }
+  ]
+}
