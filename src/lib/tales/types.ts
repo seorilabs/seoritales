@@ -25,6 +25,8 @@ export type Tale = {
 	copyrightYear: string;
 	interiorPages: number;
 	status: string;
+	statusEbook: string | null;
+	statusPaperback: string | null;
 	liveDate: string | null;
 	/** 아직 출간되지 않았으면 null. 이 경우 구매 링크와 상품 페이지를 만들지 않는다. */
 	asinEbook: string | null;

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Seo from '$lib/seo/Seo.svelte';
 	import { breadcrumbSchema, storySchema } from '$lib/seo/jsonld';
-	import { ogImage } from '$lib/seo/urls';
+	import { metaDescription, ogImage } from '$lib/seo/urls';
 	import {
 		bookPath,
 		buyUrl,
@@ -11,6 +11,7 @@
 		showsBookExtras,
 		spreadPath,
 		storyPath,
+		taleBySlug,
 		tales,
 		visibleStory
 	} from '$lib/tales/data';
@@ -25,7 +26,7 @@
 	const inSelect = $derived(tale.kdpSelect.enrolled);
 	const spreads = $derived(visibleStory(tale));
 	const previews = $derived(new Set(tale.previewSpreads));
-	const others = $derived(tales.filter((other) => other.slug !== tale.slug).slice(0, 3));
+	const others = $derived(note.related.map((slug) => taleBySlug.get(slug)!));
 
 	// 템플릿에서 {#if} 로 감싸면 줄바꿈이 앞 단어에 붙어 "pageon" 이 된다. 문자열로 만든다.
 	const returnsOn = $derived(
@@ -33,14 +34,16 @@
 	);
 
 	const description = $derived(
-		inSelect
-			? `${tale.title} (${tale.koreanTitle}) — a classic Korean folktale for ages ${tale.ageRange}, with an opening extract, background and questions to ask.`
-			: `Read ${tale.title} (${tale.koreanTitle}) in full, free. A classic Korean folktale retold for ages ${tale.ageRange} — about ${readAloudMinutes(tale)} minutes to read aloud.`
+		metaDescription(
+			inSelect
+				? `${tale.title} (${tale.koreanTitle}) — a classic Korean folktale for ages ${tale.ageRange}, with an opening extract, background and questions to ask.`
+				: `Read ${tale.title} (${tale.koreanTitle}) in full, free. A classic Korean folktale retold for ages ${tale.ageRange} — about ${readAloudMinutes(tale)} minutes to read aloud.`
+		)
 	);
 </script>
 
 <Seo
-	title="{tale.title} — a Korean folktale to read aloud | Seori Tales"
+	title="{note.searchName ?? tale.title} — Read Aloud | Seori Tales"
 	{description}
 	{path}
 	type="article"
@@ -58,6 +61,9 @@
 
 <h1>{tale.title}</h1>
 <p class="lede">{tale.subtitle}</p>
+{#if note.searchName}
+	<p class="meta">Also known as {note.searchName}.</p>
+{/if}
 <p class="meta">
 	Original Korean title: {tale.koreanTitle} · Ages {tale.ageRange} · about
 	{readAloudMinutes(tale)} minutes to read aloud
@@ -103,8 +109,8 @@
 		{/if}
 		<p class="meta">
 			{tale.interiorPages} pages, full colour, ages {tale.ageRange}. Also on the
-			<a href={bookPath(tale)}>book page</a>. Meanwhile, every other story here is free to read in
-			full — <a href="/">see all seven</a>.
+			<a href={bookPath(tale)}>book page</a>. Meanwhile, explore more stories —
+			<a href="/">see all {tales.length} stories</a>.
 		</p>
 	</div>
 {:else if buy}
@@ -145,7 +151,7 @@
 		{/each}
 	</ul>
 	<p class="meta">
-		More of these, for all seven tales, in the
+		More questions for all {tales.length} stories in the
 		<a href="/for-parents-and-teachers/">parents and teachers guide</a>.
 	</p>
 </div>

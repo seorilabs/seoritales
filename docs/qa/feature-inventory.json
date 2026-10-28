@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"features": [
+		{
+			"id": "catalogue",
+			"core": true,
+			"paths": [
+				"src/routes/+page.svelte",
+				"src/routes/about/**",
+				"src/routes/for-parents-and-teachers/**",
+				"src/lib/tales/**"
+			]
+		},
+		{
+			"id": "stories",
+			"core": true,
+			"paths": ["src/routes/stories/**"]
+		},
+		{
+			"id": "books",
+			"core": true,
+			"paths": ["src/routes/books/**"]
+		},
+		{
+			"id": "seo",
+			"core": true,
+			"paths": [
+				"src/lib/seo/**",
+				"src/routes/sitemap.xml/**",
+				"src/routes/robots.txt/**",
+				"scripts/**"
+			]
+		}
+	]
+}

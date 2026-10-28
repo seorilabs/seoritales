@@ -1,6 +1,7 @@
 import { attributionUrls } from './attribution';
 import bundle from './tales.json';
 import type { Tale, TalesBundle } from './types';
+import { teachingNotes } from './teaching';
 
 const data = bundle as TalesBundle;
 
@@ -10,7 +11,19 @@ export const tales = data.books;
 export const taleBySlug = new Map(tales.map((tale) => [tale.slug, tale]));
 
 /** 실제로 아마존에 올라간 책만. 상품 페이지는 이것만 만든다. */
-export const liveTales = tales.filter((tale) => tale.asinEbook !== null);
+export const isPublished = (tale: Tale) =>
+	(tale.statusEbook === 'live' && Boolean(tale.asinEbook)) ||
+	(tale.statusPaperback === 'live' && Boolean(tale.asinPaperback));
+export const liveTales = tales.filter(isPublished);
+export const freeTales = tales.filter((tale) => !tale.kdpSelect.enrolled);
+
+for (const tale of tales) {
+	const note = teachingNotes[tale.slug];
+	if (!note) throw new Error(`teaching: ${tale.slug} 편집 원고가 없습니다`);
+	if (note.related.some((slug) => slug === tale.slug || !taleBySlug.has(slug))) {
+		throw new Error(`teaching: ${tale.slug} 관련 이야기 주소를 확인하세요`);
+	}
+}
 
 /**
  * KDP Select 등록 중에 공개할 수 있는 스프레드 수.
@@ -58,8 +71,18 @@ for (const [slug, url] of Object.entries(attributionUrls)) {
  * ASIN 자체가 없으면 null 이고, 호출부가 링크를 숨긴다.
  */
 export function buyUrl(tale: Tale): string | null {
-	if (!tale.asinEbook) return null;
-	return attributionUrls[tale.slug] ?? `https://www.amazon.com/dp/${tale.asinEbook}`;
+	return editionUrl(tale, 'ebook') ?? editionUrl(tale, 'paperback');
+}
+
+export function editionUrl(tale: Tale, format: 'ebook' | 'paperback'): string | null {
+	if (format === 'ebook') {
+		return tale.statusEbook === 'live' && tale.asinEbook
+			? (attributionUrls[tale.slug] ?? `https://www.amazon.com/dp/${tale.asinEbook}`)
+			: null;
+	}
+	return tale.statusPaperback === 'live' && tale.asinPaperback
+		? `https://www.amazon.com/dp/${tale.asinPaperback}`
+		: null;
 }
 
 export const storyPath = (tale: Tale) => `/stories/${tale.slug}/`;

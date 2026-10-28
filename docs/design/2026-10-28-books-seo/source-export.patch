@@ -1,0 +1,52 @@
+--- a/pipeline/export_web.py
++++ b/pipeline/export_web.py
+@@ -6,7 +6,7 @@
+ 
+ Usage: python3 pipeline/export_web.py [--out web]
+ Outputs:
+-  <out>/tales.json              all seven books, site-shaped
++  <out>/tales.json              all books, site-shaped
+   <out>/images/<slug>/cover.webp
+   <out>/images/<slug>/og.jpg         1200x630 share image
+   <out>/images/<slug>/spread-NN.webp preview art
+@@ -27,6 +27,8 @@
+     "05-kongjwi-patjwi": "콩쥐팥쥐",
+     "06-golden-axe": "금도끼 은도끼",
+     "07-tiger-and-persimmon": "호랑이와 곶감",
++    "08-goblins-and-hazelnut": "도깨비 방망이",
++    "09-granny-and-tiger": "팥죽 할머니와 호랑이",
+ }
+ 
+ # Preview spreads: opening, early-middle, middle. The last third is withheld so the
+@@ -131,6 +133,8 @@
+         "copyrightYear": meta["copyright_year"],
+         "interiorPages": kdp.get("paperback", {}).get("interior_pages"),
+         "status": dist.get("status"),
++        "statusEbook": dist.get("editions", {}).get("ebook", {}).get("status", dist.get("status") if clean(dist.get("asin_ebook")) else None),
++        "statusPaperback": dist.get("editions", {}).get("paperback", {}).get("status", dist.get("status") if clean(dist.get("asin_paperback")) else None),
+         "liveDate": clean(dist.get("kdp_live_date")),
+         "asinEbook": clean(dist.get("asin_ebook")),
+         "asinPaperback": clean(dist.get("asin_paperback")),
+@@ -173,7 +177,7 @@
+         b = export_book(d, args.out)
+         total += b.pop("_bytes")
+         books.append(b)
+-        flag = "" if b["asinEbook"] else "   <- ASIN missing, buy link cannot be built"
++        flag = "" if b["asinEbook"] or b["asinPaperback"] else "   <- no published edition ASIN"
+         print(f"  {b['number']}. {b['slug']:32} {b['asinEbook'] or '-':12}{flag}")
+     books.sort(key=lambda b: b["number"])
+ 
+@@ -194,11 +198,11 @@
+         json.dump(bundle, f, ensure_ascii=False, indent=2)
+         f.write("\n")
+ 
+-    missing = [b["number"] for b in books if not b["asinEbook"]]
++    missing = [b["number"] for b in books if not b["asinEbook"] and not b["asinPaperback"]]
+     print(f"\n{path}  ({os.path.getsize(path)/1024:.0f} KB)")
+     print(f"images: {total/1024/1024:.2f} MB")
+     if missing:
+-        print(f"ASIN missing for book(s): {', '.join(map(str, missing))}")
++        print(f"No edition ASIN for book(s): {', '.join(map(str, missing))}")
+ 
+ 
+ if __name__ == "__main__":

@@ -1,105 +1,77 @@
 # seoritales.com
 
-Seori Tales 그림책 시리즈의 마케팅·SEO 사이트. SvelteKit + `adapter-static` 정적 빌드,
-GitHub Pages 배포. 구조와 SEO 컴포넌트는 `seorilabs/seorilabs-official`의 패턴을 따른다.
+Seori Tales 그림책 시리즈의 영어 이야기와 도서 안내 사이트다. SvelteKit과
+`adapter-static`으로 빌드하고 GitHub Pages로 공개한다.
 
-## 왜 있는가
+## 콘텐츠와 출간 상태
 
-Seori Tales는 아마존 밖에서 검색에 전혀 잡히지 않는다. 미국 학부모·교사는 책 제목이 아니라
-`Korean folktales for kids` 같은 **읽을거리**를 검색한다. 그래서 이 사이트의 주력은 상품
-소개가 아니라 **이야기 전문 무료 공개**(`/stories/`)다.
+2026-10-28 KDP 조회 기준으로 이야기 9편과 출간된 책 소개 8권, 안내 페이지 3개를
+제공한다. 1~7권은 전자책과 종이책이 Live이며, 8권은 종이책만 Live다. 8권 전자책은
+Draft이며 9권은 아직 등록되지 않았다. KDP Live와 지역별 실제 구매 가능 여부는
+별도로 확인해야 한다. 사이트는 소매 재고나 가격을 단정하는 Offer를 생성하지 않는다.
 
-## 페이지 (14개)
+| 경로                         | 역할                                |
+| ---------------------------- | ----------------------------------- |
+| `/`                          | 전체 이야기 목록                    |
+| `/stories/<slug>/`           | 이야기, 문화 노트와 토론 질문       |
+| `/books/<slug>/`             | 출간된 판본 안내와 Amazon 상품 링크 |
+| `/for-parents-and-teachers/` | 주제와 읽기 시간별 안내, 토론 질문  |
+| `/about/`                    | 제작 방식과 연락처                  |
 
-| 경로                         | 역할                                          |
-| ---------------------------- | --------------------------------------------- |
-| `/`                          | 시리즈 허브                                   |
-| `/stories/<slug>/` × 7       | 이야기 전문 무료 공개. 검색 유입의 주력       |
-| `/books/<slug>/` × 7         | 상품 페이지. 구매 링크와 `Book` 구조화 데이터 |
-| `/for-parents-and-teachers/` | 주제·길이별 목록과 토론 질문                  |
-| `/about/`                    | 제작 방식과 연락처                            |
+이야기 페이지는 읽을거리, 책 페이지는 출간된 그림책 정보를 제공한다. 미출간 책의
+이야기도 제공하며 책 페이지와 구매 링크는 판형별 Live 상태와 ASIN이 있을 때만 만든다.
 
-`/stories/`(읽을거리)와 `/books/`(상품)를 나눈 이유는 검색 의도가 다르기 때문이다.
-한 페이지에 섞으면 어느 쪽으로도 명확히 랭킹되지 않는다.
+## 원본 가져오기
 
-## 콘텐츠는 어디서 오는가
-
-원본은 `Workspace/folktales` 저장소다. 이 레포는 **생성물만** 커밋한다.
-
-```bash
-# folktales 저장소에서
-python3 pipeline/export_web.py
-cp web/tales.json   ../seoritales/src/lib/tales/tales.json
-cp -R web/images/*  ../seoritales/static/images/
-```
-
-- `src/lib/tales/tales.json` — 7권의 메타데이터와 이야기 전문. **직접 수정하지 않는다.**
-- `static/images/<slug>/` — 표지 1장, 미리보기 스프레드 3장, OG 이미지 1장
-- `src/lib/tales/teaching.ts` — 이 사이트에서만 쓰는 편집 원고(주제·토론 질문). 유일한 예외
-
-## 명령
+원본은 `Workspace/folktales`의 `books/`와 `pipeline/export_web.py`다.
+`src/lib/tales/tales.json`은 생성물이므로 직접 편집하지 않는다.
 
 ```bash
-npm run dev      # 개발 서버
-npm run check    # svelte-check
-npm run build    # 정적 빌드 + postbuild 게이트
-npm run lint     # prettier 검사
-npm run format   # prettier 적용
+python3 ../folktales/pipeline/export_web.py --out /tmp/seoritales-web
+cp /tmp/seoritales-web/tales.json src/lib/tales/tales.json
+cp -R /tmp/seoritales-web/images/. static/images/
 ```
 
-`npm run build`는 `scripts/check-build.mjs`를 자동 실행한다. prerender 크롤러는 루트 상대
-링크만 따라가므로 canonical·og:image·sitemap이 404여도 빌드는 조용히 통과한다. 이 게이트가
-그 사각지대를 메운다 — `<html lang>`, canonical, og:image 실존, meta description 길이,
-sitemap의 `lastmod` 날짜 형식과 `loc` 실존을 검사한다.
+이야기가 추가되면 원본 exporter에 원전 제목을 등록하고 사이트의 `teaching.ts`에
+주제, 추천 이유, 질문과 관련 이야기를 추가한다. 원본 exporter 변경분은 승인 설계의
+`source-export.patch`에 기록했다. 생성 데이터에는 판형별 상태를 담는다.
 
-## 배포
+- `statusEbook`, `asinEbook`: 전자책 출간 상태와 상품 식별자.
+- `statusPaperback`, `asinPaperback`, `isbn13Paperback`: 종이책 정보.
+- `kdpSelect`: 전문 공개 여부를 판단하는 확인된 등록 상태.
 
-`main` push → `.github/workflows/deploy.yaml` → GitHub Pages.
-커스텀 도메인은 Settings → Pages에서 지정한다. GitHub Actions 배포이므로 `CNAME` 파일은 두지 않는다.
+1, 2권의 Select 미등록은 2026-10-27 확인 기록을 반영했다. 날짜만 보고 등록을
+해제하지 않는다. 등록 중인 책에는 기존 발췌 모드를 적용한다. 기존 1~4권 전자책의
+Amazon Attribution 링크는 보존하며, 그 외 판본은 일반 상품 링크를 사용한다.
 
-## 구매 링크와 Amazon Attribution
+## 검색 정보와 검증
 
-구매 링크는 `src/lib/tales/attribution.ts` 의 책별 Attribution URL 을 쓴다. 이게 있어야
-외부 유입 추적과 Brand Referral Bonus(참조 수수료 약 10% 환급)가 붙는다.
+사이트의 실제 주요 수정일은 `src/lib/seo/updates.json`에서 페이지별로 관리한다.
+출간일이나 빌드 시각을 수정일로 사용하지 않는다. 새 페이지를 추가하거나 본문,
+검색 정보, 주요 링크를 바꿀 때 해당 날짜를 함께 수정한다. 여러 페이지를 실제로
+같은 날 고쳤다면 날짜가 같아도 된다.
 
-값은 Amazon Ads 콘솔이 내려준 URL 을 **그대로** 둔다(캠페인 `seoritales-website`,
-ad group 은 책당 하나). 조립하지 않으므로 형식이 바뀌어도 다시 받아 붙이면 된다.
-비밀값이 아니라 사이트에 노출되는 공개 링크다.
+```bash
+npm run dev
+npm run check
+npm run build
+npm test
+npm run lint
+```
 
-링크가 엉뚱한 책을 가리키면 조용히 다른 책 매출로 집계되므로, `data.ts` 가 빌드 때
-slug 와 ASIN 일치를 확인하고 어긋나면 prerender 를 실패시킨다.
+`npm run build`는 정적 산출물을 검사하고 회귀 테스트를 실행한다. 검사는 canonical,
+제목, 설명, 본문 이미지와 내부 링크, JSON-LD의 판본 정보, 사이트맵의 누락과 실제
+수정일을 확인한다. `npm test`는 먼저 생성한 `build/`를 사용한다.
 
-새 ad group 을 만들려면 콘솔 > Campaign Manager > Measurement & Reporting >
-Amazon Attribution 에서 CSV 를 받아 `attribution.ts` 를 다시 만든다.
+작품의 전자책과 종이책은 `Book.workExample`으로 구분하고, 종이책 ISBN은 해당
+판본에만 표기한다. JSON-LD의 판본 정보와 화면에 보이는 Amazon 링크가 일치해야 한다.
 
-## KDP Select 와 본문 공개
+## 배포와 승인
 
-1·2권은 KDP Select(디지털 독점)에 등록돼 있다. KDP 공식 문구는 "you cannot distribute
-your book digitally anywhere else, including on your website" 이므로, 등록 기간에는
-본문을 전문 공개할 수 없다.
+`main` 병합 후 기존 `.github/workflows/deploy.yaml`이 GitHub Pages에 배포한다.
+코드 변경은 Ready PR과 로컬 코드 리뷰, 필수 검사를 거친다. 공개 후에는 변경 주소와
+본문, Amazon 링크, 사이트맵을 다시 읽어 확인한다.
 
-사이트는 `tales.json` 의 `kdpSelect.enrolled` 를 보고 자동으로 발췌 모드로 내려간다.
-
-- 본문은 1스프레드만 (`EXCERPT_SPREADS`, `src/lib/tales/data.ts`)
-- eBook 안에 든 문화 노트와 용어 풀이도 싣지 않는다
-- 대신 `teaching.ts` 의 자체 원고(주제·토론 질문)와 복귀 예정일을 보여준다
-
-등록이 끝나면 원본 `book.json` 의 `kdp_select` 를 `false` 로 바꾸고 export 를 다시
-돌리는 것만으로 전문이 돌아온다. 코드 수정은 필요 없다.
-
-| 권                               | Select | 만료       |
-| -------------------------------- | ------ | ---------- |
-| 1 The Sun and the Moon           | 등록됨 | 2026-10-04 |
-| 2 The Rabbit and the Dragon King | 등록됨 | 2026-10-05 |
-| 3 Heungbu and Nolbu              | 미등록 | —          |
-| 4 The Fairy and the Woodcutter   | 미등록 | —          |
-
-## 아직 남은 것
-
-- **1·2권 KDP Select 자동갱신을 끄지 않으면** 90일이 자동 연장되어 전문 공개가 계속 막힌다.
-  마감은 각각 2026-10-04, 2026-10-05.
-- 5~7권을 출간하면 Amazon Attribution 링크도 함께 만들어야 한다. `attribution.ts` 에
-  없는 책은 일반 상품 링크로 떨어져 유입 집계가 빠진다.
-- 5~7권(콩쥐팥쥐·금도끼·호랑이와 곶감)은 제작은 끝났지만 아직 업로드되지 않았다.
-  이야기 페이지는 있고 상품 페이지는 만들지 않는다. 업로드 후 `book.json` 에 ASIN 을
-  적고 export 를 다시 돌리면 상품 페이지가 생긴다.
+승인 설계와 L1 개발 환경 테스트 계획은 `docs/design/2026-10-28-books-seo/`에 있다.
+검색 유입과 순위의 변화는 별도 지표다. 이번 작업에서는 Search Console 지표를
+확인하지 않았으며 신규 분석 도구를 추가하지 않는다.

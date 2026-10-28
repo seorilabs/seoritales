@@ -13,10 +13,17 @@ export type TeachingNote = {
 	pick: string;
 	/** 읽고 나서 묻기 좋은 질문. 정답이 없는 것만 고른다. */
 	questions: string[];
+	related: string[];
+	searchName?: string;
 };
 
 export const teachingNotes: Record<string, TeachingNote> = {
 	'the-sun-and-the-moon': {
+		related: [
+			'granny-and-the-tiger',
+			'the-tiger-and-the-dried-persimmon',
+			'the-rabbit-and-the-dragon-king'
+		],
 		pick: "The one to start with. A tiger in a mother's clothes knocks at the door, and two children have to see through him — which is the oldest lesson in the book and still the most useful. It ends by putting them in the sky, so the fright resolves into something a child can point at the next evening.",
 		theme: 'Courage, looking after each other, and a "why" story about the sky',
 		questions: [
@@ -25,7 +32,8 @@ export const teachingNotes: Record<string, TeachingNote> = {
 		]
 	},
 	'the-rabbit-and-the-dragon-king': {
-		pick: 'The funniest of the seven, and the best for a child who likes being cleverer than the grown-ups. A turtle talks a rabbit into visiting an undersea palace without mentioning what the Dragon King wants with him. The rabbit gets out by lying beautifully, which children find deeply satisfying and adults may want to discuss afterwards.',
+		related: ['the-tiger-and-the-dried-persimmon', 'the-sun-and-the-moon', 'granny-and-the-tiger'],
+		pick: 'A funny choice, and the best for a child who likes being cleverer than the grown-ups. A turtle talks a rabbit into visiting an undersea palace without mentioning what the Dragon King wants with him. The rabbit gets out by lying beautifully, which children find deeply satisfying and adults may want to discuss afterwards.',
 		theme: 'Quick thinking — talking your way out of trouble',
 		questions: [
 			'The rabbit tells a story to save himself. Was he right to?',
@@ -33,6 +41,7 @@ export const teachingNotes: Record<string, TeachingNote> = {
 		]
 	},
 	'heungbu-and-nolbu': {
+		related: ['the-goblins-and-the-hazelnut', 'the-golden-axe', 'kongjwi-and-the-flower-shoe'],
 		pick: "Korea's great story about two brothers, and the one most likely to start an argument at bedtime. Heungbu mends a swallow's broken leg and is repaid; Nolbu breaks one on purpose to get the same reward. Children work out on their own why it does not go well for him.",
 		theme: 'Kindness and greed, and what each one grows into',
 		questions: [
@@ -41,6 +50,7 @@ export const teachingNotes: Record<string, TeachingNote> = {
 		]
 	},
 	'the-fairy-and-the-woodcutter': {
+		related: ['the-sun-and-the-moon', 'kongjwi-and-the-flower-shoe', 'the-golden-axe'],
 		pick: 'The longest and the saddest, better at six than at four. A lonely woodcutter hides a heavenly robe so its owner cannot leave, and years later has to decide whether to give it back. There is no villain in it, which is precisely what makes it stay with people.',
 		theme: 'Promises, longing, and choices that cannot be taken back',
 		questions: [
@@ -49,6 +59,8 @@ export const teachingNotes: Record<string, TeachingNote> = {
 		]
 	},
 	'kongjwi-and-the-flower-shoe': {
+		searchName: 'Kongjwi and Patjwi: Korean Cinderella',
+		related: ['heungbu-and-nolbu', 'granny-and-the-tiger', 'the-goblins-and-the-hazelnut'],
 		pick: "Korea's Cinderella, and the easiest entry point for a child who already knows the European one. The stepmother and the impossible chores are familiar; the black ox, the flock of sparrows and the kind toad who plugs a leaking jar are not. Good for asking how two countries told the same story differently.",
 		theme: "Korea's Cinderella — kindness returned by unlikely friends",
 		questions: [
@@ -57,7 +69,8 @@ export const teachingNotes: Record<string, TeachingNote> = {
 		]
 	},
 	'the-golden-axe': {
-		pick: 'The shortest and the most direct — an honest woodcutter, a lost axe, and a mountain spirit offering him a better one. It works on very young children because the choice is visible and the consequence is immediate. A greedy neighbour tries the same trick, which is where the real ending lives.',
+		related: ['the-goblins-and-the-hazelnut', 'heungbu-and-nolbu', 'kongjwi-and-the-flower-shoe'],
+		pick: 'Short and direct — an honest woodcutter, a lost axe, and a mountain spirit offering him a better one. It works on very young children because the choice is visible and the consequence is immediate. A greedy neighbour tries the same trick, which is where the real ending lives.',
 		theme: 'Honesty when lying would be easier',
 		questions: [
 			'The woodcutter tells the truth and loses nothing. Is that how it usually works?',
@@ -65,11 +78,40 @@ export const teachingNotes: Record<string, TeachingNote> = {
 		]
 	},
 	'the-tiger-and-the-dried-persimmon': {
+		related: [
+			'granny-and-the-tiger',
+			'the-rabbit-and-the-dragon-king',
+			'the-goblins-and-the-hazelnut'
+		],
 		pick: 'Pure comedy, and the best read-aloud of the lot. A tiger listens at a window while a mother fails to quiet her crying baby, then succeeds instantly by mentioning a dried persimmon — and the tiger concludes that a gotgam must be the most terrifying creature in Korea. Give the tiger a voice and this one runs itself.',
 		theme: 'A comic misunderstanding — and what fear is actually made of',
 		questions: [
 			'The tiger is frightened of a sweet. What made him so sure it was a monster?',
 			'Have you ever been scared of something that turned out to be small?'
+		]
+	},
+	'the-goblins-and-the-hazelnut': {
+		searchName: 'The Goblins and the Hazelnut: Dokkaebi Bangmangi',
+		related: ['heungbu-and-nolbu', 'the-golden-axe', 'granny-and-the-tiger'],
+		pick: 'Choose this one for a child who likes joining in. Count the hazelnuts for the family, shout the magic words with the tokkaebi, then make one loud CRACK. A generous boy and a greedy neighbour try the same trick, with very different results.',
+		theme: 'Sharing, greed, and thinking of others first',
+		questions: [
+			'The boy saves hazelnuts for his family before eating his own. Who would you save one for?',
+			'The neighbour copies the boy but gets no magic club. What was different about his plan?'
+		]
+	},
+	'granny-and-the-tiger': {
+		searchName: 'Granny and the Tiger: The Red-Bean Porridge Granny',
+		related: [
+			'the-sun-and-the-moon',
+			'the-tiger-and-the-dried-persimmon',
+			'kongjwi-and-the-flower-shoe'
+		],
+		pick: 'A winter story for children who enjoy a noisy team effort. Seven small helpers take turns asking for porridge, then work together to send a much bigger tiger away. Let each listener play a helper and join in with the sounds.',
+		theme: 'Small friends, sharing, and standing together',
+		questions: [
+			'Granny shares her porridge while she is frightened. Why do you think she does that?',
+			'Could one helper have stopped the tiger alone? What changes when they work together?'
 		]
 	}
 };

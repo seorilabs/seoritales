@@ -10,7 +10,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
-		"postbuild": "node scripts/check-build.mjs"
+		"postbuild": "node scripts/check-build.mjs && npm test",
+		"test": "node --test scripts/*.test.mjs"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",
