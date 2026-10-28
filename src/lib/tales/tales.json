@@ -20,13 +20,15 @@
       "copyrightYear": "2026",
       "interiorPages": 24,
       "status": "live",
+      "statusEbook": "live",
+      "statusPaperback": "live",
       "liveDate": "2026-07-06",
       "asinEbook": "B0H7QQ9KZT",
       "asinPaperback": "B0H7QQ7Y1P",
       "isbn13Paperback": "9798185514122",
       "kdpSelect": {
-        "enrolled": true,
-        "termEnds": "2026-10-04"
+        "enrolled": false,
+        "termEnds": null
       },
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>When a hungry tiger follows Mother home over the hills, a brave big sister and her giggly little brother must outwit him — up a tall tree, past a trick and a giggle, all the way to a rope let down from the sky.</p><p>This warm, dramatic retelling of one of Korea's most beloved folktales explains how the sun and the moon came to be — and why, even now, you can't look straight at the sun.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — a short “About This Story” note on rice cakes, sorghum, and the folktale tradition</li><li><b>Perfect for ages 4–8</b> — bedtime, story time, or a quiet afternoon together</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who love stories from around the world.</p><p><b>Book 1 of Seori Tales — Korean Folktales for Children.</b></p>",
@@ -216,13 +218,15 @@
       "copyrightYear": "2026",
       "interiorPages": 24,
       "status": "live",
+      "statusEbook": "live",
+      "statusPaperback": "live",
       "liveDate": "2026-07-07",
       "asinEbook": "B0H7HC9CH1",
       "asinPaperback": "B0H7XRRSZ5",
       "isbn13Paperback": "9798186004301",
       "kdpSelect": {
-        "enrolled": true,
-        "termEnds": "2026-10-05"
+        "enrolled": false,
+        "termEnds": null
       },
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>The Dragon King of the East Sea is sick, and only one medicine can help — a rabbit's liver! So the loyal Turtle paddles all the way to the green mountains to fetch the cleverest rabbit of all... who is about to need every bit of his cleverness to hop his way home again.</p><p>This warm, funny retelling of one of Korea's best-loved folktales is a trickster tale where quick wits save the small — and a faithful heart is rewarded too.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art — from a shimmering palace under the sea to a moonlit mountaintop</li><li><b>A gentle window into Korea</b> — an “About This Story” note introducing the Dragon Palace, pansori story-singing, and wild mountain ginseng</li><li><b>Perfect for ages 4–8</b> — bedtime, story time, or a quiet afternoon together</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who love stories from around the world.</p><p><b>Book 2 of Seori Tales — Korean Folktales for Children.</b></p>",
@@ -421,6 +425,8 @@
       "copyrightYear": "2026",
       "interiorPages": 24,
       "status": "live",
+      "statusEbook": "live",
+      "statusPaperback": "live",
       "liveDate": "2026-07-08",
       "asinEbook": "B0H82MZZWY",
       "asinPaperback": "B0H827WVV7",
@@ -631,6 +637,8 @@
       "copyrightYear": "2026",
       "interiorPages": 24,
       "status": "live",
+      "statusEbook": "live",
+      "statusPaperback": "live",
       "liveDate": "2026-07-08",
       "asinEbook": "B0H68ZCNDJ",
       "asinPaperback": "B0H84B4VR1",
@@ -847,18 +855,20 @@
       "language": "en",
       "copyrightYear": "2026",
       "interiorPages": 24,
-      "status": "ship_ready_not_uploaded",
-      "liveDate": null,
-      "asinEbook": null,
-      "asinPaperback": null,
-      "isbn13Paperback": null,
+      "status": "live",
+      "statusEbook": "live",
+      "statusPaperback": "live",
+      "liveDate": "2026-10-23",
+      "asinEbook": "B0HNYKXK3H",
+      "asinPaperback": "B0HP11GQ16",
+      "isbn13Paperback": "9798164542320",
       "kdpSelect": {
         "enrolled": false,
         "termEnds": null
       },
       "priceEbookUsd": 3.99,
-      "descriptionHtml": "<p>Under a plum tree in old Korea lives Kongjwi, a girl who is kind to every living thing. But when a cold new stepmother fills her days with impossible chores — a stony field, a wooden hoe, a jar that will not fill — kindness comes back in wonderful ways: a great black ox plows the field, a fat old toad plugs the leaky jar, and a thousand sparrows swoop down to help.</p><p>Then a sky maiden brings a gift — a beautiful hanbok and two little flower shoes — and Kongjwi runs to the great festival at last. But hopping across the stream... oh! One little shoe floats away, straight toward the magistrate's parade. Whose shoe is this? Korea's own Cinderella, told long before glass slippers — and it ends not with a punishment, but with the kindest feast of all.</p><ul><li><b>Read-aloud English</b> — a CRACK to gasp at, a shoe-hop to giggle at, and a refrain of kindness, written to sound lovely out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on flower shoes, onggi jars, and how older tellings end</li><li><b>Perfect for ages 4–8</b> — a fairy-tale plot children already love, in a world that is new</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who collect Cinderella stories from around the world.</p><p><b>Book 5 of Seori Tales — Korean Folktales for Children.</b></p>",
-      "backBlurb": "Under a plum tree in old Korea lives Kongjwi, a girl who is kind to every living thing. But when a cold new stepmother fills her days with impossible chores, kindness comes back in wonderful ways — a great black ox plows the stony field, a fat old toad plugs the leaky jar, and a thousand sparrows come down to help. Then a sky maiden brings a gift: two little flower shoes... and one of them is about to float away and change everything. Korea's own Cinderella, told with warmth, humor, and one glowing flower shoe — a story about how kindness, shared, only grows.",
+      "descriptionHtml": "<p>Under a plum tree in old Korea lives Kongjwi, a girl who is kind to every living thing. But when a cold new stepmother fills her days with impossible chores — a stony field, a wooden hoe, a jar that will not fill — kindness comes back in wonderful ways: a great black ox plows the field, a fat old toad plugs the leaky jar, and hundreds of sparrows swoop down to help.</p><p>Then a sky maiden brings a gift — a beautiful hanbok and two little flower shoes — and Kongjwi runs to the great festival at last. But hopping across the stream... oh! One little shoe floats away, straight toward the magistrate's parade. Whose shoe is this? A Korean Cinderella story with flower shoes — and it ends not with a punishment, but with the kindest feast of all.</p><ul><li><b>Read-aloud English</b> — a CRACK to gasp at, a shoe-hop to giggle at, and a refrain of kindness, written to sound lovely out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on flower shoes, onggi jars, and how older tellings end</li><li><b>Perfect for ages 4–8</b> — a fairy-tale plot children already love, in a world that is new</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who collect Cinderella stories from around the world.</p><p><b>Book 5 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "Under a plum tree in old Korea lives Kongjwi, a girl who is kind to every living thing. But when a cold new stepmother fills her days with impossible chores, kindness comes back in wonderful ways — a great black ox plows the stony field, a fat old toad plugs the leaky jar, and hundreds of sparrows come down to help. Then a sky maiden brings a gift: two little flower shoes... and one of them is about to float away and change everything. Korea's own Cinderella, told with warmth, humor, and one glowing flower shoe — a story about how kindness, shared, only grows.",
       "keywords": [
         "bedtime stories ages 4-8",
         "read aloud picture book preschool",
@@ -888,7 +898,7 @@
         "heading": "About This Story",
         "body": [
           "Kongjwi and Patjwi (say KONG-jwee and PAHT-jwee) is one of Korea's best-loved folktales — often called Korea's Cinderella, told with flower shoes instead of glass slippers. Kongjwi's name means \"bean,\" and Patjwi's means \"red bean.\"",
-          "Instead of a fairy godmother, Kongjwi is helped by friends she was kind to first: a black ox, a toad who plugs the leaky jar, and a cloud of sparrows.",
+          "Kongjwi receives help from a black ox, a toad, a cloud of sparrows, and a sky maiden.",
           "Her flower shoes (kkotsin) are traditional Korean silk shoes with upturned toes and flower embroidery — worn on the happiest days.",
           "The big brown jar is an onggi, an earthenware jar Korean families still use.",
           "In older tellings the story goes on much longer, and Patjwi's tricks are punished harshly. In our telling, Kongjwi does what she has done all along — she is kind first, and shares her feast with everyone.",
@@ -941,8 +951,8 @@
           "text": [
             "\"Never fear, Kongjwi!\" croaked a friendly voice. A fat old toad sat down on the hole inside the jar — and up rose the water, right to the top!"
           ],
-          "alt": "Under the first stars a golden-brown toad grins from the rim of the brimming jar as Kongjwi laughs and pours sparkling water in the lamplight.",
-          "spread": "spread-06"
+          "alt": "In a storybook cutaway of the brown jar, one golden-brown toad plugs the leak inside while water rises. Kongjwi smiles beside it in the lamplight.",
+          "spread": "spread-06-publication-20261023"
         },
         {
           "id": "p07",
@@ -998,7 +1008,7 @@
             "Then Kongjwi stepped quietly forward — and the flower shoe slipped onto her foot like a blossom coming home. And from her sleeve, she drew its twin."
           ],
           "alt": "Kongjwi sits on the festival bench with one glowing flower shoe fitting perfectly on her foot as she raises its twin from her sleeve, the magistrate and crowd lit with wonder.",
-          "spread": "spread-13"
+          "spread": "spread-13-publication-20261023"
         },
         {
           "id": "p14",
@@ -1027,11 +1037,13 @@
       "language": "en",
       "copyrightYear": "2026",
       "interiorPages": 24,
-      "status": "ship_ready_not_uploaded",
+      "status": "live",
+      "statusEbook": "live",
+      "statusPaperback": "live",
       "liveDate": null,
-      "asinEbook": null,
-      "asinPaperback": null,
-      "isbn13Paperback": null,
+      "asinEbook": "B0HCGLWYB3",
+      "asinPaperback": "B0HP19CYLP",
+      "isbn13Paperback": "9798164550387",
       "kdpSelect": {
         "enrolled": false,
         "termEnds": null
@@ -1051,7 +1063,7 @@
       "categories": [
         "Children's eBooks > Fairy Tales, Folk Tales & Myths",
         "Children's eBooks > Geography & Cultures > Multicultural Stories",
-        "Children's eBooks > Growing Up & Facts of Life > Values"
+        "Children's eBooks > Growing Up & Facts of Life > Friendship, Social Skills & School Life > Manners > Fiction"
       ],
       "glossaryHeading": "Korean Words in This Story",
       "glossary": [
@@ -1066,7 +1078,7 @@
       "cultureNote": {
         "heading": "About This Story",
         "body": [
-          "The Golden Axe (say GEUM-do-kki EUN-do-kki, which means \"gold axe, silver axe\") is one of Korea's best-loved folktales, told to children for hundreds of years to teach the value of honesty.",
+          "The Golden Axe is a Korean folktale about honesty. Its Korean name, geumdokki eundokki (say GEUM-doh-kkee EUN-doh-kkee), means \"gold axe, silver axe.\"",
           "The woodcutter is a namukkun, a person who gathered firewood in the mountains and carried it home on a wooden A-frame called a jige. For a poor woodcutter, his axe was his whole living — that is why losing it mattered so much.",
           "The kind spirit of the pond is a sansillyeong, a mountain spirit who watches over the mountain, its animals, and its water. In Korean tales he is wise and fair, rewarding good hearts.",
           "Many other countries tell a cousin of this tale — in one old telling, a river god tests a woodman in the very same way.",
@@ -1089,7 +1101,7 @@
             "Every morning he climbed the mountain with his old iron axe, singing all the way. He cut firewood beside a deep, quiet pond."
           ],
           "alt": "The woodcutter climbs a green pine-mountain trail singing, a firewood-loaded jige on his back and his iron axe in hand, above a clear deep blue-green pond.",
-          "spread": "spread-02"
+          "spread": "spread-02-publication-20261023"
         },
         {
           "id": "p03",
@@ -1097,7 +1109,7 @@
             "One day, as he swung at a tall pine — WHOOSH! — the axe flew from his hands and splashed deep into the pond."
           ],
           "alt": "Beside the pond the woodcutter's iron axe flies out of his hands mid-swing and splashes into the deep water, ripple rings spreading across the surface.",
-          "spread": "spread-03"
+          "spread": "spread-03-publication-20261023"
         },
         {
           "id": "p04",
@@ -1150,7 +1162,7 @@
         {
           "id": "p10",
           "text": [
-            "The woodcutter carried the axes home and shared them with his neighbors. Soon everyone in the village loved him."
+            "The woodcutter carried the axes home. Now he could help his mother and his neighbors, too."
           ],
           "alt": "The woodcutter walks home into his village with the three axes on his jige, warmly greeted by his old mother and cheerful villagers as he shares grain and coins.",
           "spread": "spread-10"
@@ -1182,7 +1194,7 @@
         {
           "id": "p14",
           "text": [
-            "The Spirit sank away with the golden axe. But the honest woodcutter chopped wood happily ever after. Truth is worth more than gold."
+            "The Spirit sank away with the golden axe. The greedy neighbor went home empty-handed. The honest woodcutter worked happily. Truth is worth more than gold."
           ],
           "alt": "Back home at golden hour the honest woodcutter happily splits firewood with his plain old iron axe on a chopping block while his old mother and two village children smile nearby.",
           "spread": "spread-14"
@@ -1206,17 +1218,19 @@
       "language": "en",
       "copyrightYear": "2026",
       "interiorPages": 24,
-      "status": "ship_ready_not_uploaded",
+      "status": "live",
+      "statusEbook": "live",
+      "statusPaperback": "live",
       "liveDate": null,
-      "asinEbook": null,
-      "asinPaperback": null,
-      "isbn13Paperback": null,
+      "asinEbook": "B0H68V5V32",
+      "asinPaperback": "B0HPGN5YPV",
+      "isbn13Paperback": "9798165776960",
       "kdpSelect": {
         "enrolled": false,
         "termEnds": null
       },
       "priceEbookUsd": 3.99,
-      "descriptionHtml": "<p>The biggest, hungriest tiger in the mountains has never been afraid of anything — until tonight. Creeping into a snowy village, he hears a mother hush her crying baby: \"A tiger is coming!\" The baby keeps crying. But one little word — <b>gotgam!</b> — and the crying stops at ONCE.</p><p>The tiger goes pale under his stripes. <i>What is a gotgam? It must be the most terrible monster in all of Korea!</i> He doesn't know it's just a sweet dried persimmon... and when a sneaky ox thief climbs onto his back in the dark barn, the wildest, funniest ride in Korean folklore begins.</p><ul><li><b>Read-aloud English</b> — a barn that's \"dark, dark, dark\" to chant along, a THUMP! to shout, and the giggle-guaranteed cry of \"The gotgam has GOT me!\"</li><li><b>Rich illustrations</b> in a warm painterly style with the bold spirit of Korean <i>minhwa</i> folk art — starring the silliest, most lovable tiger in the mountains</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on how families dry persimmons under the eaves in winter, and why the tiger is the great star of Korean tales</li><li><b>Perfect for ages 4–8</b> — big laughs, zero real danger: every \"monster\" turns out to be a misunderstanding, and the ending is pure warmth</li></ul><p>A wonderful gift for giggly bedtimes, multicultural classrooms, and every child who is a little scared of the dark.</p><p><b>Book 7 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "descriptionHtml": "<p>The biggest, hungriest tiger in the mountains has never been afraid of anything — until tonight. Creeping into a snowy village, he hears a mother hush her crying baby: \"A tiger is coming!\" The baby keeps crying. But one little word — <b>gotgam!</b> — and the crying stops at ONCE.</p><p>The tiger goes pale under his stripes. <i>What is a gotgam? It must be the most terrible monster in all of Korea!</i> He doesn't know it's just a sweet dried persimmon... and when a sneaky ox thief climbs onto his back in the dark barn, the wildest, funniest ride in Korean folklore begins.</p><ul><li><b>Read-aloud English</b> — a barn that's \"dark, dark, dark\" to chant along, a THUMP! to shout, and the playful cry of \"The gotgam has GOT me!\"</li><li><b>Rich illustrations</b> in a warm painterly style with the bold spirit of Korean <i>minhwa</i> folk art — starring the silliest, most lovable tiger in the mountains</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on how families dry persimmons under the eaves in winter, and why the tiger is the great star of Korean tales</li><li><b>Perfect for ages 4–8</b> — big laughs, zero real danger: every \"monster\" turns out to be a misunderstanding, and the ending is pure warmth</li></ul><p>A wonderful gift for giggly bedtimes, multicultural classrooms, and every child who is a little scared of the dark.</p><p><b>Book 7 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "On a cold winter night, the biggest, hungriest tiger in the mountains creeps into a sleepy village — and hears a mother hush her crying baby with one little word: gotgam! The baby stops crying at ONCE. \"What is a gotgam?\" the tiger trembles. \"It must be the scariest beast in all of Korea!\" Then a sneaky ox thief climbs onto the tiger's back in the dark, and the wildest, funniest ride in Korean folklore begins. A beloved Korean folktale about fear, mix-ups, and one very sweet surprise — perfect for reading aloud, again and again.",
       "keywords": [
         "bedtime stories ages 4-8",
@@ -1245,7 +1259,7 @@
       "cultureNote": {
         "heading": "About This Story",
         "body": [
-          "The Tiger and the Dried Persimmon (say ho-rang-i-wa GOT-gahm) is one of Korea's favorite funny folktales, told for hundreds of years — the story of the fiercest animal in the land defeated by a sweet.",
+          "The Tiger and the Dried Persimmon is a funny Korean folktale about a fierce tiger who mistakes a sweet for something terrifying.",
           "A gotgam is a dried persimmon, Korea's beloved winter treat. In late autumn, families peel ripe persimmons and hang them in rows under the eaves. Over the cold weeks they turn soft, chewy, and honey-sweet, with a fine white dusting of natural sugar.",
           "In Korean folktales the tiger is the biggest star of all — sometimes fearsome, often fooled. Many old stories even begin, \"long, long ago, back when tigers smoked pipes.\" A tiger who runs from a snack fits him perfectly.",
           "Korean parents once hushed crying children just as the mother does here — and the joke is that the tiger, listening through the wall, thinks a gotgam must be a monster even scarier than he is. The scariest things, the tale winks, are the ones we have never seen.",
@@ -1288,7 +1302,7 @@
         {
           "id": "p05",
           "text": [
-            "\"Look, a gotgam!\" said the mother — a sweet dried persimmon treat. Right away, the baby stopped crying."
+            "\"Look, a gotgam!\" said the mother, holding up a sweet dried persimmon. Right away, the baby stopped crying."
           ],
           "alt": "The mother holds up a small orange dried persimmon on a string as her baby beams and reaches for it, while the tiger's shadow on the paper door leans in to listen.",
           "spread": "spread-05"
@@ -1363,6 +1377,366 @@
             "Back home, the baby laughed and ate the sweet gotgam. And they say tigers never came down to that village again."
           ],
           "alt": "On the sunlit porch in the morning, the baby sits on the mother's lap happily chewing the sweet dried persimmon while the ox stands safe in the snowy yard and orange persimmon strings glow under the eaves.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "the-goblins-and-the-hazelnut",
+      "sourceDir": "08-goblins-and-hazelnut",
+      "number": 8,
+      "title": "The Goblins and the Hazelnut",
+      "subtitle": "A Korean Folktale of Tokkaebi, Gold, and a Magic Club",
+      "koreanTitle": "도깨비 방망이",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "partially_live",
+      "statusEbook": "draft",
+      "statusPaperback": "live",
+      "liveDate": null,
+      "asinEbook": null,
+      "asinPaperback": "B0HPGCKDQ3",
+      "isbn13Paperback": "9798165777622",
+      "kdpSelect": {
+        "enrolled": false,
+        "termEnds": null
+      },
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>Up on the mountain, a kind boy finds four hazelnuts and counts them the way he always does: one for Father, one for Mother, one for Little Sister… and one for me. But when night falls and he hides on the beam of an old empty house, five <b>tokkaebi</b>, Korea's wild and wonderful goblins, burst through the door. They bang their magic clubs on the floor: <i>\"Gold, come out — ttuk-ttak!\"</i></p><p>The boy is SO hungry. He bites down on his one hazelnut. CRACK! \"The house is falling down!\" yell the goblins, and they run so fast they leave a magic club behind… until the greedy man next door tries the very same trick.</p><ul><li><b>Read-aloud English</b> with a counting refrain kids say along with you, a spell to shout (\"ttuk-ttak!\"), and a CRACK that makes everyone jump</li><li><b>Rich illustrations</b> in a warm painterly style with the bold spirit of Korean <i>minhwa</i> folk art, starring friendly blue and red goblins and their floating blue tokkaebi-fire</li><li><b>A gentle window into Korea</b>: an \"About This Story\" note on tokkaebi, their magic clubs, and the full-moon custom of cracking nuts for a healthy year</li><li><b>Perfect for ages 4–8</b>: spooky-fun but never scary, no one gets hurt, and the ending turns a greedy neighbor into one more friend at the table</li></ul><p>A wonderful gift for bedtime, multicultural classrooms, and every child learning to save a share for someone else.</p><p><b>Book 8 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "Up on the mountain, a kind boy finds four hazelnuts — one for Father, one for Mother, one for Little Sister, and one for himself. But that night, in an old empty house, five tokkaebi burst in. These wild, wonderful Korean goblins bang their magic clubs on the floor: \"Gold, come out — ttuk-ttak!\" Then one loud CRACK of a hazelnut sends them running... and leaves a magic club behind. Now the greedy man next door wants one too! A warm, funny retelling of a beloved Korean folktale about thinking of others first — perfect for reading aloud, again and again.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "dokkaebi friendly monster books",
+        "not too scary halloween books for kids",
+        "books about sharing and kindness",
+        "moral lesson books for kids"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Science Fiction, Fantasy & Scary Stories > Fantasy & Magic"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Tokkaebi — Korea's wild, playful goblins (also spelled dokkaebi). They love tricks, dancing, and buckwheat jelly.",
+        "Bangmangi — a tokkaebi's magic club. Knock it and say what you wish for!",
+        "Ttuk-ttak — the sound of a quick knock. Koreans say it for anything done in a snap.",
+        "Gaeam — a wild Korean hazelnut, small, round, and brown.",
+        "Jige — a wooden A-frame carrier, worn on the back for firewood.",
+        "Daeboreum — the first full moon of the lunar year, when families crack nuts with their teeth for strong teeth and a healthy year.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "The Goblins and the Hazelnut retells a Korean folktale called Dokkaebi Bangmangi, \"the goblin's magic club.\"",
+          "Tokkaebi (also spelled dokkaebi) are Korea's goblins. They are not devils but wild, noisy tricksters who can bring good luck or trouble. In old stories they love wrestling, dancing, and buckwheat jelly, and people said tokkaebi-fire, little blue lights, drifted over dark fields at night.",
+          "A tokkaebi's bangmangi, or magic club, knocks out whatever its holder wishes for. Ttuk-ttak is the sound of the knock, and Koreans still say it for anything done quickly and easily.",
+          "Wild hazelnuts ripen on Korean hillsides in late summer and early autumn. On Daeboreum, the first full moon of the lunar year, many families still crack hard nuts with their teeth, wishing for strong teeth and a healthy year.",
+          "In older tellings the greedy man gets a good thumping. In ours, the tokkaebi make him dance instead."
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "Long ago, a kind boy lived by a mountain with his father, mother, and little sister. They had very little, but they shared everything."
+          ],
+          "alt": "On a golden autumn morning, a family of four stands at the twig gate of a small thatched house, each holding a piece of sweet potato; the boy wears a wooden carrier on his back.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "Up on the mountain, the boy found hazelnuts. He counted, \"One for Father, one for Mother, one for Little Sister… and one for me.\""
+          ],
+          "alt": "On a sunny hillside, the boy in a red headband kneels beneath a hazel bush and counts four small brown hazelnuts in his palm, his carrier of sticks beside him.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "But the sun slid down, and the path grew dark. The boy found an old, empty house and climbed onto a big wooden beam under the roof."
+          ],
+          "alt": "Inside an old empty house at dusk, the boy sleeps stretched along a thick wooden beam high under the roof, his carrier hanging nearby, as violet light slants through the torn paper door.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "At midnight — THUMP, THUMP! In burst five tokkaebi, Korea's wild, wonderful goblins. They carried big, bumpy wooden clubs."
+          ],
+          "alt": "At midnight, five grinning blue and red goblins with wooden clubs burst through the door, lit by floating blue-green flames, while the boy on the beam above claps his hands over his mouth.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "They banged their clubs on the floor. \"Gold, come out — ttuk-ttak!\" Out tumbled gold! \"Silver, come out — ttuk-ttak!\" Out rolled silver!"
+          ],
+          "alt": "The goblins sit in a circle on the floor as the biggest blue goblin knocks his club down and gold coins burst out in a shower of sparkles, while the boy peeks over the beam above.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "\"Rice cakes and meat, come out — ttuk-ttak!\" The tokkaebi ate and danced. Up on the beam, the boy's tummy rumbled."
+          ],
+          "alt": "The goblins feast at low tables piled with rice, rice cakes, meat skewers, and persimmons; two dance and one plays a drum perched on a big jar, while the hungry boy on the beam clutches his tummy.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "He saved the nuts for his family. \"Just the one for me,\" he whispered, and he bit down hard. CRACK!"
+          ],
+          "alt": "Up on the beam, the boy squeezes his eyes shut and bites down hard on a hazelnut, as two goblins far below stop dancing and look up.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "\"The beam is breaking! The house is falling down!\" yelled the tokkaebi. They ran so fast, they left a club behind."
+          ],
+          "alt": "The goblins run out of the open door into the night, arms flailing, leaving one wooden club glowing on the floor, as the boy peeks down from the beam.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "The tokkaebi never came back, so the boy took the club home. \"Rice, come out — ttuk-ttak!\" Out poured more rice than his family could eat."
+          ],
+          "alt": "In the sunny yard, the boy holds up the magic club and white rice pours from it into baskets and a pot, while his family cheers and his little sister jumps for joy.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "The boy shared the rice with every hungry family. But the rich, greedy man next door heard all about it. \"I want a magic club too!\""
+          ],
+          "alt": "In the village lane, the boy and his little sister hand out rice to their neighbors, while the greedy rich man in a teal silk coat peers over his wall with a scowl.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "The greedy man grabbed hazelnuts. \"One for me, one for me, and ALL the rest for ME!\" That night, he climbed onto the same beam."
+          ],
+          "alt": "On the hillside, the greedy man shakes a hazel branch and stuffs the nuts into a bulging sack, cheeks full, as the old empty house waits up the slope.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "When the tokkaebi began their feast, the greedy man bit down on a hazelnut as hard as he could. CRACK! But this time, nobody ran."
+          ],
+          "alt": "The greedy man, squeezed onto the beam, bites a hazelnut with a loud crack, and below him five goblins look up at him, not scared at all.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "\"That crack again? It was a trick! You came for our club!\" So the tokkaebi made him dance, ttuk-ttak, all night long."
+          ],
+          "alt": "The tired greedy man, sweating, is made to dance among grinning goblins who tap their clubs on the floor to keep the beat, his empty sack dropped nearby.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "At sunrise, the greedy man wobbled home with an empty sack and tired feet. The kind boy held out a bowl of rice. \"And one for you, too.\""
+          ],
+          "alt": "At sunrise by the family's gate, the kind boy holds out a steaming bowl of rice to the barefoot greedy man, who carries his shoes and an empty sack, while the family smiles behind.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "granny-and-the-tiger",
+      "sourceDir": "09-granny-and-tiger",
+      "number": 9,
+      "title": "Granny and the Tiger",
+      "subtitle": "A Korean Folktale of Red-Bean Porridge and Seven Little Helpers",
+      "koreanTitle": "팥죽 할머니와 호랑이",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "blocked_weekly_quota",
+      "statusEbook": "blocked_weekly_quota",
+      "statusPaperback": "blocked_weekly_quota",
+      "liveDate": null,
+      "asinEbook": null,
+      "asinPaperback": null,
+      "isbn13Paperback": null,
+      "kdpSelect": {
+        "enrolled": false,
+        "termEnds": null
+      },
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p>All summer long, a little old granny pulls weeds in her red-bean field, until a big striped tiger jumps out of the bushes: <i>\"Granny, I am going to eat you up!\"</i> Quick as a wink, Granny makes a deal. Let her harvest her beans and cook red-bean porridge first. Come back on the longest night of winter.</p><p>When that snowy night arrives, Granny cries into her porridge pot, and one by one, seven surprising helpers come to the door: a chestnut, a turtle, an awl, a millstone, a straw mat, a wooden carrier… and yes, some dog poop! Each one gets a bowl of porridge. Each one hides. And then the tiger comes creeping in. POP! SNAP! SQUISH! BONK! SPLASH!</p><ul><li><b>Read-aloud English</b> with a call-and-response refrain (\"Granny, Granny, why are you crying?\") and a sound for every helper that kids shout along with you</li><li><b>Rich illustrations</b> in a warm painterly style with the bold spirit of Korean <i>minhwa</i> folk art, starring the series' striped folk-art tiger and seven funny little helpers</li><li><b>A gentle window into Korea</b>: an \"About This Story\" note on Dongji, the winter solstice, and the red-bean porridge Korean families still share on the longest night of the year</li><li><b>Perfect for ages 4–8</b>: slapstick, not scary; the tiger never touches Granny and simply floats far away, and the story ends with friends sharing porridge at sunrise</li></ul><p>A wonderful winter gift for bedtime, multicultural classrooms, and every grandma who knows that small friends can do big things together.</p><p><b>Book 9 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "All summer long, a little old granny pulls weeds in her red-bean field, until a big striped tiger jumps out of the bushes. \"I am going to eat you up!\" Quick as a wink, Granny makes a deal: come back on the longest night of winter. When that snowy night arrives, Granny cries into her porridge pot... and one by one, seven surprising helpers come to the door: a chestnut, a turtle, an awl, a millstone, a straw mat, a wooden carrier, and yes, some dog poop! A funny, warm retelling of a beloved Korean folktale about sharing what you have, perfect for reading aloud again and again.",
+      "keywords": [
+        "bedtime stories ages 4-8",
+        "read aloud picture book preschool",
+        "asian american books for kids",
+        "winter solstice books for kids",
+        "books about grandmas for kids",
+        "funny poop books for kids",
+        "teamwork and friendship books for kids"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Growing Up & Facts of Life > Family Life > Grandparents"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Halmeoni — grandma. Korean children call their grandmothers halmeoni.",
+        "Horangi — the Korean word for tiger, the star of many old Korean tales.",
+        "Patjuk — thick, warm red-bean porridge, cooked on the longest night of winter.",
+        "Dongji — the winter solstice, the longest night of the year.",
+        "Saealsim — small, chewy rice balls in the porridge, as small as a bird's egg.",
+        "Meongseok — a big woven straw mat, spread in the yard to dry grain.",
+        "Jige — a wooden A-frame carrier that farmers wore on their backs.",
+        "Say them out loud together!"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "Granny and the Tiger retells a Korean folktale called Patjuk Halmeomgwa Horangi, \"the red-bean porridge granny and the tiger.\" Every helper in our story, even the dog poop, comes from the old tale.",
+          "Dongji, the winter solstice, is the longest night of the year, on December 21 or 22. Koreans once called it \"Little New Year,\" and some called it the night the tiger gets married. On this day families cook patjuk, a thick red-bean porridge. People believed its deep red color chased away bad luck and mischievous spirits, and some sprinkled a little on their gates and walls.",
+          "The porridge holds saealsim (say: seh-ahl-sheem), small, chewy rice balls named for their size: as small as a bird's egg. Some families say you should eat one ball for every year of your age.",
+          "In older tellings the tiger meets a harsher end. In ours, the river carries him far away."
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "Long ago, a little old granny lived all alone by a big mountain. All summer long, she pulled weeds in her red-bean field."
+          ],
+          "alt": "On a bright summer day, a little white-haired granny in a cream jacket and navy skirt bends over her red-bean field with a small hoe, her thatched cottage and a green mountain behind her.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "One day, a big striped tiger jumped out of the bushes. \"Granny, I am hungry. I am going to eat you up!\""
+          ],
+          "alt": "A huge striped tiger leaps out of the bushes with his tongue out, and the startled granny throws up her arms as her hoe flies into the air.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "\"Wait!\" said Granny. \"Let me harvest my beans and cook red-bean porridge. Come back on the longest night of winter, and eat me then.\""
+          ],
+          "alt": "In a golden field of ripening bean pods, the granny wags her finger up at the giant tiger, who sits like a big cat and licks his lips.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "Snow fell. On the longest, darkest night of winter, Granny stirred a big pot of red-bean porridge, and she cried and cried."
+          ],
+          "alt": "On a snowy night, the granny cries big tears as she stirs a black cauldron of dark red porridge in her kitchen, the fire glowing beneath it.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "Roll, roll, came a chestnut. \"Granny, Granny, why are you crying?\" \"The tiger!\" \"Give me a bowl of porridge, and I will help you.\""
+          ],
+          "alt": "A smiling chestnut with tiny arms and legs walks up to the snowy doorstep, waving, and the tearful granny turns from her steaming pot to look.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "Crawl, crawl, came a turtle. Squish, squish, came some dog poop. Poke, poke, came a pointy awl. \"Granny, Granny, why are you crying?\""
+          ],
+          "alt": "Across the snowy yard come a soft-shelled turtle, a little smiling pile of dog poop and a hopping awl, while the granny peeks out of her kitchen door with the chestnut on her shoulder.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "Rumble, rumble, came a millstone. Flap, flap, came a straw mat. Clomp, clomp, came a wooden carrier. \"Granny, Granny, we will help you!\""
+          ],
+          "alt": "In the snowy yard, a rolling millstone, a flapping straw mat and a walking wooden carrier arrive with smiling faces, as the granny and the small helpers wave from the glowing kitchen.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "Granny gave each one a bowl of hot red-bean porridge. Then everyone hid, and they waited… and waited."
+          ],
+          "alt": "A cut-away view of the house at night shows everyone hiding: the chestnut in the fire, the turtle in the water jar, the poop and the awl by the door, the millstone on a shelf, the mat in the yard and the carrier by the gate, while the granny peeks out with a finger to her lips.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "At midnight, in crept the tiger. \"Brr, so cold!\" He warmed his paws by the fire. POP! The chestnut flew out and hit him in the eye."
+          ],
+          "alt": "At midnight, the shivering tiger crouches by the kitchen fire, and the chestnut shoots out of the flames in a burst of sparks and bonks him on the eye.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "\"Ow! Ow!\" The tiger ran to the water jar to wash his eye. SNAP! The turtle bit his nose."
+          ],
+          "alt": "The tiger leans over the tall water jar to wash his eye, and the turtle pops up and bites the tip of his nose.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "The tiger ran for the door. SQUISH! He slipped on the dog poop and sat down — OUCH! — right on the pointy awl."
+          ],
+          "alt": "The tiger slips on the dog poop and tumbles backward, about to sit right down on the awl, which stands with its sharp point up beneath him.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "BONK! Down dropped the heavy millstone, and the tiger saw stars. FLAP! The straw mat rolled him up, round and round."
+          ],
+          "alt": "Outside in the snow, the straw mat has rolled the dizzy tiger up like a carpet, with only his head and tail poking out, as the millstone bounces off his head in a ring of stars.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "Clomp, clomp! The wooden carrier took him to the river and tipped him in. SPLASH! The tiger floated far, far away and never came back."
+          ],
+          "alt": "Under a full moon, the wet, grumpy tiger swims away down the dark river with his back turned, while the wooden carrier and the rolled straw mat smile from the snowy bank.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "Granny and her seven new friends shared porridge till sunrise. \"Granny, Granny, why are you smiling?\" \"Because I am not alone anymore!\""
+          ],
+          "alt": "At a pink winter sunrise, the laughing granny and all seven helpers sit in a row on her porch, sharing steaming bowls of red-bean porridge.",
           "spread": "spread-14"
         }
       ],

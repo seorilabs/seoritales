@@ -4,28 +4,28 @@
 	import { metaDescription, ogImage } from '$lib/seo/urls';
 	import {
 		bookPath,
-		buyUrl,
 		coverPath,
+		editionUrl,
 		liveTales,
 		ogPath,
 		series,
 		spreadPath,
-		storyPath,
-		tales
+		storyPath
 	} from '$lib/tales/data';
 
 	let { data } = $props();
 	const tale = $derived(data.tale);
 
 	const path = $derived(bookPath(tale));
-	const buy = $derived(buyUrl(tale));
+	const ebook = $derived(editionUrl(tale, 'ebook'));
+	const paperback = $derived(editionUrl(tale, 'paperback'));
 	const spreads = $derived(
 		tale.story.filter((spread) => tale.previewSpreads.includes(spread.spread))
 	);
 </script>
 
 <Seo
-	title="{tale.title} — Korean folktale picture book for ages {tale.ageRange} | Seori Tales"
+	title="{tale.title} — Korean Picture Book | Seori Tales"
 	description={metaDescription(tale.backBlurb)}
 	{path}
 	type="book"
@@ -35,7 +35,7 @@
 			{ name: 'Korean folktales', path: '/' },
 			{ name: tale.title, path }
 		]),
-		bookSchema(tale, buy)
+		bookSchema(tale)
 	]}
 />
 
@@ -53,8 +53,11 @@
 		<h1>{tale.title}</h1>
 		<p class="lede">{tale.subtitle}</p>
 		<p>{tale.backBlurb}</p>
-		{#if buy}
-			<p><a class="buy" href={buy} rel="noopener">Get it on Amazon</a></p>
+		{#if ebook}
+			<p><a class="buy" href={ebook} rel="noopener">Kindle eBook on Amazon</a></p>
+		{/if}
+		{#if paperback}
+			<p><a class="buy" href={paperback} rel="noopener">Paperback on Amazon</a></p>
 		{/if}
 		<p class="meta">
 			{#if tale.kdpSelect.enrolled}
@@ -79,12 +82,12 @@
 		<dd>{tale.koreanTitle}</dd>
 		<dt>Reading age</dt>
 		<dd>{tale.ageRange} ({tale.gradeRange})</dd>
-		<dt>Pages</dt>
+		<dt>Paperback pages</dt>
 		<dd>{tale.interiorPages}, full colour</dd>
 		<dt>Publisher</dt>
 		<dd>{series.publisher}</dd>
 		{#if tale.isbn13Paperback}
-			<dt>ISBN-13</dt>
+			<dt>Paperback ISBN-13</dt>
 			<dd>{tale.isbn13Paperback}</dd>
 		{/if}
 	</dl>

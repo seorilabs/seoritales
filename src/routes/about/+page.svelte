@@ -2,7 +2,7 @@
 	import Seo from '$lib/seo/Seo.svelte';
 	import { breadcrumbSchema, organizationSchema } from '$lib/seo/jsonld';
 	import { site } from '$lib/site';
-	import { series, tales } from '$lib/tales/data';
+	import { freeTales, liveTales, series, tales } from '$lib/tales/data';
 
 	const path = '/about/';
 </script>
@@ -27,8 +27,10 @@
 
 <div class="prose">
 	<p>
-		{series.name} is a picture book series from {site.publisher}. There are {tales.length} books so far,
-		each one a single traditional Korean tale told in read-aloud English for ages 4–8.
+		{series.name} is a picture book series from {site.publisher}. There are {tales.length} stories to
+		explore and
+		{liveTales.length} published picture books, each one a traditional Korean tale told in read-aloud
+		English for ages 4–8.
 	</p>
 
 	<h2>Why these stories</h2>
@@ -58,9 +60,9 @@
 
 	<h2>Reading them free</h2>
 	<p>
-		Every story on this site is complete and free to read. That is deliberate: a folktale that
-		nobody can read is not doing its job. The books exist for the illustrations and for the reading
-		experience — the kind of book that ends up on the floor beside a bed.
+		There are {freeTales.length} complete stories free to read on this site. A folktale that nobody can
+		read is not doing its job. The books exist for the illustrations and for the reading experience —
+		the kind of book that ends up on the floor beside a bed.
 	</p>
 
 	<h2>Contact</h2>

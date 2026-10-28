@@ -1,118 +1,150 @@
-/**
- * 빌드 산출물의 head 태그를 검사한다.
- *
- * prerender 크롤러는 루트 상대 링크만 따라가고 절대 URL은 큐에 넣지 않는다.
- * 따라서 canonical, hreflang, og:image가 404를 가리켜도 빌드는 조용히 통과한다.
- * 이 스크립트가 그 사각지대를 메운다.
- */
+/** 정적 산출물의 검색 정보, 링크, 이미지와 판본 정보를 검사한다. */
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
 const buildDir = process.argv[2] ?? 'build';
+const updatesFile = process.argv[3] ?? 'src/lib/seo/updates.json';
 const SITE = 'https://seoritales.com';
-
-function htmlFiles(dir) {
-	const out = [];
-	for (const entry of readdirSync(dir)) {
-		const full = join(dir, entry);
-		if (statSync(full).isDirectory()) {
-			if (entry === '_app') continue;
-			out.push(...htmlFiles(full));
-		} else if (entry.endsWith('.html')) {
-			out.push(full);
-		}
-	}
-	return out;
-}
-
-/** 사이트 내부 절대 URL이 실제 산출물을 가리키는지 확인한다. */
-function resolvesInBuild(url) {
-	if (!url.startsWith(SITE)) return true; // 외부 링크는 검사 대상이 아니다
-	const path = url.slice(SITE.length) || '/';
-	if (path.endsWith('/')) return existsSync(join(buildDir, path, 'index.html'));
-	return existsSync(join(buildDir, path));
-}
-
 const errors = [];
-const pages = htmlFiles(buildDir);
-
-for (const file of pages) {
-	const rel = '/' + relative(buildDir, file);
-	const html = readFileSync(file, 'utf8');
-	// Search Console 소유권 검증 파일처럼 문서가 아닌 정적 파일은 건너뛴다.
-	if (!html.includes('<html')) continue;
-	// noindex 페이지는 색인 대상이 아니라 canonical과 공유 이미지를 요구하지 않는다.
-	const noindex = /<meta[^>]*name="robots"[^>]*content="[^"]*noindex/.test(html);
-	const head = /<head>([\s\S]*?)<\/head>/.exec(html)?.[1] ?? '';
-
-	if (html.includes('%lang%')) {
-		errors.push(`${rel}: %lang% 자리표시자가 치환되지 않았습니다 (hooks.server.ts 확인)`);
-	}
-
-	const lang = /<html lang="([^"]*)"/.exec(html)?.[1];
-	if (!lang) errors.push(`${rel}: <html lang> 이 없습니다`);
-
-	// 검색결과에서 잘리는 설명은 클릭률을 떨어뜨린다. 원장의 긴 블러브를 그대로
-	// 흘리는 회귀를 막는다. 한도는 구글 표시 길이보다 넉넉하게 잡았다.
-	const description = /<meta[^>]*name="description"[^>]*content="([^"]*)"/.exec(head)?.[1];
-	if (!description) {
-		if (!noindex) errors.push(`${rel}: meta description이 없습니다`);
-	} else if (description.length > 170) {
-		errors.push(`${rel}: meta description이 ${description.length}자입니다 (170자 이하)`);
-	}
-
-	const canonical = /<link[^>]*rel="canonical"[^>]*href="([^"]*)"/.exec(head)?.[1];
-	if (!canonical) {
-		if (!noindex) errors.push(`${rel}: canonical 링크가 없습니다`);
-	} else if (!resolvesInBuild(canonical)) {
-		errors.push(`${rel}: canonical이 빌드에 없는 주소를 가리킵니다 -> ${canonical}`);
-	}
-
-	for (const [, href] of head.matchAll(/<link[^>]*rel="alternate"[^>]*href="([^"]*)"/g)) {
-		if (!resolvesInBuild(href)) {
-			errors.push(`${rel}: hreflang이 빌드에 없는 주소를 가리킵니다 -> ${href}`);
-		}
-	}
-
-	const ogImage = /<meta[^>]*property="og:image"[^>]*content="([^"]*)"/.exec(head)?.[1];
-	if (!ogImage) {
-		if (!noindex) errors.push(`${rel}: og:image가 없습니다`);
-	} else if (!resolvesInBuild(ogImage)) {
-		errors.push(`${rel}: og:image 파일이 없습니다 -> ${ogImage}`);
-	}
-}
-
-// sitemap의 lastmod가 전부 오늘로 찍히는 회귀를 감지한다.
-const sitemapPath = join(buildDir, 'sitemap.xml');
-if (existsSync(sitemapPath)) {
-	const sitemap = readFileSync(sitemapPath, 'utf8');
-	const lastmods = [...sitemap.matchAll(/<lastmod>([^<]*)<\/lastmod>/g)].map((m) => m[1]);
-	const today = new Date().toISOString().slice(0, 10);
-	const todayCount = lastmods.filter((value) => value.startsWith(today)).length;
-	if (lastmods.length > 0 && todayCount === lastmods.length) {
-		errors.push(
-			`sitemap.xml: lastmod ${lastmods.length}개가 전부 오늘(${today})입니다. ` +
-				'빌드 시각을 쓰고 있지 않은지 확인하세요.'
+const today = new Date().toISOString().slice(0, 10);
+const updates = JSON.parse(readFileSync(updatesFile, 'utf8'));
+const decode = (text) =>
+	text.replace(/&(?:amp|quot|apos|lt|gt|#\d+|#x[\da-f]+);/gi, (entity) => {
+		const named = { '&amp;': '&', '&quot;': '"', '&apos;': "'", '&lt;': '<', '&gt;': '>' };
+		if (named[entity]) return named[entity];
+		return String.fromCodePoint(
+			entity.startsWith('&#x')
+				? parseInt(entity.slice(3, -1), 16)
+				: parseInt(entity.slice(2, -1), 10)
 		);
-	}
-	// lastmod 는 W3C Datetime 이어야 한다. 원장의 미기록 자리표시자("TBD")가
-	// 그대로 새어 나오면 색인 자체는 되지만 갱신 신호가 통째로 무시된다.
-	for (const value of lastmods) {
-		if (!/^\d{4}-\d{2}-\d{2}(T|$)/.test(value)) {
-			errors.push(`sitemap.xml: lastmod 가 날짜 형식이 아닙니다 -> ${value}`);
+	});
+function attributes(raw) {
+	return Object.fromEntries(
+		[...raw.matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g)].map((m) => [
+			m[1].toLowerCase(),
+			decode(m[2] ?? m[3])
+		])
+	);
+}
+function htmlFiles(dir) {
+	return readdirSync(dir).flatMap((entry) => {
+		const full = join(dir, entry);
+		if (statSync(full).isDirectory()) return entry === '_app' ? [] : htmlFiles(full);
+		return entry.endsWith('.html') ? [full] : [];
+	});
+}
+function resolves(url, pagePath = '/') {
+	const parsed = new URL(url, SITE + pagePath);
+	if (parsed.origin !== SITE) return true;
+	const path = decodeURIComponent(parsed.pathname);
+	return path.endsWith('/')
+		? existsSync(join(buildDir, path, 'index.html'))
+		: existsSync(join(buildDir, path));
+}
+function inspectSchema(node, pagePath) {
+	if (!node || typeof node !== 'object') return;
+	if (node.bookFormat === 'https://schema.org/EBook' && node.isbn)
+		errors.push(`${pagePath}: 전자책에 종이책 ISBN을 붙였습니다`);
+	if (node.offers || node['@type'] === 'Offer')
+		errors.push(`${pagePath}: 소매 확인 근거 없는 Offer입니다`);
+	for (const [key, value] of Object.entries(node)) {
+		if (
+			['url', 'item', 'image', '@id'].includes(key) &&
+			typeof value === 'string' &&
+			value.startsWith(SITE + '/') &&
+			!resolves(value)
+		)
+			errors.push(`${pagePath}: JSON-LD 없는 주소 -> ${value}`);
+		if (typeof value === 'object') {
+			if (Array.isArray(value)) value.forEach((entry) => inspectSchema(entry, pagePath));
+			else inspectSchema(value, pagePath);
 		}
 	}
-
-	for (const [, loc] of sitemap.matchAll(/<loc>([^<]*)<\/loc>/g)) {
-		if (!resolvesInBuild(loc)) errors.push(`sitemap.xml: 없는 주소를 등재했습니다 -> ${loc}`);
-	}
 }
-
-if (errors.length > 0) {
+const paths = new Set();
+const titles = new Set();
+for (const file of htmlFiles(buildDir)) {
+	const html = readFileSync(file, 'utf8');
+	if (!/<html\b/i.test(html)) continue;
+	const head = /<head\b[^>]*>([\s\S]*?)<\/head>/i.exec(html)?.[1] ?? '';
+	const tags = [...head.matchAll(/<(meta|link)\b([^>]*?)>/gi)].map((m) => ({
+		tag: m[1].toLowerCase(),
+		...attributes(m[2])
+	}));
+	if (tags.some((t) => t.name === 'robots' && t.content?.includes('noindex'))) continue;
+	const rel = relative(buildDir, file).replaceAll('\\', '/');
+	const path =
+		rel === 'index.html' ? '/' : rel.endsWith('/index.html') ? '/' + rel.slice(0, -10) : '/' + rel;
+	paths.add(path);
+	const fail = (message) => errors.push(`${path}: ${message}`);
+	if (!/<html\b[^>]*\blang=["'][^"']+["']/i.test(html)) fail('<html lang>이 없습니다');
+	const pageTitles = [...head.matchAll(/<title>([\s\S]*?)<\/title>/gi)].map((m) =>
+		decode(m[1]).trim()
+	);
+	if (pageTitles.length !== 1 || !pageTitles[0]) fail('title은 한 개여야 합니다');
+	else if (titles.has(pageTitles[0])) fail('title이 다른 페이지와 중복됩니다');
+	else titles.add(pageTitles[0]);
+	if ([...html.matchAll(/<h1\b/gi)].length !== 1) fail('h1은 한 개여야 합니다');
+	const descriptions = tags.filter((t) => t.name === 'description');
+	if (descriptions.length !== 1 || !descriptions[0].content)
+		fail('meta description은 한 개여야 합니다');
+	else if (descriptions[0].content.length > 170)
+		fail(`meta description이 ${descriptions[0].content.length}자입니다 (170자 이하)`);
+	const canonicals = tags.filter((t) => t.tag === 'link' && t.rel === 'canonical');
+	if (canonicals.length !== 1 || canonicals[0].href !== SITE + path)
+		fail(`canonical은 ${SITE + path} 한 개여야 합니다`);
+	const og = tags.filter((t) => t.property === 'og:image');
+	if (og.length !== 1 || !og[0].content || !resolves(og[0].content))
+		fail('og:image 파일이 없습니다');
+	for (const [, tag, raw] of html.matchAll(/<(a|img|link)\b([^>]*?)>/gi)) {
+		const attrs = attributes(raw);
+		const url = tag.toLowerCase() === 'img' ? attrs.src : attrs.href;
+		if (!url || url.startsWith('#')) continue;
+		if (!resolves(url, path)) fail(`없는 내부 링크 또는 이미지 -> ${url}`);
+	}
+	for (const [, raw] of html.matchAll(
+		/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
+	)) {
+		try {
+			inspectSchema(JSON.parse(raw), path);
+		} catch {
+			fail('JSON-LD를 해석할 수 없습니다');
+		}
+	}
+	if (
+		!/^\d{4}-\d{2}-\d{2}$/.test(updates[path] ?? '') ||
+		!Number.isFinite(Date.parse(updates[path])) ||
+		new Date(updates[path]).toISOString().slice(0, 10) !== updates[path] ||
+		updates[path] > today
+	)
+		fail('실제 수정일이 없거나 날짜가 잘못됐습니다');
+}
+const sitemapPath = join(buildDir, 'sitemap.xml');
+if (!existsSync(sitemapPath)) errors.push('sitemap.xml이 없습니다');
+else {
+	const sitemap = readFileSync(sitemapPath, 'utf8');
+	const listed = new Set();
+	for (const [, entry] of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+		const loc = /<loc>([^<]+)<\/loc>/.exec(entry)?.[1];
+		const lastmod = /<lastmod>([^<]+)<\/lastmod>/.exec(entry)?.[1];
+		if (!loc || !loc.startsWith(SITE + '/')) {
+			errors.push('sitemap.xml: 잘못된 loc');
+			continue;
+		}
+		const path = loc.slice(SITE.length);
+		if (listed.has(path)) errors.push(`sitemap.xml: 중복 주소 -> ${path}`);
+		listed.add(path);
+		if (!paths.has(path)) errors.push(`sitemap.xml: 색인 가능한 페이지가 없습니다 -> ${path}`);
+		if (lastmod !== updates[path])
+			errors.push(`sitemap.xml: ${path} lastmod가 실제 수정일과 다릅니다`);
+	}
+	for (const path of paths) if (!listed.has(path)) errors.push(`sitemap.xml: ${path} 누락`);
+}
+for (const path of Object.keys(updates))
+	if (!paths.has(path)) errors.push(`수정일 원장: 없는 페이지 -> ${path}`);
+if (errors.length) {
 	console.error(`check-build: 오류 ${errors.length}건`);
-	for (const error of errors.slice(0, 40)) console.error(`  ${error}`);
-	if (errors.length > 40) console.error(`  ... 외 ${errors.length - 40}건`);
+	errors.forEach((error) => console.error(`  ${error}`));
 	process.exit(1);
 }
-
-console.log(`check-build: 페이지 ${pages.length}개 통과`);
+console.log(`check-build: 페이지 ${paths.size}개 통과`);

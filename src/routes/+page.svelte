@@ -1,9 +1,16 @@
 <script lang="ts">
 	import Seo from '$lib/seo/Seo.svelte';
-	import { organizationSchema, seriesListSchema, webSiteSchema } from '$lib/seo/jsonld';
+	import {
+		organizationSchema,
+		seriesListSchema,
+		storyListSchema,
+		webSiteSchema
+	} from '$lib/seo/jsonld';
 	import {
 		bookPath,
 		coverPath,
+		freeTales,
+		isPublished,
 		liveTales,
 		readAloudMinutes,
 		storyPath,
@@ -13,10 +20,15 @@
 </script>
 
 <Seo
-	title="Korean Folktales for Children — Read All Seven Free | Seori Tales"
-	description="Seven classic Korean folktales retold in read-aloud English for ages 4–8. Read every story free, with notes on where each tale comes from."
+	title="Korean Folktales for Children — Read Free Online | Seori Tales"
+	description={`${tales.length} Korean folktales in read-aloud English for ages 4–8. Explore ${freeTales.length} complete stories free, with cultural notes and questions for children.`}
 	path="/"
-	jsonLd={[organizationSchema(), webSiteSchema(), seriesListSchema(liveTales)]}
+	jsonLd={[
+		organizationSchema(),
+		webSiteSchema(),
+		seriesListSchema(liveTales),
+		storyListSchema(tales)
+	]}
 />
 
 <h1>Korean folktales for children</h1>
@@ -27,8 +39,8 @@
 
 <div class="prose">
 	<p>
-		There are seven stories below and every one of them is free to read in full. No sign-up, nothing
-		held back for a newsletter. Each comes with a note on where the tale comes from, the Korean
+		There are {tales.length} stories below, with {freeTales.length} available in full for free. No sign-up,
+		nothing held back for a newsletter. Each comes with a note on where the tale comes from, the Korean
 		words inside it, and roughly how long it takes to read out loud.
 	</p>
 	<p>
@@ -39,12 +51,12 @@
 	</p>
 	<p>
 		If you are choosing for a classroom or a specific age, the
-		<a href="/for-parents-and-teachers/">parents and teachers guide</a> sorts all seven by theme and length,
-		with discussion questions.
+		<a href="/for-parents-and-teachers/">parents and teachers guide</a> sorts the stories by theme and
+		length, with discussion questions.
 	</p>
 </div>
 
-<h2>All seven stories</h2>
+<h2>All {tales.length} stories</h2>
 
 <ol class="list">
 	{#each tales as tale (tale.slug)}
@@ -68,7 +80,7 @@
 					<a href={storyPath(tale)}
 						>{tale.kdpSelect.enrolled ? 'Read the opening' : 'Read it free'}</a
 					>
-					{#if tale.asinEbook}
+					{#if isPublished(tale)}
 						· <a href={bookPath(tale)}>The picture book</a>
 					{:else}
 						· <span class="soon">picture book coming soon</span>

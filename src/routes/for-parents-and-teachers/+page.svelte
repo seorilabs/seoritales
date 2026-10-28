@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Seo from '$lib/seo/Seo.svelte';
 	import { breadcrumbSchema } from '$lib/seo/jsonld';
-	import { readAloudMinutes, storyPath, tales } from '$lib/tales/data';
+	import { freeTales, readAloudMinutes, storyPath, tales } from '$lib/tales/data';
 	import { teachingNotes } from '$lib/tales/teaching';
 
 	const path = '/for-parents-and-teachers/';
@@ -9,7 +9,7 @@
 
 <Seo
 	title="Korean folktales for kids — a guide for parents and teachers | Seori Tales"
-	description="Seven Korean folktales for ages 4–8, sorted by theme and read-aloud length, with discussion questions. Every tale is free to read in full."
+	description={`${tales.length} Korean folktales for ages 4–8, sorted by theme and read-aloud length, with discussion questions and ${freeTales.length} complete stories to read free.`}
 	{path}
 	jsonLd={[
 		breadcrumbSchema([
@@ -23,8 +23,8 @@
 
 <h1>Korean folktales for kids: a guide for parents and teachers</h1>
 <p class="lede">
-	Seven tales for ages 4–8, sorted by what they are actually about — with the questions worth asking
-	afterwards.
+	{tales.length} tales for ages 4–8, sorted by what they are actually about — with the questions worth
+	asking afterwards.
 </p>
 
 <div class="prose">
@@ -34,8 +34,8 @@
 		coming. Most take under ten minutes.
 	</p>
 	<p>
-		Every story below is free to read in full on this site. Nothing is gated, and there is no
-		sign-up. If a tale becomes a favourite, there is an illustrated picture book of it too.
+		There are {freeTales.length} complete stories to read free on this site, with no sign-up. Published
+		illustrated editions are linked from their story pages.
 	</p>
 
 	<h2>Choosing a story</h2>

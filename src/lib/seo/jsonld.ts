@@ -1,6 +1,6 @@
 import { site } from '$lib/site';
 import { absoluteUrl } from '$lib/seo/urls';
-import { bookPath, coverPath, series } from '$lib/tales/data';
+import { bookPath, coverPath, editionUrl, isPublished, series, storyPath } from '$lib/tales/data';
 import type { Tale } from '$lib/tales/types';
 
 export const ORGANIZATION_ID = `${site.url}/#organization`;
@@ -45,11 +45,11 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
 	};
 }
 
-/**
- * 책 한 권. offers는 ASIN이 있을 때만 넣는다 — 가격만 있고 살 수 없는 상품은
- * 구조화 데이터 위반이다.
- */
-export function bookSchema(tale: Tale, buyUrl: string | null) {
+/** 작품과 판매 판본을 구분한다. ASIN은 실제 소매 재고를 증명하지 않는다. */
+export function bookSchema(tale: Tale) {
+	const path = absoluteUrl(bookPath(tale));
+	const ebook = editionUrl(tale, 'ebook');
+	const paperback = editionUrl(tale, 'paperback');
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'Book',
@@ -60,24 +60,40 @@ export function bookSchema(tale: Tale, buyUrl: string | null) {
 		author: { '@type': 'Organization', name: series.author },
 		publisher: { '@id': ORGANIZATION_ID },
 		inLanguage: 'en',
-		bookFormat: 'https://schema.org/EBook',
-		numberOfPages: tale.interiorPages,
 		image: absoluteUrl(coverPath(tale)),
 		url: absoluteUrl(bookPath(tale)),
 		isPartOf: { '@type': 'BookSeries', name: series.name },
 		typicalAgeRange: tale.ageRange,
-		...(tale.isbn13Paperback ? { isbn: tale.isbn13Paperback } : {}),
-		...(buyUrl
-			? {
-					offers: {
-						'@type': 'Offer',
-						price: tale.priceEbookUsd.toFixed(2),
-						priceCurrency: 'USD',
-						availability: 'https://schema.org/InStock',
-						url: buyUrl
-					}
-				}
-			: {})
+		workExample: [
+			...(ebook
+				? [
+						{
+							'@type': 'Book',
+							'@id': `${path}#ebook`,
+							bookFormat: 'https://schema.org/EBook',
+							url: ebook,
+							identifier: { '@type': 'PropertyValue', propertyID: 'ASIN', value: tale.asinEbook }
+						}
+					]
+				: []),
+			...(paperback
+				? [
+						{
+							'@type': 'Book',
+							'@id': `${path}#paperback`,
+							bookFormat: 'https://schema.org/Paperback',
+							url: paperback,
+							numberOfPages: tale.interiorPages,
+							identifier: {
+								'@type': 'PropertyValue',
+								propertyID: 'ASIN',
+								value: tale.asinPaperback
+							},
+							...(tale.isbn13Paperback ? { isbn: tale.isbn13Paperback } : {})
+						}
+					]
+				: [])
+		]
 	};
 }
 
@@ -86,6 +102,7 @@ export function storySchema(tale: Tale, path: string) {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'ShortStory',
+		'@id': `${absoluteUrl(path)}#story`,
 		name: tale.title,
 		alternateName: tale.koreanTitle,
 		url: absoluteUrl(path),
@@ -94,11 +111,26 @@ export function storySchema(tale: Tale, path: string) {
 		typicalAgeRange: tale.ageRange,
 		author: { '@type': 'Organization', name: series.author },
 		publisher: { '@id': ORGANIZATION_ID },
+		...(isPublished(tale) ? { isPartOf: { '@id': `${absoluteUrl(bookPath(tale))}#book` } } : {}),
 		isBasedOn: {
 			'@type': 'CreativeWork',
 			name: tale.koreanTitle,
 			description: 'Traditional Korean folktale in the public domain.'
 		}
+	};
+}
+
+export function storyListSchema(tales: Tale[]) {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'ItemList',
+		name: 'Korean folktales to read aloud',
+		itemListElement: tales.map((tale, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: tale.title,
+			url: absoluteUrl(storyPath(tale))
+		}))
 	};
 }
 
