@@ -42,6 +42,8 @@ jobs:
           repository: seorilabs/.github
           ref: main
           path: .development-policy
+      - name: Install verifier dependencies
+        run: npm ci --prefix .development-policy --ignore-scripts --no-audit
       - name: Verify development evidence
         env:
           GH_TOKEN: ${{ github.token }}
