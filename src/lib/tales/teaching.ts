@@ -113,5 +113,15 @@ export const teachingNotes: Record<string, TeachingNote> = {
 			'Granny shares her porridge while she is frightened. Why do you think she does that?',
 			'Could one helper have stopped the tiger alone? What changes when they work together?'
 		]
+	},
+	'the-red-fan-and-the-blue-fan': {
+		searchName: 'The Red Fan and the Blue Fan: Ppalgan Buchae, Paran Buchae',
+		related: ['the-golden-axe', 'heungbu-and-nolbu', 'the-goblins-and-the-hazelnut'],
+		pick: 'A playful choice for children who enjoy magic getting out of hand. Min discovers two fans that change the size of a nose, plays a trick for money, and finds himself lifted into the sky. The gentle ending leaves room to talk about making amends.',
+		theme: 'Greed, consequences, and making amends',
+		questions: [
+			'Why does Min return the coins after he gets home?',
+			'What would you do if you found the two magic fans?'
+		]
 	}
 };

@@ -1,0 +1,75 @@
+--- a/pipeline/export_web.py
++++ b/pipeline/export_web.py
+@@ -29,6 +29,7 @@
+     "07-tiger-and-persimmon": "호랑이와 곶감",
+     "08-goblins-and-hazelnut": "도깨비 방망이",
+     "09-granny-and-tiger": "팥죽 할머니와 호랑이",
++    "10-red-blue-fan": "빨간 부채 파란 부채",
+ }
+ 
+ # Preview spreads: opening, early-middle, middle. The last third is withheld so the
+--- a/books/08-goblins-and-hazelnut/book.json
++++ b/books/08-goblins-and-hazelnut/book.json
+@@ -31,13 +31,13 @@
+       "back_blurb": "Up on the mountain, a kind boy finds four hazelnuts — one for Father, one for Mother, one for Little Sister, and one for himself. But that night, in an old empty house, five tokkaebi burst in. These wild, wonderful Korean goblins bang their magic clubs on the floor: \"Gold, come out — ttuk-ttak!\" Then one loud CRACK of a hazelnut sends them running... and leaves a magic club behind. Now the greedy man next door wants one too! A warm, funny retelling of a beloved Korean folktale about thinking of others first — perfect for reading aloud, again and again."
+     },
+     "distribution": {
+-      "status": "partially_live",
++      "status": "live",
+       "launch_channel": "Amazon KDP",
+       "kdp_select": false,
+       "ebook_wide_eligible": true,
+       "phase": "Phase 1 (Amazon First)",
+       "kdp_live_date": null,
+-      "asin_ebook": null,
++      "asin_ebook": "B0HKKDSP1G",
+       "asin_paperback": "B0HPGCKDQ3",
+       "list_price_usd": 3.99,
+       "wide_stores": {
+@@ -52,7 +52,7 @@
+       "kdp_evidence_nas": "/Volumes/Data/Backup/agent-artifacts/folktales/2026-11-03/3665b4ca87e2/kdp-upload-8-9-76d69f3c/evidence/finalreadback.json",
+       "editions": {
+         "ebook": {
+-          "status": "in_review",
++          "status": "live",
+           "draft_id": "A362ITGKZINCSU",
+           "price_usd": 3.99,
+           "asin": null,
+--- a/books/09-granny-and-tiger/book.json
++++ b/books/09-granny-and-tiger/book.json
+@@ -32,14 +32,14 @@
+       "back_blurb": "All summer long, a little old granny pulls weeds in her red-bean field, until a big striped tiger jumps out of the bushes. \"I am going to eat you up!\" Quick as a wink, Granny makes a deal: come back on the longest night of winter. When that snowy night arrives, Granny cries into her porridge pot... and one by one, seven surprising helpers come to the door: a chestnut, a turtle, an awl, a millstone, a straw mat, a wooden carrier, and yes, some dog poop! A funny, warm retelling of a beloved Korean folktale about sharing what you have, perfect for reading aloud again and again."
+     },
+     "distribution": {
+-      "status": "in_review",
++      "status": "live",
+       "launch_channel": "Amazon KDP",
+       "kdp_select": false,
+       "ebook_wide_eligible": true,
+       "phase": "Phase 1 (Amazon First)",
+       "kdp_live_date": null,
+-      "asin_ebook": null,
+-      "asin_paperback": null,
++      "asin_ebook": "B0HQ6ZCWD8",
++      "asin_paperback": "B0HQBXG9V3",
+       "list_price_usd": 3.99,
+       "wide_stores": {
+         "route": "direct upload recommended for fixed-layout (see books/01-sun-and-moon/WIDE-DISTRIBUTION.md)",
+@@ -53,7 +53,7 @@
+       "kdp_evidence_nas": "/Volumes/Data/Backup/agent-artifacts/folktales/2026-11-03/3665b4ca87e2/kdp-upload-8-9-76d69f3c/evidence/finalreadback.json",
+       "editions": {
+         "ebook": {
+-          "status": "in_review",
++          "status": "live",
+           "draft_id": "A3QUEKQOIP1E9I",
+           "price_usd": 3.99,
+           "asin": null,
+@@ -125,7 +125,7 @@
+           "submission_confirmation_basis": "KDP submission confirmation and Bookshelf observed at this evidence capture time"
+         },
+         "paperback": {
+-          "status": "in_review",
++          "status": "live",
+           "draft_id": "AYBAZMDC5Q4",
+           "price_usd": 9.99,
+           "asin": null,

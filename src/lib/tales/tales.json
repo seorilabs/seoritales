@@ -1398,11 +1398,11 @@
       "language": "en",
       "copyrightYear": "2026",
       "interiorPages": 24,
-      "status": "partially_live",
-      "statusEbook": "draft",
+      "status": "live",
+      "statusEbook": "live",
       "statusPaperback": "live",
       "liveDate": null,
-      "asinEbook": null,
+      "asinEbook": "B0HKKDSP1G",
       "asinPaperback": "B0HPGCKDQ3",
       "isbn13Paperback": "9798165777622",
       "kdpSelect": {
@@ -1578,13 +1578,13 @@
       "language": "en",
       "copyrightYear": "2026",
       "interiorPages": 24,
-      "status": "blocked_weekly_quota",
-      "statusEbook": "blocked_weekly_quota",
-      "statusPaperback": "blocked_weekly_quota",
+      "status": "live",
+      "statusEbook": "live",
+      "statusPaperback": "live",
       "liveDate": null,
-      "asinEbook": null,
-      "asinPaperback": null,
-      "isbn13Paperback": null,
+      "asinEbook": "B0HQ6ZCWD8",
+      "asinPaperback": "B0HQBXG9V3",
+      "isbn13Paperback": "9798167531154",
       "kdpSelect": {
         "enrolled": false,
         "termEnds": null
@@ -1737,6 +1737,183 @@
             "Granny and her seven new friends shared porridge till sunrise. \"Granny, Granny, why are you smiling?\" \"Because I am not alone anymore!\""
           ],
           "alt": "At a pink winter sunrise, the laughing granny and all seven helpers sit in a row on her porch, sharing steaming bowls of red-bean porridge.",
+          "spread": "spread-14"
+        }
+      ],
+      "previewSpreads": [
+        "spread-01",
+        "spread-04",
+        "spread-08"
+      ]
+    },
+    {
+      "slug": "the-red-fan-and-the-blue-fan",
+      "sourceDir": "10-red-blue-fan",
+      "number": 10,
+      "title": "The Red Fan and the Blue Fan",
+      "subtitle": "A Korean Folktale of Magic and Making Amends",
+      "koreanTitle": "빨간 부채 파란 부채",
+      "ageRange": "4-8",
+      "gradeRange": "Preschool - Grade 3",
+      "language": "en",
+      "copyrightYear": "2026",
+      "interiorPages": 24,
+      "status": "files_ready",
+      "statusEbook": null,
+      "statusPaperback": null,
+      "liveDate": null,
+      "asinEbook": null,
+      "asinPaperback": null,
+      "isbn13Paperback": null,
+      "kdpSelect": {
+        "enrolled": false,
+        "termEnds": null
+      },
+      "priceEbookUsd": 3.99,
+      "descriptionHtml": "<p><b>One red fan. One blue fan. One nose with a very big surprise!</b></p><p>Min discovers that one fan makes noses longer and the other makes them shorter. A sneaky plan fills his pockets—but soon his own nose reaches the clouds, and a sky keeper mistakes it for a clothesline!</p><ul><li>Short, playful English for reading aloud together</li><li>Warm gouache illustrations inspired by Korean folk art</li><li>A gentle rescue and a clear, caring way to put a mistake right</li><li>An About This Story culture note; Korean words in the paperback</li></ul><p>A cheerful story-time gift for ages 4–8, at home or in a multicultural classroom.</p><p><b>Book 10 of Seori Tales — Korean Folktales for Children.</b></p>",
+      "backBlurb": "One red fan. One blue fan. One nose with a very big surprise! When Min discovers that red makes noses longer and blue makes them shorter, he sees a chance to fill his pockets. But a little trick soon grows into a sky-high muddle. Can a kind sky keeper help him home—and can Min put his mistake right? A funny, gentle retelling for ages 4–8, with warm gouache illustrations, an About This Story note, and Korean words to say together.",
+      "keywords": [
+        "bedtime read aloud ages 4-8",
+        "preschool giggle time",
+        "honesty after mistakes",
+        "growing noses silly adventure",
+        "asian heritage family reading",
+        "kindness forgiveness responsibility",
+        "gentle giggles kindergarten"
+      ],
+      "categories": [
+        "Children's eBooks > Fairy Tales, Folk Tales & Myths",
+        "Children's eBooks > Geography & Cultures > Multicultural Stories",
+        "Children's eBooks > Humor"
+      ],
+      "glossaryHeading": "Korean Words in This Story",
+      "glossary": [
+        "Buchae — a hand fan, used to make a cooling breeze.",
+        "Ppalgang — the color red. Our red fan makes noses longer.",
+        "Parang — the color blue. Our blue fan makes noses shorter.",
+        "Hanbok — traditional Korean clothing, like the outfits in the pictures.",
+        "Which fan would you pick?"
+      ],
+      "cultureNote": {
+        "heading": "About This Story",
+        "body": [
+          "This book retells the Korean folktale Ppalgan Buchae, Paran Buchae: The Red Fan and the Blue Fan. A buchae is a hand fan. In this story, its everyday breeze has a very unusual power.",
+          "Tellings differ: the finder may be an old man, a farmer, or a woodcutter. The red fan makes noses longer, the blue fan makes them shorter, and a greedy trick leads to a nose reaching the sky.",
+          "In some versions, people in the sky tie the nose to a post. When the finder uses the blue fan, his body rises as his nose shrinks. Some endings are harsher than ours.",
+          "For this retelling, we imagined Min, a helpful sky keeper, and a soft cloth seat for a safe journey home. Min returns the coins and says sorry. The magic is old; these words and pictures are new."
+        ]
+      },
+      "story": [
+        {
+          "id": "p01",
+          "text": [
+            "One hot day, a woodcutter named Min found two fans beside the path: one red, one blue."
+          ],
+          "alt": "Min, a woodcutter in a sage-green jacket and tan trousers, discovers a round red fan and a round blue fan on a sunny mountain path.",
+          "spread": "spread-01"
+        },
+        {
+          "id": "p02",
+          "text": [
+            "Min waved the red fan. His nose stretched across the path—then past a tree!"
+          ],
+          "alt": "Min waves the round red fan; a long flexible nose grows from his face across the path and past a pine tree. He holds the blue fan in his other hand.",
+          "spread": "spread-02"
+        },
+        {
+          "id": "p03",
+          "text": [
+            "He tried the blue fan. His nose slipped back to its usual size."
+          ],
+          "alt": "Min waves the blue fan beside his face and smiles with relief at his small nose. His other hand holds the red fan down at his hip.",
+          "spread": "spread-03"
+        },
+        {
+          "id": "p04",
+          "text": [
+            "Min waved the red fan at a sleeping rich man. The man's nose stretched across the room!"
+          ],
+          "alt": "Min holds the blue fan in one hand and waves the red fan toward a dozing rich man in a purple robe. The rich man's nose stretches across the room; Min's nose stays small.",
+          "spread": "spread-04"
+        },
+        {
+          "id": "p05",
+          "text": [
+            "\"Help!\" cried the rich man. \"I will give you a bag of coins to make it small!\""
+          ],
+          "alt": "The startled rich man looks at his long nose and offers Min an ochre pouch of coins. Min stands beside him with the two fans.",
+          "spread": "spread-05"
+        },
+        {
+          "id": "p06",
+          "text": [
+            "Min waved the blue fan, and the nose shrank. He took the coins without telling the man his trick."
+          ],
+          "alt": "Min waves the blue fan at the rich man, whose nose is small again, and accepts the pouch of coins.",
+          "spread": "spread-06"
+        },
+        {
+          "id": "p07",
+          "text": [
+            "But Min wanted more. \"Maybe there is treasure in the sky!\""
+          ],
+          "alt": "Min clutches the coin pouch and gazes up at clouds, imagining a little chest of treasure in the sky. Both fans are tucked in his sash.",
+          "spread": "spread-07"
+        },
+        {
+          "id": "p08",
+          "text": [
+            "He waved the red fan. Past the roof, past the birds, his nose reached the clouds!"
+          ],
+          "alt": "Min stands on the ground with the blue fan in one hand and waves the red fan with the other. His nose stretches up past a roof and birds into the clouds.",
+          "spread": "spread-08"
+        },
+        {
+          "id": "p09",
+          "text": [
+            "\"A new clothesline!\" said a sky keeper, and tied the tip of Min's nose to a railing."
+          ],
+          "alt": "On a cloud terrace, a silver-haired sky keeper gently ties the long nose tip to a wooden railing beside hanging laundry. Min is far below.",
+          "spread": "spread-09"
+        },
+        {
+          "id": "p10",
+          "text": [
+            "Min waved the blue fan. With its tip still tied, his shrinking nose pulled him up to the sky!"
+          ],
+          "alt": "Min waves the blue fan while his shorter nose remains tied to the sky railing. His feet rise toward the cloud terrace.",
+          "spread": "spread-10"
+        },
+        {
+          "id": "p11",
+          "text": [
+            "The keeper caught Min, sat him in a soft cloth seat, then untied his nose."
+          ],
+          "alt": "The lavender-clad keeper supports Min in a broad golden cloth seat and holds the loose ribbon released from his nose. Min holds the blue fan and rests the red fan on his lap.",
+          "spread": "spread-11"
+        },
+        {
+          "id": "p12",
+          "text": [
+            "The keeper lowered the cloth seat, slowly, slowly. Min waved the blue fan until his nose was small again."
+          ],
+          "alt": "The keeper lowers a golden cloth seat toward the village, holding its two long ends. Min sits securely, waves the blue fan beside his small nose, and holds the red fan on his lap.",
+          "spread": "spread-12"
+        },
+        {
+          "id": "p13",
+          "text": [
+            "Back on the ground, Min returned the coins. \"I played a trick on you, and I am sorry.\""
+          ],
+          "alt": "Min bows and returns the ochre coin pouch to the purple-robed rich man. Both noses are their ordinary size.",
+          "spread": "spread-13"
+        },
+        {
+          "id": "p14",
+          "text": [
+            "That evening, Min put both fans away. A plain summer breeze cooled his very ordinary nose."
+          ],
+          "alt": "Min rests outside his thatched cottage with a small, ordinary nose. Both round fans lie in an open wooden box as a breeze moves the leaves.",
           "spread": "spread-14"
         }
       ],

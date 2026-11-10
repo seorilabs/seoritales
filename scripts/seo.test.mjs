@@ -131,3 +131,16 @@ test('원본 전문과 판형별 출간 상태가 정적 페이지에 반영된�
 		}
 	}
 });
+
+test('10권 전문과 확인된 8, 9권 판본만 제공한다', () => {
+	const { books } = JSON.parse(readFileSync('src/lib/tales/tales.json', 'utf8'));
+	const eighth = books.find((book) => book.number === 8);
+	const ninth = books.find((book) => book.number === 9);
+	const tenth = books.find((book) => book.number === 10);
+	assert.deepEqual([eighth.statusEbook, eighth.asinEbook], ['live', 'B0HKKDSP1G']);
+	assert.deepEqual([ninth.statusEbook, ninth.asinEbook], ['live', 'B0HQ6ZCWD8']);
+	assert.deepEqual([ninth.statusPaperback, ninth.asinPaperback], ['live', 'B0HQBXG9V3']);
+	assert.equal(tenth.kdpSelect.enrolled, false);
+	assert.equal(tenth.story.length, 14);
+	assert.equal(existsSync(`build/books/${tenth.slug}/index.html`), false);
+});
