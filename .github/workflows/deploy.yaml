@@ -42,16 +42,16 @@ jobs:
           repository: seorilabs/.github
           ref: main
           path: .development-policy
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
       - name: Install verifier dependencies
         run: npm ci --prefix .development-policy --ignore-scripts --no-audit
       - name: Verify development evidence
         env:
           GH_TOKEN: ${{ github.token }}
         run: node .development-policy/scripts/release/verify-development-evidence.mjs --repo "$GITHUB_REPOSITORY" --tag development-evidence --sha "$GITHUB_SHA" --target web --phase before-deploy
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          cache: npm
       - run: npm ci
       - run: npm run check
       - run: npm run build
