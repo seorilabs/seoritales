@@ -142,5 +142,7 @@ test('10권 전문과 확인된 8, 9권 판본만 제공한다', () => {
 	assert.deepEqual([ninth.statusPaperback, ninth.asinPaperback], ['live', 'B0HQBXG9V3']);
 	assert.equal(tenth.kdpSelect.enrolled, false);
 	assert.equal(tenth.story.length, 14);
+	assert.ok(tenth.cultureNote.body.some((line) => line.includes('Min as a woodcutter')));
+	assert.ok(tenth.glossary.every((entry) => !entry.includes('Which fan')));
 	assert.equal(existsSync(`build/books/${tenth.slug}/index.html`), false);
 });
