@@ -68,7 +68,7 @@ npm run lint
 
 ## 배포와 승인
 
-`main` 병합 후 기존 `.github/workflows/deploy.yaml`이 GitHub Pages에 배포한다.
+`main` 병합은 공개 배포를 시작하지 않는다. 최종 main SHA의 개발 근거를 등록하고 중앙 `before-deploy` 검증을 통과한 뒤 `.github/workflows/deploy.yaml`을 명시적으로 실행해 GitHub Pages에 배포한다.
 코드 변경은 Ready PR과 로컬 코드 리뷰, 필수 검사를 거친다. 공개 후에는 변경 주소와
 본문, Amazon 링크, 사이트맵을 다시 읽어 확인한다.
 
