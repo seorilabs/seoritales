@@ -1,0 +1,40 @@
+--- a/pipeline/export_web.py
++++ b/pipeline/export_web.py
+@@ -31,0 +32 @@
++    "10-red-blue-fan": "빨간 부채 파란 부채",
+--- a/books/08-goblins-and-hazelnut/book.json
++++ b/books/08-goblins-and-hazelnut/book.json
+@@ -34 +34 @@
+-      "status": "partially_live",
++      "status": "live",
+@@ -40 +40 @@
+-      "asin_ebook": null,
++      "asin_ebook": "B0HKKDSP1G",
+@@ -55 +55 @@
+-          "status": "in_review",
++          "status": "live",
+--- a/books/09-granny-and-tiger/book.json
++++ b/books/09-granny-and-tiger/book.json
+@@ -35 +35 @@
+-      "status": "in_review",
++      "status": "live",
+@@ -41,2 +41,2 @@
+-      "asin_ebook": null,
+-      "asin_paperback": null,
++      "asin_ebook": "B0HQ6ZCWD8",
++      "asin_paperback": "B0HQBXG9V3",
+@@ -56 +56 @@
+-          "status": "in_review",
++          "status": "live",
+@@ -128 +128 @@
+-          "status": "in_review",
++          "status": "live",
+--- a/books/10-red-blue-fan/book.json
++++ b/books/10-red-blue-fan/book.json
+@@ -30,2 +30 @@
+-        "",
+-        "Which fan would you pick?"
++        ""
+@@ -234 +233 @@
+-        "For this retelling, we imagined Min, a helpful sky keeper, and a soft cloth seat for a safe journey home. Min returns the coins and says sorry. The magic is old; these words and pictures are new."
++        "For this retelling, we imagined Min as a woodcutter and a sky keeper who lowers him home in a soft cloth seat. Min returns the coins and says sorry. The magic is old; these words and pictures are new."
