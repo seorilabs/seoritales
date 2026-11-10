@@ -31,7 +31,7 @@ cp -R /tmp/seoritales-web/images/. static/images/
 
 이야기가 추가되면 원본 exporter에 원전 제목을 등록하고 사이트의 `teaching.ts`에
 주제, 추천 이유, 질문과 관련 이야기를 추가한다. 원본 exporter 변경분은 승인 설계의
-`source-export.patch`에 기록했다. 2026-11-10 원본 매핑과 판본 상태 갱신은 `docs/design/2026-11-10-catalog-update/source-export.patch`에 기록했다. 원본에 패치를 적용하거나 격리 복사본에서 적용한 뒤 내보낸다. 생성 데이터에는 판형별 상태를 담는다.
+`source-export.patch`에 기록했다. 2026-11-10 원본 매핑과 판본 상태 갱신은 `docs/design/2026-11-10-catalog-update/source-export.patch`에 기록했다. 원본 또는 격리 복사본에 `git apply --unidiff-zero`로 패치를 적용한 뒤 내보낸다. 생성 데이터에는 판형별 상태를 담는다.
 
 - `statusEbook`, `asinEbook`: 전자책 출간 상태와 상품 식별자.
 - `statusPaperback`, `asinPaperback`, `isbn13Paperback`: 종이책 정보.
