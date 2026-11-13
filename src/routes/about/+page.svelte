@@ -48,21 +48,21 @@
 
 	<h2>How the books are made</h2>
 	<p>
-		The text of every story is written and rewritten by hand, read aloud, and revised until it works
-		spoken. The illustrations are generated with AI image tools against a fixed style guide and
-		character sheets, then selected, corrected, and composed by a person — often across many
-		rejected attempts per page. The same disclosure is filed with our retailers.
+		The English text and illustrations are created with AI tools and revised through editorial and
+		visual review. A fixed style guide and character sheets guide the pictures. The retellings are
+		checked for read-aloud flow, story continuity, and suitability for ages 4–8. We disclose the use
+		of AI to our retailers.
 	</p>
 	<p>
 		We say this plainly because a parent choosing a children's book deserves to know how it was
 		made.
 	</p>
 
-	<h2>Reading them free</h2>
+	<h2>Stories and previews</h2>
 	<p>
-		There are {freeTales.length} complete stories free to read on this site. A folktale that nobody can
-		read is not doing its job. The books exist for the illustrations and for the reading experience —
-		the kind of book that ends up on the floor beside a bed.
+		There are {freeTales.length} complete stories to read free on this site, alongside opening previews
+		of the other books. Each preview shows the first scene. Published editions are linked from the book
+		pages; new stores appear after we verify that the book is available to buy.
 	</p>
 
 	<h2>Contact</h2>

@@ -13,9 +13,10 @@ export const taleBySlug = new Map(tales.map((tale) => [tale.slug, tale]));
 /** 실제로 아마존에 올라간 책만. 상품 페이지는 이것만 만든다. */
 export const isPublished = (tale: Tale) =>
 	(tale.statusEbook === 'live' && Boolean(tale.asinEbook)) ||
-	(tale.statusPaperback === 'live' && Boolean(tale.asinPaperback));
+	(tale.statusPaperback === 'live' && Boolean(tale.asinPaperback)) ||
+	tale.storeLinks.length > 0;
 export const liveTales = tales.filter(isPublished);
-export const freeTales = tales.filter((tale) => !tale.kdpSelect.enrolled);
+export const freeTales = tales.filter((tale) => tale.webPublication.mode === 'full');
 
 for (const tale of tales) {
 	const note = teachingNotes[tale.slug];
@@ -25,23 +26,10 @@ for (const tale of tales) {
 	}
 }
 
-/**
- * KDP Select 등록 중에 공개할 수 있는 스프레드 수.
- * eBook 은 19쪽이고 허용치는 샘플 10%(약 1.9쪽)다. 1스프레드면 확실히 그 안이다.
- * 등록이 끝나 book.json 의 kdp_select 가 false 가 되면 자동으로 전문이 돌아온다.
- */
-const EXCERPT_SPREADS = 1;
-
-/** Select 등록 중이면 발췌만 내보낸다. 아니면 14스프레드 전문. */
-export function visibleStory(tale: Tale) {
-	return tale.kdpSelect.enrolled ? tale.story.slice(0, EXCERPT_SPREADS) : tale.story;
-}
-
-/**
- * 본문 외에 책에서 가져온 것(문화 노트, 용어 풀이)도 Select 중에는 싣지 않는다.
- * 이것들도 eBook 안에 든 페이지이기 때문이다.
- */
-export const showsBookExtras = (tale: Tale) => !tale.kdpSelect.enrolled;
+/** 공개 범위는 원본 exporter에서 적용한다. 비공개 본문은 번들에 넣지 않는다. */
+export const isPreview = (tale: Tale) => tale.webPublication.mode === 'preview';
+export const visibleStory = (tale: Tale) => tale.story;
+export const showsBookExtras = (tale: Tale) => !isPreview(tale);
 
 /** 'October 4, 2026' 처럼 읽히는 형태로. */
 export function formatDate(iso: string): string {
@@ -71,7 +59,9 @@ for (const [slug, url] of Object.entries(attributionUrls)) {
  * ASIN 자체가 없으면 null 이고, 호출부가 링크를 숨긴다.
  */
 export function buyUrl(tale: Tale): string | null {
-	return editionUrl(tale, 'ebook') ?? editionUrl(tale, 'paperback');
+	return (
+		editionUrl(tale, 'ebook') ?? editionUrl(tale, 'paperback') ?? tale.storeLinks[0]?.url ?? null
+	);
 }
 
 export function editionUrl(tale: Tale, format: 'ebook' | 'paperback'): string | null {
@@ -93,6 +83,5 @@ export const spreadPath = (tale: Tale, spread: string) => `/images/${tale.slug}/
 
 /** 소리 내어 읽는 속도(분당 약 130단어)로 계산한 읽기 시간. */
 export function readAloudMinutes(tale: Tale): number {
-	const words = tale.story.reduce((sum, s) => sum + s.text.join(' ').split(/\s+/).length, 0);
-	return Math.max(2, Math.round(words / 130));
+	return tale.readAloudMinutes;
 }

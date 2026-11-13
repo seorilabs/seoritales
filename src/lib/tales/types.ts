@@ -32,21 +32,20 @@ export type Tale = {
 	asinEbook: string | null;
 	asinPaperback: string | null;
 	isbn13Paperback: string | null;
-	/**
-	 * KDP Select 는 디지털 독점이다. 등록 기간에는 본문을 웹에 전문 공개할 수 없다
-	 * — KDP 공식 문구: "you cannot distribute your book digitally anywhere else,
-	 * including on your website". 사이트는 이 값을 보고 발췌 모드로 내려간다.
-	 */
+	/** KDP 등록 상태와 웹 공개 정책은 독립적으로 기록한다. */
 	kdpSelect: { enrolled: boolean; termEnds: string | null };
+	webPublication: { mode: 'full' | 'preview' };
+	readAloudMinutes: number;
+	storeLinks: { store: 'apple_books' | 'google_play_books'; label: string; url: string }[];
 	priceEbookUsd: number;
 	/** KDP 상품 설명 원문(HTML). 심사를 통과한 문구라 새로 쓰지 않는다. */
 	descriptionHtml: string;
 	backBlurb: string;
 	keywords: string[];
 	categories: string[];
-	glossaryHeading: string;
+	glossaryHeading: string | null;
 	glossary: string[];
-	cultureNote: { heading: string; body: string[] };
+	cultureNote: { heading: string | null; body: string[] };
 	story: StorySpread[];
 	/** 웹에 실제로 올라간 미리보기 아트만 담긴다. */
 	previewSpreads: string[];

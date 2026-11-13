@@ -65,6 +65,12 @@ export function bookSchema(tale: Tale) {
 		isPartOf: { '@type': 'BookSeries', name: series.name },
 		typicalAgeRange: tale.ageRange,
 		workExample: [
+			...tale.storeLinks.map((store) => ({
+				'@type': 'Book',
+				'@id': `${path}#ebook-${store.store}`,
+				bookFormat: 'https://schema.org/EBook',
+				url: store.url
+			})),
 			...(ebook
 				? [
 						{
@@ -97,7 +103,7 @@ export function bookSchema(tale: Tale) {
 	};
 }
 
-/** 이야기 전문 페이지. 그림책 본문은 창작물이므로 CreativeWork로 표기한다. */
+/** 공개 범위에 맞는 이야기 또는 첫 장면. */
 export function storySchema(tale: Tale, path: string) {
 	return {
 		'@context': 'https://schema.org',
@@ -108,6 +114,11 @@ export function storySchema(tale: Tale, path: string) {
 		url: absoluteUrl(path),
 		inLanguage: 'en',
 		genre: 'Korean folktale',
+		description:
+			tale.webPublication.mode === 'preview'
+				? 'Opening scene preview of the illustrated edition.'
+				: 'Complete read-aloud story.',
+		isAccessibleForFree: true,
 		typicalAgeRange: tale.ageRange,
 		author: { '@type': 'Organization', name: series.author },
 		publisher: { '@id': ORGANIZATION_ID },

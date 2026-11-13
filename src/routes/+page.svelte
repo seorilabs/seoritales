@@ -11,6 +11,7 @@
 		coverPath,
 		freeTales,
 		isPublished,
+		isPreview,
 		liveTales,
 		readAloudMinutes,
 		storyPath,
@@ -20,8 +21,8 @@
 </script>
 
 <Seo
-	title="Korean Folktales for Children — Read Free Online | Seori Tales"
-	description={`${tales.length} Korean folktales in read-aloud English for ages 4–8. Explore ${freeTales.length} complete stories free, with cultural notes and questions for children.`}
+	title="Korean Folktales for Children — Stories and Previews | Seori Tales"
+	description={`${tales.length} Korean folktales in read-aloud English for ages 4–8. Explore ${freeTales.length} complete stories and opening previews, with questions for children.`}
 	path="/"
 	jsonLd={[
 		organizationSchema(),
@@ -39,9 +40,9 @@
 
 <div class="prose">
 	<p>
-		There are {tales.length} stories below, with {freeTales.length} available in full for free. No sign-up,
-		nothing held back for a newsletter. Each comes with a note on where the tale comes from, the Korean
-		words inside it, and roughly how long it takes to read out loud.
+		Explore {tales.length} tales below: {freeTales.length} complete stories and opening previews of the
+		other books. No sign-up is needed. Each page includes questions to discuss together; complete stories
+		also include cultural notes and Korean words.
 	</p>
 	<p>
 		A child in Ohio can name three European fairy tales before breakfast and has probably never met
@@ -77,9 +78,7 @@
 				</p>
 				<p>{teachingNotes[tale.slug].pick}</p>
 				<p class="links">
-					<a href={storyPath(tale)}
-						>{tale.kdpSelect.enrolled ? 'Read the opening' : 'Read it free'}</a
-					>
+					<a href={storyPath(tale)}>{isPreview(tale) ? 'Read the opening' : 'Read it free'}</a>
 					{#if isPublished(tale)}
 						· <a href={bookPath(tale)}>The picture book</a>
 					{:else}
