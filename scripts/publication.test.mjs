@@ -30,13 +30,18 @@ test('양쪽 파일럿 완료 전에는 후속 9권 공개 정책을 유지한�
 	assert.match(home, /9 complete stories/);
 	assert.match(home, /opening previews/);
 });
-test('확인되지 않은 새 서점 구매 링크를 생성하지 않는다', () => {
+test('공개된 새 서점 링크는 그림책 페이지에 연결한다', () => {
 	for (const b of books) {
-		assert.deepEqual(b.storeLinks, []);
-		const html = readFileSync(`build/stories/${b.slug}/index.html`, 'utf8');
-		assert.doesNotMatch(
-			html,
-			/href="https:\/\/(?:books\.apple\.com|play\.google\.com\/store\/books)/
-		);
+		for (const store of b.storeLinks) {
+			const url = new URL(store.url);
+			assert.equal(url.protocol, 'https:');
+			assert.equal(
+				url.hostname,
+				store.store === 'apple_books' ? 'books.apple.com' : 'play.google.com'
+			);
+			const html = readFileSync(`build/books/${b.slug}/index.html`, 'utf8');
+			assert.ok(html.includes(store.url.replaceAll('&', '&amp;')));
+			assert.ok(html.includes(`eBook on ${store.label}`));
+		}
 	}
 });

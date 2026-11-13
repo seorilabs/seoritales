@@ -100,8 +100,8 @@ test('원본 전문과 판형별 출간 상태가 정적 페이지에 반영된�
 		const ebook = tale.statusEbook === 'live' && Boolean(tale.asinEbook);
 		const paperback = tale.statusPaperback === 'live' && Boolean(tale.asinPaperback);
 		const path = `build/books/${tale.slug}/index.html`;
-		assert.equal(existsSync(path), ebook || paperback, tale.slug);
-		if (!ebook && !paperback) continue;
+		assert.equal(existsSync(path), ebook || paperback || tale.storeLinks.length > 0, tale.slug);
+		if (!ebook && !paperback && !tale.storeLinks.length) continue;
 		const bookHtml = readFileSync(path, 'utf8');
 		const book = [
 			...bookHtml.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)
@@ -111,7 +111,7 @@ test('원본 전문과 판형별 출간 상태가 정적 페이지에 반영된�
 		assert.ok(book?.workExample, tale.slug);
 		assert.equal(
 			book.workExample.some((e) => e.bookFormat === 'https://schema.org/EBook'),
-			ebook,
+			ebook || tale.storeLinks.length > 0,
 			tale.slug
 		);
 		assert.equal(

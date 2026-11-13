@@ -65,6 +65,12 @@ export function bookSchema(tale: Tale) {
 		isPartOf: { '@type': 'BookSeries', name: series.name },
 		typicalAgeRange: tale.ageRange,
 		workExample: [
+			...tale.storeLinks.map((store) => ({
+				'@type': 'Book',
+				'@id': `${path}#ebook-${store.store}`,
+				bookFormat: 'https://schema.org/EBook',
+				url: store.url
+			})),
 			...(ebook
 				? [
 						{
