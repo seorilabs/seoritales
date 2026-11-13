@@ -7,6 +7,8 @@
 		coverPath,
 		editionUrl,
 		liveTales,
+		isPreview,
+		showsBookExtras,
 		ogPath,
 		series,
 		spreadPath,
@@ -59,8 +61,11 @@
 		{#if paperback}
 			<p><a class="buy" href={paperback} rel="noopener">Paperback on Amazon</a></p>
 		{/if}
+		{#each tale.storeLinks as store (store.store)}
+			<p><a class="buy" href={store.url} rel="noopener">eBook on {store.label}</a></p>
+		{/each}
 		<p class="meta">
-			{#if tale.kdpSelect.enrolled}
+			{#if isPreview(tale)}
 				Or <a href={storyPath(tale)}>read the opening</a> first.
 			{:else}
 				Or <a href={storyPath(tale)}>read the whole story free</a> first.
@@ -108,14 +113,16 @@
 	{/each}
 </div>
 
-<div class="prose">
-	<h2>{tale.glossaryHeading}</h2>
-	<ul>
-		{#each tale.glossary as entry}
-			<li>{entry}</li>
-		{/each}
-	</ul>
-</div>
+{#if showsBookExtras(tale)}
+	<div class="prose">
+		<h2>{tale.glossaryHeading}</h2>
+		<ul>
+			{#each tale.glossary as entry}
+				<li>{entry}</li>
+			{/each}
+		</ul>
+	</div>
+{/if}
 
 <h2>More in the series</h2>
 <ul class="grid">

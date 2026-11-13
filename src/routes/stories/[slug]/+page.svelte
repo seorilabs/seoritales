@@ -5,7 +5,8 @@
 	import {
 		bookPath,
 		buyUrl,
-		formatDate,
+		isPublished,
+		isPreview,
 		ogPath,
 		readAloudMinutes,
 		showsBookExtras,
@@ -23,20 +24,15 @@
 	const path = $derived(storyPath(tale));
 	const buy = $derived(buyUrl(tale));
 	const note = $derived(teachingNotes[tale.slug]);
-	const inSelect = $derived(tale.kdpSelect.enrolled);
+	const preview = $derived(isPreview(tale));
 	const spreads = $derived(visibleStory(tale));
 	const previews = $derived(new Set(tale.previewSpreads));
 	const others = $derived(note.related.map((slug) => taleBySlug.get(slug)!));
 
-	// 템플릿에서 {#if} 로 감싸면 줄바꿈이 앞 단어에 붙어 "pageon" 이 된다. 문자열로 만든다.
-	const returnsOn = $derived(
-		tale.kdpSelect.termEnds ? ` on ${formatDate(tale.kdpSelect.termEnds)}` : ''
-	);
-
 	const description = $derived(
 		metaDescription(
-			inSelect
-				? `${tale.title} (${tale.koreanTitle}) — a classic Korean folktale for ages ${tale.ageRange}, with an opening extract, background and questions to ask.`
+			preview
+				? `${tale.title} (${tale.koreanTitle}) — a classic Korean folktale for ages ${tale.ageRange}, with an opening scene and discussion questions.`
 				: `Read ${tale.title} (${tale.koreanTitle}) in full, free. A classic Korean folktale retold for ages ${tale.ageRange} — about ${readAloudMinutes(tale)} minutes to read aloud.`
 		)
 	);
@@ -92,24 +88,21 @@
 	{/each}
 </article>
 
-{#if inSelect}
-	<!--
-		KDP Select 등록 중에는 본문을 전문 공개할 수 없다. 발췌만 싣고, 등록이 끝나면
-		book.json 의 kdp_select 가 false 가 되면서 전문이 자동으로 돌아온다.
-	-->
+{#if preview}
 	<div class="panel prose">
 		<h2>The rest of this story</h2>
 		<p>
-			{tale.title} is currently exclusive to Kindle, so we can only show the opening here. The full text
-			returns to this page{returnsOn}.
+			This is the opening scene of {tale.title}. The complete story is available in the illustrated
+			edition.
 		</p>
 		<p>{tale.backBlurb}</p>
 		{#if buy}
-			<p><a class="buy" href={buy} rel="noopener">Read it on Amazon</a></p>
+			<p><a class="buy" href={buy} rel="noopener">Find the illustrated edition</a></p>
 		{/if}
 		<p class="meta">
-			{tale.interiorPages} pages, full colour, ages {tale.ageRange}. Also on the
-			<a href={bookPath(tale)}>book page</a>. Meanwhile, explore more stories —
+			Full colour, ages {tale.ageRange}.
+			{#if isPublished(tale)}See the <a href={bookPath(tale)}>book page</a>.{/if}
+			Explore more stories —
 			<a href="/">see all {tales.length} stories</a>.
 		</p>
 	</div>

@@ -3,7 +3,7 @@
     "name": "Seori Tales — Korean Folktales for Children",
     "author": "Seori Tales",
     "publisher": "Seori Books",
-    "descriptionHtml": "<p><b>Timeless Korean folktales, retold and illustrated for children everywhere.</b></p><p>For hundreds of years, Korean grandparents have told these stories at bedtime — tales of brave sisters and clever brothers, hungry tigers and magic ropes, kindness rewarded and greed undone. <i>Seori Tales</i> brings them to a new generation of readers around the world, in warm, read-aloud English paired with rich, hand-crafted illustrations that blend gentle storybook art with the bold spirit of Korean folk painting.</p><p>Each book is a complete story you can read in one sitting — perfect for bedtime, story time, or quiet afternoons together. Along the way, little touches of Korean culture appear naturally in the pictures and words, with a friendly culture note and a \"Korean Words in This Story\" page in the back, so children discover a new part of the world while they enjoy a wonderful tale.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud.</li><li><b>Beautiful illustrations</b> on every page.</li><li><b>A gentle window into Korea</b> — culture notes and simple Korean words.</li><li><b>Stories that travel</b> — beloved in Korea, new to the world.</li></ul><p>Start the collection and share the magic of Korea's best-loved folktales, one story at a time.</p>",
+    "descriptionHtml": "<p><b>Timeless Korean folktales, retold and illustrated for children everywhere.</b></p><p>For hundreds of years, Korean grandparents have told these stories at bedtime — tales of brave sisters and clever brothers, hungry tigers and magic ropes, kindness rewarded and greed undone. <i>Seori Tales</i> brings them to a new generation of readers around the world, in warm, read-aloud English paired with rich, illustrations that blend gentle storybook art with the bold spirit of Korean folk painting.</p><p>Each book is a complete story you can read in one sitting — perfect for bedtime, story time, or quiet afternoons together. Along the way, little touches of Korean culture appear naturally in the pictures and words, with a friendly culture note and a \"Korean Words in This Story\" page in the back, so children discover a new part of the world while they enjoy a wonderful tale.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud.</li><li><b>Beautiful illustrations</b> on every page.</li><li><b>A gentle window into Korea</b> — culture notes and simple Korean words.</li><li><b>Stories that travel</b> — beloved in Korea, new to the world.</li></ul><p>Start the collection and share the magic of Korea's best-loved folktales, one story at a time.</p>",
     "seriesPageAsin": "B0H7QCTW8M"
   },
   "books": [
@@ -30,6 +30,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "preview"
+      },
+      "readAloudMinutes": 4,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>When a hungry tiger follows Mother home over the hills, a brave big sister and her giggly little brother must outwit him — up a tall tree, past a trick and a giggle, all the way to a rope let down from the sky.</p><p>This warm, dramatic retelling of one of Korea's most beloved folktales explains how the sun and the moon came to be — and why, even now, you can't look straight at the sun.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — a short “About This Story” note on rice cakes, sorghum, and the folktale tradition</li><li><b>Perfect for ages 4–8</b> — bedtime, story time, or a quiet afternoon together</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who love stories from around the world.</p><p><b>Book 1 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "When a hungry tiger follows Mother home over the hills, a brave big sister and her giggly little brother must outwit him — all the way to a rope let down from the sky. A warm, dramatic retelling of one of Korea's best-loved folktales, and how the sun and the moon came to be.",
@@ -47,23 +52,11 @@
         "Children's eBooks > Geography & Cultures > Multicultural Stories",
         "Children's eBooks > Animals > More Animals > Lions, Tigers & Leopards"
       ],
-      "glossaryHeading": "Korean Words in This Story",
-      "glossary": [
-        "Tteok — chewy cakes made of steamed rice.",
-        "Songpyeon — pretty half-moon rice cakes, often colored.",
-        "Hanbok — traditional Korean clothing.",
-        "Sorghum — a tall grain with reddish stalks.",
-        "Say them out loud together!"
-      ],
+      "glossaryHeading": null,
+      "glossary": [],
       "cultureNote": {
-        "heading": "About This Story",
-        "body": [
-          "The Sun and the Moon is one of Korea’s most beloved folktales, told to children for centuries.",
-          "Rice cakes (tteok) are chewy cakes of steamed rice — an everyday treat and a gift of care in Korea.",
-          "Sorghum is a tall grain with reddish stalks. This story playfully explains their color — a kind of tale storytellers call a “why story.”",
-          "The rope from Heaven reflects an old belief in a just sky that answers those who ask with a good heart.",
-          "Like many folktales, it carries a quiet lesson: courage, care for family, and the hope that the sky is watching over children."
-        ]
+        "heading": null,
+        "body": []
       },
       "story": [
         {
@@ -74,135 +67,10 @@
           ],
           "alt": "A mother and her two young children in Korean hanbok stand outside their small thatched cottage high on a green mountain.",
           "spread": "spread-01"
-        },
-        {
-          "id": "p02",
-          "text": [
-            "One morning Mother tied on her scarf. “I must cross the hills to work,” she said. “Lock the door tight, and open it for no one — no one but me.”",
-            "“Yes, Mother,” said the children. And off she went, over hill after hill."
-          ],
-          "alt": "The mother, wearing a headscarf, waves goodbye to her big-sister daughter and little son at the cottage door as she sets off over the green hills.",
-          "spread": "spread-02"
-        },
-        {
-          "id": "p03",
-          "text": [
-            "At dusk Mother started home with a basket of rice cakes. On the first hill, a great Tiger rose from the grass.",
-            "“Give me a rice cake,” he growled, “and I won’t eat you.”",
-            "With shaking hands, she gave him one."
-          ],
-          "alt": "At dusk a large striped tiger, drawn in bold Korean folk-art style, rises from the grass on a hillside before the frightened mother, who clutches a basket of colorful rice cakes.",
-          "spread": "spread-03"
-        },
-        {
-          "id": "p04",
-          "text": [
-            "But on the next hill, the Tiger rose again. “One more, or I’ll eat you!” And again on the next. And the next.",
-            "Hill by hill, the basket grew lighter... and lighter... until not one cake was left. And the Tiger was still hungry."
-          ],
-          "alt": "The tiger looms again on the next hill while the mother's basket of rice cakes grows emptier as she backs away across the darkening hills.",
-          "spread": "spread-04"
-        },
-        {
-          "id": "p05",
-          "text": [
-            "On the last dark hill, the basket was empty. The Tiger licked his lips.",
-            "The children waited and waited by the door. But that night, Mother did not come home."
-          ],
-          "alt": "The tiger licks its lips beside an empty basket on a dark hilltop, while far away the two children wait by their lamplit cottage door.",
-          "spread": "spread-05"
-        },
-        {
-          "id": "p06",
-          "text": [
-            "Late that night came a knock. “Children, open the door. Mother is home.”",
-            "But the voice was low and growly — not soft like Mother’s. The sister held her brother close."
-          ],
-          "alt": "At night a large shadowy tiger knocks at the cottage door while the big sister holds her little brother close inside.",
-          "spread": "spread-06"
-        },
-        {
-          "id": "p07",
-          "text": [
-            "“Mother’s voice is soft,” said the sister. “Show me your hand.”",
-            "Through the gap slid a great, hairy paw — with claws like knives.",
-            "“It’s the Tiger!” the children cried."
-          ],
-          "alt": "A huge hairy paw with long claws pushes through the gap in the door as the two wide-eyed children pull back in alarm.",
-          "spread": "spread-07"
-        },
-        {
-          "id": "p08",
-          "text": [
-            "Quick as rabbits, the children slipped out the back door.",
-            "They ran to the old tree by the well and climbed — up, up, up — as high as they could go."
-          ],
-          "alt": "The two children slip out the back door and climb high into an old tree beside a stone well under a starry night sky.",
-          "spread": "spread-08"
-        },
-        {
-          "id": "p09",
-          "text": [
-            "The Tiger prowled below. Then he looked in the well — and there were the children, shining back at him!",
-            "But that was only their picture in the water. He pawed and pawed at it, puzzled... until at last he looked up."
-          ],
-          "alt": "The tiger peers into the well at the children's reflection in the water while they hide high in the tree branches above.",
-          "spread": "spread-09"
-        },
-        {
-          "id": "p10",
-          "text": [
-            "“How did you climb so high?” the Tiger called sweetly.",
-            "“We rubbed oil on the trunk!” the sister said.",
-            "The Tiger tried it — and slid right back down. Thump!"
-          ],
-          "alt": "The tiger slips off the oiled tree trunk and tumbles to the ground as the children watch from the branches.",
-          "spread": "spread-10"
-        },
-        {
-          "id": "p11",
-          "text": [
-            "But the little brother giggled. “Silly Tiger! You cut steps with an axe!”",
-            "Oh no — now the Tiger knew! Chop. Chop. Chop. Up he came, closer and closer."
-          ],
-          "alt": "The little brother giggles from the treetop while the tiger chops footholds into the trunk with an axe and climbs upward.",
-          "spread": "spread-11"
-        },
-        {
-          "id": "p12",
-          "text": [
-            "The children climbed to the very top and looked up to the sky.",
-            "“Please, Heaven! If you want us to live, send us a strong new rope. If not, send an old, rotten one.”",
-            "And down from the stars came a rope of light — strong and golden. Up, up they climbed, into the sky."
-          ],
-          "alt": "At the treetop the two children reach toward the sky as a glowing golden rope of light descends from the stars to carry them up.",
-          "spread": "spread-12"
-        },
-        {
-          "id": "p13",
-          "text": [
-            "The Tiger begged too. “Heaven, send me a rope!” But he did not ask kindly — he did not even say please.",
-            "Down dropped a rope, old and frayed. He climbed... it snapped... and down, down, down he fell, into a field of sorghum far below.",
-            "And that is why, to this day, sorghum stalks are stained red."
-          ],
-          "alt": "The tiger falls from a snapped, frayed rope down toward a field of red sorghum far below.",
-          "spread": "spread-13"
-        },
-        {
-          "id": "p14",
-          "text": [
-            "Up in the sky, the sister was to be the Moon, and the brother the Sun. But the sister was afraid of the dark, quiet night.",
-            "So they traded. The brother became the gentle Moon, who shines at night — and the sister became the bright, blazing Sun, who shines all day.",
-            "And because she felt shy with everyone looking up, she shines so brightly that — even now — no one can look straight at her for long."
-          ],
-          "alt": "High in the starry sky the sister becomes the blazing golden sun and her little brother the gentle crescent moon.",
-          "spread": "spread-14"
         }
       ],
       "previewSpreads": [
-        "spread-01",
-        "spread-04",
-        "spread-08"
+        "spread-01"
       ]
     },
     {
@@ -228,6 +96,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 6,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>The Dragon King of the East Sea is sick, and only one medicine can help — a rabbit's liver! So the loyal Turtle paddles all the way to the green mountains to fetch the cleverest rabbit of all... who is about to need every bit of his cleverness to hop his way home again.</p><p>This warm, funny retelling of one of Korea's best-loved folktales is a trickster tale where quick wits save the small — and a faithful heart is rewarded too.</p><ul><li><b>Read-aloud English</b> — written to sound lovely spoken out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art — from a shimmering palace under the sea to a moonlit mountaintop</li><li><b>A gentle window into Korea</b> — an “About This Story” note introducing the Dragon Palace, pansori story-singing, and wild mountain ginseng</li><li><b>Perfect for ages 4–8</b> — bedtime, story time, or a quiet afternoon together</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who love stories from around the world.</p><p><b>Book 2 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "The Dragon King of the East Sea is sick, and only one medicine can help — a rabbit's liver! So the loyal Turtle paddles all the way to the green mountains to fetch the cleverest rabbit of all... who is about to need every bit of his cleverness to hop his way home again. A warm, funny retelling of one of Korea's best-loved folktales, from a shimmering palace under the sea to a moonlit mountaintop.",
@@ -435,6 +308,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 6,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>Kind Heungbu has nothing at all — nothing but a tiny hut, a houseful of hungry children, and a heart as warm as spring. So when a baby swallow falls from its nest, of course he mends its little leg with a bit of red silk thread.</p><p>Next spring the grateful swallow returns with one small, shining seed... and soon Heungbu's roof is full of giant magic gourds — gourds that pour out rice like a waterfall! But when his greedy big brother Nolbu hurts a swallow on purpose to get a seed of his own, what bursts out of HIS gourds is a wild, stamping crowd of Korean goblins — with a noisy lesson to deliver.</p><ul><li><b>Read-aloud English</b> — swallow-song, sawing songs, and gleeful goblin chaos, written to sound lovely out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an “About This Story” note on pansori story-singing, lucky swallows, gourd bowls, and the mischievous <i>tokkaebi</i></li><li><b>Perfect for ages 4–8</b> — bedtime, story time, or a quiet afternoon together</li></ul><p>A warm, funny tale of kindness rewarded, greed undone, and a brother forgiven — a wonderful gift for curious kids, multicultural classrooms, and families who love stories from around the world.</p><p><b>Book 3 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "Kind Heungbu has nothing at all — nothing but a tiny hut, a houseful of hungry children, and a heart as warm as spring. So when a baby swallow falls from its nest, of course he mends its little leg with a bit of red silk thread. Next spring the grateful swallow brings back one small, shining seed... and soon Heungbu's roof is full of magic gourds — while his greedy big brother Nolbu is about to learn a noisy lesson from the goblins. A warm, funny retelling of one of Korea's best-loved folktales, sung with swallows, sawing songs, and the sweetest treasure of all: sharing.",
@@ -647,6 +525,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 9,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>High in the Diamond Mountains of Korea lives a kind young woodcutter with one bowl, one spoon, and one quiet heart. Then one full-moon night, seven sky fairies fly down to play in a hidden mountain pond — and the lonely woodcutter hides one shimmering winged robe, even though he knows, oh he knows, that hiding what is not yours is wrong.</p><p>The youngest fairy stays. Love grows, real and warm — two children, four bowls, a happy house. But the sky always calls its children home... and one moonlit night, the woodcutter must find the bravest kind of love: the kind that gives back what was never his. Then the sky itself sends down a great silver bucket on a rope of moonlight — because in the world's most beloved tales, what you set free with love always finds its way back.</p><ul><li><b>Read-aloud English</b> — chantable refrains, a SPLASH to shout, and a moonlit ride to the sky, written to sound lovely out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an “About This Story” note on sky fairies, the winged robe, the well of the sky, and how older tellings end</li><li><b>Perfect for ages 4–8</b> — a Korean cousin of the world's swan-maiden tales, with a reunion ending that soothes at bedtime</li></ul><p>A magical gift for curious kids, multicultural classrooms, and families who love stories from around the world — and a story that ends with a ritual your child can keep: next full moon, find the moon in the water, and look closely.</p><p><b>Book 4 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "High in the Diamond Mountains lives a kind young woodcutter with one bowl, one spoon, and one quiet heart. Then one full-moon night, seven sky fairies fly down to play in a hidden pond — and when the youngest cannot fly home, his lonely wish comes true... though hiding what is not yours never stays hidden forever. A tender, magical retelling of one of Korea's best-loved folktales — a story of a winged robe, a grateful golden deer, a silver bucket on a rope of moonlight, and the bravest kind of love: the kind that lets go.",
@@ -866,6 +749,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 3,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>Under a plum tree in old Korea lives Kongjwi, a girl who is kind to every living thing. But when a cold new stepmother fills her days with impossible chores — a stony field, a wooden hoe, a jar that will not fill — kindness comes back in wonderful ways: a great black ox plows the field, a fat old toad plugs the leaky jar, and hundreds of sparrows swoop down to help.</p><p>Then a sky maiden brings a gift — a beautiful hanbok and two little flower shoes — and Kongjwi runs to the great festival at last. But hopping across the stream... oh! One little shoe floats away, straight toward the magistrate's parade. Whose shoe is this? A Korean Cinderella story with flower shoes — and it ends not with a punishment, but with the kindest feast of all.</p><ul><li><b>Read-aloud English</b> — a CRACK to gasp at, a shoe-hop to giggle at, and a refrain of kindness, written to sound lovely out loud</li><li><b>Rich illustrations</b> in a painterly style with the bold charm of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on flower shoes, onggi jars, and how older tellings end</li><li><b>Perfect for ages 4–8</b> — a fairy-tale plot children already love, in a world that is new</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and families who collect Cinderella stories from around the world.</p><p><b>Book 5 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "Under a plum tree in old Korea lives Kongjwi, a girl who is kind to every living thing. But when a cold new stepmother fills her days with impossible chores, kindness comes back in wonderful ways — a great black ox plows the stony field, a fat old toad plugs the leaky jar, and hundreds of sparrows come down to help. Then a sky maiden brings a gift: two little flower shoes... and one of them is about to float away and change everything. Korea's own Cinderella, told with warmth, humor, and one glowing flower shoe — a story about how kindness, shared, only grows.",
@@ -1048,6 +936,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 2,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>At the foot of a green mountain lives a poor but honest woodcutter, and his old iron axe is his whole living. One day it slips from his hands and sinks deep into a mountain pond. As he weeps, the water begins to glow — and a kind Mountain Spirit rises up, holding a gleaming <b>gold</b> axe. \"Is this your axe?\"</p><p>The woodcutter shakes his head. Not the gold axe, not the silver axe — only his own plain iron one. And because he tells the truth, he is given all three. But when a greedy neighbor hears the tale and tries the very same trick... he learns what a lie is really worth.</p><ul><li><b>Read-aloud English</b> — a WHOOSH to gasp at, a SPLASH to giggle at, and a gentle rule-of-three that little listeners can say along with you</li><li><b>Rich illustrations</b> in a warm painterly style with the glow of Korean <i>minhwa</i> folk art</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on the woodcutter's <i>jige</i>, the mountain <i>sansillyeong</i>, and how the tale is told around the world</li><li><b>Perfect for ages 4–8</b> — a clear, kind lesson about honesty, with no scary bits and a happy ending</li></ul><p>A wonderful gift for curious kids, multicultural classrooms, and any family teaching that the truth is worth more than gold.</p><p><b>Book 6 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "At the foot of a green mountain lives a poor but honest woodcutter, and his old iron axe is his whole living. One day it slips from his hands and sinks deep into a mountain pond. As he weeps, the water begins to glow — and a kind Mountain Spirit rises up, holding a gleaming GOLD axe. \"Is this your axe?\" Will the woodcutter tell the truth? And what happens when a greedy neighbor tries the very same trick? A beloved Korean folktale about honesty, told with warmth and gentle humor — and the quiet proof that truth is worth more than gold.",
@@ -1229,6 +1122,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 2,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>The biggest, hungriest tiger in the mountains has never been afraid of anything — until tonight. Creeping into a snowy village, he hears a mother hush her crying baby: \"A tiger is coming!\" The baby keeps crying. But one little word — <b>gotgam!</b> — and the crying stops at ONCE.</p><p>The tiger goes pale under his stripes. <i>What is a gotgam? It must be the most terrible monster in all of Korea!</i> He doesn't know it's just a sweet dried persimmon... and when a sneaky ox thief climbs onto his back in the dark barn, the wildest, funniest ride in Korean folklore begins.</p><ul><li><b>Read-aloud English</b> — a barn that's \"dark, dark, dark\" to chant along, a THUMP! to shout, and the playful cry of \"The gotgam has GOT me!\"</li><li><b>Rich illustrations</b> in a warm painterly style with the bold spirit of Korean <i>minhwa</i> folk art — starring the silliest, most lovable tiger in the mountains</li><li><b>A gentle window into Korea</b> — an \"About This Story\" note on how families dry persimmons under the eaves in winter, and why the tiger is the great star of Korean tales</li><li><b>Perfect for ages 4–8</b> — big laughs, zero real danger: every \"monster\" turns out to be a misunderstanding, and the ending is pure warmth</li></ul><p>A wonderful gift for giggly bedtimes, multicultural classrooms, and every child who is a little scared of the dark.</p><p><b>Book 7 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "On a cold winter night, the biggest, hungriest tiger in the mountains creeps into a sleepy village — and hears a mother hush her crying baby with one little word: gotgam! The baby stops crying at ONCE. \"What is a gotgam?\" the tiger trembles. \"It must be the scariest beast in all of Korea!\" Then a sneaky ox thief climbs onto the tiger's back in the dark, and the wildest, funniest ride in Korean folklore begins. A beloved Korean folktale about fear, mix-ups, and one very sweet surprise — perfect for reading aloud, again and again.",
@@ -1409,6 +1307,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 3,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>Up on the mountain, a kind boy finds four hazelnuts and counts them the way he always does: one for Father, one for Mother, one for Little Sister… and one for me. But when night falls and he hides on the beam of an old empty house, five <b>tokkaebi</b>, Korea's wild and wonderful goblins, burst through the door. They bang their magic clubs on the floor: <i>\"Gold, come out — ttuk-ttak!\"</i></p><p>The boy is SO hungry. He bites down on his one hazelnut. CRACK! \"The house is falling down!\" yell the goblins, and they run so fast they leave a magic club behind… until the greedy man next door tries the very same trick.</p><ul><li><b>Read-aloud English</b> with a counting refrain kids say along with you, a spell to shout (\"ttuk-ttak!\"), and a CRACK that makes everyone jump</li><li><b>Rich illustrations</b> in a warm painterly style with the bold spirit of Korean <i>minhwa</i> folk art, starring friendly blue and red goblins and their floating blue tokkaebi-fire</li><li><b>A gentle window into Korea</b>: an \"About This Story\" note on tokkaebi, their magic clubs, and the full-moon custom of cracking nuts for a healthy year</li><li><b>Perfect for ages 4–8</b>: spooky-fun but never scary, no one gets hurt, and the ending turns a greedy neighbor into one more friend at the table</li></ul><p>A wonderful gift for bedtime, multicultural classrooms, and every child learning to save a share for someone else.</p><p><b>Book 8 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "Up on the mountain, a kind boy finds four hazelnuts — one for Father, one for Mother, one for Little Sister, and one for himself. But that night, in an old empty house, five tokkaebi burst in. These wild, wonderful Korean goblins bang their magic clubs on the floor: \"Gold, come out — ttuk-ttak!\" Then one loud CRACK of a hazelnut sends them running... and leaves a magic club behind. Now the greedy man next door wants one too! A warm, funny retelling of a beloved Korean folktale about thinking of others first — perfect for reading aloud, again and again.",
@@ -1589,6 +1492,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 2,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p>All summer long, a little old granny pulls weeds in her red-bean field, until a big striped tiger jumps out of the bushes: <i>\"Granny, I am going to eat you up!\"</i> Quick as a wink, Granny makes a deal. Let her harvest her beans and cook red-bean porridge first. Come back on the longest night of winter.</p><p>When that snowy night arrives, Granny cries into her porridge pot, and one by one, seven surprising helpers come to the door: a chestnut, a turtle, an awl, a millstone, a straw mat, a wooden carrier… and yes, some dog poop! Each one gets a bowl of porridge. Each one hides. And then the tiger comes creeping in. POP! SNAP! SQUISH! BONK! SPLASH!</p><ul><li><b>Read-aloud English</b> with a call-and-response refrain (\"Granny, Granny, why are you crying?\") and a sound for every helper that kids shout along with you</li><li><b>Rich illustrations</b> in a warm painterly style with the bold spirit of Korean <i>minhwa</i> folk art, starring the series' striped folk-art tiger and seven funny little helpers</li><li><b>A gentle window into Korea</b>: an \"About This Story\" note on Dongji, the winter solstice, and the red-bean porridge Korean families still share on the longest night of the year</li><li><b>Perfect for ages 4–8</b>: slapstick, not scary; the tiger never touches Granny and simply floats far away, and the story ends with friends sharing porridge at sunrise</li></ul><p>A wonderful winter gift for bedtime, multicultural classrooms, and every grandma who knows that small friends can do big things together.</p><p><b>Book 9 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "All summer long, a little old granny pulls weeds in her red-bean field, until a big striped tiger jumps out of the bushes. \"I am going to eat you up!\" Quick as a wink, Granny makes a deal: come back on the longest night of winter. When that snowy night arrives, Granny cries into her porridge pot... and one by one, seven surprising helpers come to the door: a chestnut, a turtle, an awl, a millstone, a straw mat, a wooden carrier, and yes, some dog poop! A funny, warm retelling of a beloved Korean folktale about sharing what you have, perfect for reading aloud again and again.",
@@ -1769,6 +1677,11 @@
         "enrolled": false,
         "termEnds": null
       },
+      "webPublication": {
+        "mode": "full"
+      },
+      "readAloudMinutes": 2,
+      "storeLinks": [],
       "priceEbookUsd": 3.99,
       "descriptionHtml": "<p><b>One red fan. One blue fan. One nose with a very big surprise!</b></p><p>Min discovers that one fan makes noses longer and the other makes them shorter. A sneaky plan fills his pockets—but soon his own nose reaches the clouds, and a sky keeper mistakes it for a clothesline!</p><ul><li>Short, playful English for reading aloud together</li><li>Warm gouache illustrations inspired by Korean folk art</li><li>A gentle rescue and a clear, caring way to put a mistake right</li><li>An About This Story culture note; Korean words in the paperback</li></ul><p>A cheerful story-time gift for ages 4–8, at home or in a multicultural classroom.</p><p><b>Book 10 of Seori Tales — Korean Folktales for Children.</b></p>",
       "backBlurb": "One red fan. One blue fan. One nose with a very big surprise! When Min discovers that red makes noses longer and blue makes them shorter, he sees a chance to fill his pockets. But a little trick soon grows into a sky-high muddle. Can a kind sky keeper help him home—and can Min put his mistake right? A funny, gentle retelling for ages 4–8, with warm gouache illustrations, an About This Story note, and Korean words to say together.",

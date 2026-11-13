@@ -1,0 +1,199 @@
+--- a/pipeline/export_web.py
++++ b/pipeline/export_web.py
+@@ -12,6 +12,7 @@
+   <out>/images/<slug>/spread-NN.webp preview art
+ """
+ import argparse, json, os, re, sys
++from urllib.parse import urlparse
+ from PIL import Image
+ 
+ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+@@ -29,6 +30,7 @@
+     "07-tiger-and-persimmon": "호랑이와 곶감",
+     "08-goblins-and-hazelnut": "도깨비 방망이",
+     "09-granny-and-tiger": "팥죽 할머니와 호랑이",
++    "10-red-blue-fan": "빨간 부채 파란 부채",
+ }
+ 
+ # Preview spreads: opening, early-middle, middle. The last third is withheld so the
+@@ -76,12 +78,38 @@
+     return next((p for p in pages if p.get("id") == page_id), None)
+ 
+ 
++def public_store_links(distribution):
++    links = []
++    for store, label, host, path in (
++        ("apple_books", "Apple Books", "books.apple.com", "/"),
++        ("google_play_books", "Google Play Books", "play.google.com", "/store/books/details"),
++    ):
++        state = distribution.get("wide_stores", {}).get(store)
++        if not isinstance(state, dict):
++            continue
++        url = state.get("url", "")
++        parsed = urlparse(url)
++        if (state.get("status") == "buyable" and state.get("purchase_verified") is True
++                and clean(state.get("verified_at")) and parsed.scheme == "https"
++                and parsed.hostname == host and parsed.path.startswith(path)):
++            links.append({"store": store, "label": label, "url": url})
++    return links
++
++
+ def export_book(bookdir, outdir):
+     name = os.path.basename(bookdir.rstrip("/"))
+-    book = json.load(open(os.path.join(bookdir, "book.json")))
+-    kdp = json.load(open(os.path.join(bookdir, "kdp", "metadata.json")))
++    with open(os.path.join(bookdir, "book.json")) as source:
++        book = json.load(source)
++    with open(os.path.join(bookdir, "kdp", "metadata.json")) as source:
++        kdp = json.load(source)
+     meta, pages = book["meta"], book["pages"]
+     dist = meta.get("distribution", {})
++    mode = meta.get("web_publication", {}).get("mode", "full")
++    if mode not in ("full", "preview"):
++        sys.exit(f"{name}: invalid web publication mode {mode!r}")
++    if dist.get("kdp_select"):
++        mode = "preview"
++    preview_numbers = (1,) if mode == "preview" else PREVIEW_SPREADS
+ 
+     if name not in KOREAN_TITLES:
+         sys.exit(f"{name}: no Korean title declared in KOREAN_TITLES")
+@@ -98,12 +126,17 @@
+         os.path.join(imgdir, "og.jpg"))
+ 
+     previews = []
+-    for n in PREVIEW_SPREADS:
++    for n in preview_numbers:
+         src = os.path.join(bookdir, "art", f"spread-{n:02d}.png")
+         if not os.path.exists(src):
+             sys.exit(f"{name}: missing {src}")
+         total += save_webp(src, os.path.join(imgdir, f"spread-{n:02d}.webp"), SPREAD_W)
+         previews.append(f"spread-{n:02d}")
++    # Re-exporting into an existing bundle must also remove withheld illustrations.
++    allowed_images = {"cover.webp", "og.jpg", *(f"{p}.webp" for p in previews)}
++    for filename in os.listdir(imgdir):
++        if filename.startswith("spread-") and filename.endswith(".webp") and filename not in allowed_images:
++            os.unlink(os.path.join(imgdir, filename))
+ 
+     story = [
+         {
+@@ -119,6 +152,10 @@
+ 
+     culture = page_of(pages, "culture") or {}
+     pb = meta.get("paperback", {})
++    words = sum(len(" ".join(p["text"]).split()) for p in story)
++    reading_minutes = max(2, int(words / 130 + 0.5))
++    if mode == "preview":
++        story = story[:1]
+ 
+     return {
+         "slug": slug,
+@@ -145,16 +182,19 @@
+             "enrolled": bool(dist.get("kdp_select")),
+             "termEnds": clean(dist.get("kdp_select_term_ends")),
+         },
++        "webPublication": {"mode": mode},
++        "readAloudMinutes": reading_minutes,
++        "storeLinks": public_store_links(dist),
+         "priceEbookUsd": dist.get("list_price_usd"),
+         "descriptionHtml": kdp["description_html"],
+         "backBlurb": pb.get("back_blurb"),
+         "keywords": kdp.get("keywords", []),
+         "categories": kdp.get("categories", []),
+-        "glossaryHeading": pb.get("glossary_heading"),
+-        "glossary": [g for g in pb.get("glossary", []) if g.strip()],
++        "glossaryHeading": pb.get("glossary_heading") if mode == "full" else None,
++        "glossary": [g for g in pb.get("glossary", []) if g.strip()] if mode == "full" else [],
+         "cultureNote": {
+-            "heading": culture.get("heading"),
+-            "body": [b for b in culture.get("body", []) if b.strip()],
++            "heading": culture.get("heading") if mode == "full" else None,
++            "body": [b for b in culture.get("body", []) if b.strip()] if mode == "full" else [],
+         },
+         "story": story,
+         "previewSpreads": previews,
+--- a/books/01-sun-and-moon/book.json
++++ b/books/01-sun-and-moon/book.json
+@@ -47,6 +47,10 @@
+         "Say them out loud together!"
+       ],
+       "back_blurb": "When a hungry tiger follows Mother home over the hills, a brave big sister and her giggly little brother must outwit him — all the way to a rope let down from the sky. A warm, dramatic retelling of one of Korea's best-loved folktales, and how the sun and the moon came to be."
++    },
++    "web_publication": {
++      "mode": "preview",
++      "reason": "Apple Books and Google Play Books direct-sale pilot; opening scene only"
+     }
+   },
+   "pages": [
+--- /dev/null
++++ b/pipeline/test_web_publication.py
+@@ -0,0 +1,70 @@
++"""Public export regression checks; no publishing files are modified."""
++import importlib.util
++import json
++from pathlib import Path
++import tempfile
++import unittest
++from PIL import Image
++
++spec = importlib.util.spec_from_file_location('export_web', Path(__file__).with_name('export_web.py'))
++web = importlib.util.module_from_spec(spec)
++spec.loader.exec_module(web)
++SOURCE = Path(__file__).resolve().parents[1] / 'books/01-sun-and-moon'
++
++class PublicationTest(unittest.TestCase):
++    def setUp(self):
++        self.temp = tempfile.TemporaryDirectory()
++        self.addCleanup(self.temp.cleanup)
++        self.root = Path(self.temp.name)
++        self.book = self.root / '01-sun-and-moon'
++        self.out = self.root / 'out'
++        for directory in ('art', 'cover', 'kdp'):
++            (self.book / directory).mkdir(parents=True)
++        self.data = json.loads((SOURCE / 'book.json').read_text())
++        (self.book / 'kdp/metadata.json').write_text((SOURCE / 'kdp/metadata.json').read_text())
++        for name in ('cover-kdp.jpg','cover-art-square.png'):
++            Image.new('RGB',(24,24),'white').save(self.book / 'cover' / name)
++        for n in (1,4,8):
++            Image.new('RGB',(24,24),'green').save(self.book / 'art' / f'spread-{n:02d}.png')
++
++    def export(self, mode='preview', select=False):
++        self.data['meta']['web_publication']={'mode':mode}
++        self.data['meta']['distribution']['kdp_select']=select
++        (self.book / 'book.json').write_text(json.dumps(self.data))
++        return web.export_book(str(self.book),str(self.out))
++
++    def test_preview_omits_every_withheld_text_and_extra(self):
++        result=self.export()
++        self.assertEqual(len(result['story']),1)
++        self.assertEqual(result['webPublication']['mode'],'preview')
++        encoded=json.dumps(result,ensure_ascii=False)
++        for page in self.data['pages']:
++            if page.get('type')=='spread' and page['id']!=result['story'][0]['id']:
++                for text in page['text']+[page['alt']]:
++                    self.assertNotIn(text,encoded)
++        self.assertEqual(result['cultureNote']['body'],[])
++        self.assertEqual(result['glossary'],[])
++        self.assertEqual(result['previewSpreads'],['spread-01'])
++
++    def test_preview_removes_previous_export_images(self):
++        self.export('full')
++        result=self.export('preview')
++        images=set(p.name for p in (self.out/'images'/result['slug']).iterdir())
++        self.assertEqual(images,{'cover.webp','og.jpg','spread-01.webp'})
++
++    def test_select_always_restricts_full_and_does_not_control_preview(self):
++        self.assertEqual(len(self.export('full',True)['story']),1)
++        self.assertEqual(len(self.export('preview',False)['story']),1)
++        self.assertEqual(len(self.export('full',False)['story']),14)
++
++    def test_only_verified_purchase_links_are_public(self):
++        stores=self.data['meta']['distribution']['wide_stores']
++        stores['apple_books']={'status':'in_review','url':'https://books.apple.com/us/book/id123'}
++        stores['google_play_books']={'status':'buyable','purchase_verified':True,'verified_at':'2026-11-13T00:00:00Z','url':'https://play.google.com/store/books/details?id=example'}
++        self.assertEqual([s['store'] for s in self.export()['storeLinks']],['google_play_books'])
++        stores['google_play_books']['purchase_verified']=False
++        self.assertEqual(self.export()['storeLinks'],[])
++        stores['apple_books']={'status':'buyable','purchase_verified':True,'verified_at':'2026-11-13T00:00:00Z','url':'https://example.com/'}
++        self.assertEqual(self.export()['storeLinks'],[])
++
++if __name__=='__main__': unittest.main()

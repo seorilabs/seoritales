@@ -5,7 +5,7 @@ Seori Tales 그림책 시리즈의 영어 이야기와 도서 안내 사이트�
 
 ## 콘텐츠와 출간 상태
 
-2026-11-10 KDP Bookshelf 전체 제목 조회 기준으로 이야기 10편과 출간된 책 소개 9권, 안내 페이지 3개를 제공한다. 1~9권의 전자책과 종이책은 각각 Live이며 ASIN이 확인됐다. 10권은 KDP 제목 목록에 없고 제작 원본에는 미업로드로 기록되어 있어 이야기 전문만 제공한다. KDP Live와 지역별 실제 구매 가능 여부는 별도로 확인해야 한다. 사이트는 소매 재고나 가격을 단정하는 Offer를 생성하지 않는다.
+10편의 이야기와 출간 판본 안내를 제공한다. 『The Sun and the Moon』은 Apple·Google 판매 파일럿을 위해 첫 장면만 공개한다. 후속 9권은 양쪽 파일럿 완료 뒤 순서대로 전환한다. KDP Live와 지역별 실제 구매 가능 상태는 별도로 확인한다. 사이트는 검증되지 않은 가격·재고 Offer를 생성하지 않는다.
 
 | 경로                         | 역할                                |
 | ---------------------------- | ----------------------------------- |
@@ -35,10 +35,15 @@ cp -R /tmp/seoritales-web/images/. static/images/
 
 - `statusEbook`, `asinEbook`: 전자책 출간 상태와 상품 식별자.
 - `statusPaperback`, `asinPaperback`, `isbn13Paperback`: 종이책 정보.
-- `kdpSelect`: 전문 공개 여부를 판단하는 확인된 등록 상태.
+- `kdpSelect`: 확인된 독점 등록 상태. 등록 중이면 exporter가 첫 장면만 내보낸다.
+- `webPublication.mode`: 원본 `meta.web_publication.mode`에서 생성한 `full` 또는 `preview`. Select 해제만으로 `preview`가 전문으로 바뀌지 않는다.
+- `storeLinks`: 권별 원장의 `buyable`, `purchase_verified: true`, 확인 시각, 공식 상품 URL이 모두 확인된 Apple·Google 링크만 포함한다.
+- `readAloudMinutes`: 미리보기 제한 전 전체 원본의 읽기 시간.
+
+2026-11-13 공개 정책 변경은 `docs/design/2026-11-13-wide-preview/source-export.patch`에 기록했다. 이전 원본 패치를 먼저 적용한 상태에서 새 패치를 적용한다. 생성 뒤 사이트 이미지 폴더에도 비공개로 바뀐 삽화가 남지 않게 삭제한다. 출판 EPUB과 표지는 다시 만들지 않는다.
 
 1~~9권은 2026-11-10 Bookshelf에서 Select 등록 표시가 없었다. 10권은 전체 제목 목록에 없었다. 날짜만 보고 등록을
-해제하지 않는다. 등록 중인 책에는 기존 발췌 모드를 적용한다. 기존 1~~4권 전자책의
+해제하지 않는다. 등록 중인 책에는 exporter에서 발췌 모드를 적용한다. 기존 1~~4권 전자책의
 Amazon Attribution 링크는 보존하며, 그 외 판본은 일반 상품 링크를 사용한다.
 
 ## 검색 정보와 검증
