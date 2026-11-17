@@ -101,5 +101,7 @@
 				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
 			}
 		}
-	]
+	],
+	"generated_bundle": "src/lib/tales/tales.json",
+	"generated_bundle_sha256": "b9b96c6558e699e330835d92a5291177f2499f2caa7e0f0d6c508c4c9a786f15"
 }
