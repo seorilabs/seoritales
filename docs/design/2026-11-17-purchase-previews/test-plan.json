@@ -1,0 +1,11 @@
+{
+	"schemaVersion": 1,
+	"level": "L1",
+	"baseline": "f4ecf439ac355ce21c08874b9323e1c19c6159bb",
+	"changedFeatures": ["catalogue", "stories", "books", "seo"],
+	"environments": ["dev"],
+	"redesign": false,
+	"foundationRerun": false,
+	"floorOverrides": [],
+	"release": { "markets": ["web"], "until": "public" }
+}
