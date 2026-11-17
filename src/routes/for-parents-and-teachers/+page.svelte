@@ -1,7 +1,14 @@
 <script lang="ts">
 	import Seo from '$lib/seo/Seo.svelte';
 	import { breadcrumbSchema } from '$lib/seo/jsonld';
-	import { freeTales, readAloudMinutes, storyPath, tales } from '$lib/tales/data';
+	import {
+		bookPath,
+		freeTales,
+		isPublished,
+		readAloudMinutes,
+		storyPath,
+		tales
+	} from '$lib/tales/data';
 	import { teachingNotes } from '$lib/tales/teaching';
 
 	const path = '/for-parents-and-teachers/';
@@ -9,7 +16,7 @@
 
 <Seo
 	title="Korean folktales for kids — a guide for parents and teachers | Seori Tales"
-	description={`${tales.length} Korean folktales for ages 4–8, sorted by theme and read-aloud length, with discussion questions and opening previews${freeTales.length ? ` and ${freeTales.length} complete stories` : ''}.`}
+	description={`${tales.length} Korean folktales for ages 4–8, sorted by theme and read-aloud length, with opening previews and links to the illustrated editions${freeTales.length ? ` and ${freeTales.length} complete stories` : ''}.`}
 	{path}
 	jsonLd={[
 		breadcrumbSchema([
@@ -23,8 +30,8 @@
 
 <h1>Korean folktales for kids: a guide for parents and teachers</h1>
 <p class="lede">
-	{tales.length} tales for ages 4–8, sorted by what they are actually about — with the questions worth
-	asking afterwards.
+	{tales.length} picture books for ages 4–8. Compare themes and reading times, then choose a book to read
+	together.
 </p>
 
 <div class="prose">
@@ -57,7 +64,7 @@
 			{#each tales as tale (tale.slug)}
 				<tr>
 					<th scope="row">
-						<a href={storyPath(tale)}>{tale.title}</a>
+						<a href={isPublished(tale) ? bookPath(tale) : storyPath(tale)}>{tale.title}</a>
 						<span class="ko">{tale.koreanTitle}</span>
 					</th>
 					<td>{teachingNotes[tale.slug].theme}</td>
@@ -86,20 +93,6 @@
 		<i>gotgam</i> — with a short gloss. Getting them slightly wrong together is fine and is usually the
 		part children remember.
 	</p>
-
-	<h2>Questions worth asking</h2>
-	<p>These have no right answer, which is what makes them work.</p>
-</div>
-
-<div class="prose">
-	{#each tales as tale (tale.slug)}
-		<h3><a href={storyPath(tale)}>{tale.title}</a></h3>
-		<ul>
-			{#each teachingNotes[tale.slug].questions as question}
-				<li>{question}</li>
-			{/each}
-		</ul>
-	{/each}
 </div>
 
 <div class="prose">

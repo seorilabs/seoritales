@@ -2,6 +2,7 @@ import { site } from '$lib/site';
 import { absoluteUrl } from '$lib/seo/urls';
 import { bookPath, coverPath, editionUrl, isPublished, series, storyPath } from '$lib/tales/data';
 import type { Tale } from '$lib/tales/types';
+import { teachingNotes } from '$lib/tales/teaching';
 
 export const ORGANIZATION_ID = `${site.url}/#organization`;
 const WEBSITE_ID = `${site.url}/#website`;
@@ -56,7 +57,7 @@ export function bookSchema(tale: Tale) {
 		'@id': `${absoluteUrl(bookPath(tale))}#book`,
 		name: tale.title,
 		alternateName: tale.koreanTitle,
-		description: tale.backBlurb,
+		description: tale.backBlurb ?? teachingNotes[tale.slug].pick,
 		author: { '@type': 'Organization', name: series.author },
 		publisher: { '@id': ORGANIZATION_ID },
 		inLanguage: 'en',
@@ -135,12 +136,12 @@ export function storyListSchema(tales: Tale[]) {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
-		name: 'Korean folktales to read aloud',
+		name: 'Korean picture books and previews',
 		itemListElement: tales.map((tale, index) => ({
 			'@type': 'ListItem',
 			position: index + 1,
 			name: tale.title,
-			url: absoluteUrl(storyPath(tale))
+			url: absoluteUrl(isPublished(tale) ? bookPath(tale) : storyPath(tale))
 		}))
 	};
 }

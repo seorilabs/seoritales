@@ -53,17 +53,6 @@ for (const [slug, url] of Object.entries(attributionUrls)) {
 	}
 }
 
-/**
- * 책의 구매 링크. Attribution 링크가 있으면 그것을 쓴다 — 외부 유입 추적과
- * Brand Referral Bonus 가 거기에 달려 있다. 없으면 일반 상품 링크로 떨어진다.
- * ASIN 자체가 없으면 null 이고, 호출부가 링크를 숨긴다.
- */
-export function buyUrl(tale: Tale): string | null {
-	return (
-		editionUrl(tale, 'ebook') ?? editionUrl(tale, 'paperback') ?? tale.storeLinks[0]?.url ?? null
-	);
-}
-
 export function editionUrl(tale: Tale, format: 'ebook' | 'paperback'): string | null {
 	if (format === 'ebook') {
 		return tale.statusEbook === 'live' && tale.asinEbook

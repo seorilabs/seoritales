@@ -1,0 +1,202 @@
+{
+	"checkedAt": "2026-11-17T13:11:09.225748+00:00",
+	"publicStores": [
+		{
+			"number": 1,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6834414435",
+			"status": 200,
+			"error": null,
+			"title": ["\n      ‎The Sun and the Moon by Seori Tales on Apple Books\n    "],
+			"prices": ["3.99"]
+		},
+		{
+			"number": 1,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=l6UsEgAAQBAJ&hl=en&gl=US",
+			"status": 200,
+			"error": null,
+			"title": [
+				"The Sun and the Moon: A Korean Folktale of a Sister and Her Brother by Seori Tales - Books on Google Play"
+			],
+			"prices": ["3.99"]
+		},
+		{
+			"number": 2,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835827216",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 2,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=Ct4uEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 3,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835833444",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 3,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=YOAuEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 4,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835834776",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 4,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=tOAuEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 5,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835833434",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 5,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=P-EuEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 6,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835837398",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 6,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=X-EuEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 7,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835837336",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 7,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=e-EuEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 8,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835837339",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 8,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=neEuEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 9,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835837953",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 9,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=r-EuEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 10,
+			"store": "apple_books",
+			"url": "https://books.apple.com/us/book/id6835839262",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		},
+		{
+			"number": 10,
+			"store": "google_play_books",
+			"url": "https://play.google.com/store/books/details?id=ueEuEgAAQBAJ&hl=en&gl=US",
+			"status": null,
+			"error": "HTTP Error 404: Not Found",
+			"title": null,
+			"prices": null
+		}
+	],
+	"sourceFiles": {
+		"pipeline/export_web.py": "b0163237b8301927a727173fd3f3b9bd8f8d3931bb5720da4434d378ab38007d",
+		"backoffice/wide-distribution.json": "9356f44f6c2b4dc3ae06bd4d2a485d7624230ad10b9fdacba645dc9681964cf0",
+		"books/01-sun-and-moon/book.json": "033d73884b745db03f8f66e969e6946e194d44404b6be4777231dbf4f74b1b14",
+		"books/02-rabbit-dragon-king/book.json": "f56af48b151569b44a1d5b07298ac8e4d1bb9f8b77966b52e854ceec05ff677d",
+		"books/03-heungbu-nolbu/book.json": "d79f87c7e62a5b1f00f26816a2051a818644db4fe9932c1bb78f405140e81250",
+		"books/04-fairy-woodcutter/book.json": "ca1494435a0d8a6a630531caecfd43ea7cab01acf749d9ea45366fa9f2b3675f",
+		"books/05-kongjwi-patjwi/book.json": "ebc9a66b7601d21b130c632b68fa29ade04afb22f4e13ccab05e834ead0a7eed",
+		"books/06-golden-axe/book.json": "4ca46a4a677022643f4348b601f6ff0a4b6a96002572766981c3503cb0d59e62",
+		"books/07-tiger-and-persimmon/book.json": "6a77da4e7a28d4c5d519361530a40c24f3862bb32278ea2175a989fed4597992",
+		"books/08-goblins-and-hazelnut/book.json": "f5cac3176d08b521e68179d172aa4a983efc7c2227729e260c750352bcbad72c",
+		"books/09-granny-and-tiger/book.json": "4342e15695d006235ed551e84de393cf8e7f788b50eae46e87dc649c0b879038",
+		"books/10-red-blue-fan/book.json": "67996e1bafc99004ddf8683e35ad083f932480346ae58c1ae2e5982f26800d5c"
+	},
+	"scope": "Source files unchanged. Public paid Apple listing permits a storefront link; native purchase and settlement gates remain unchanged. Amazon links reuse existing verified ASINs; HTTP robot checks do not establish retail purchase availability."
+}

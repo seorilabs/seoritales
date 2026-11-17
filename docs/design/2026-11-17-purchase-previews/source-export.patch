@@ -1,0 +1,31 @@
+--- a/pipeline/export_web.py
++++ b/pipeline/export_web.py
+@@ -89,7 +89,16 @@
+             continue
+         url = state.get("url", "")
+         parsed = urlparse(url)
+-        if (state.get("status") == "buyable" and state.get("purchase_verified") is True
++        # A verified public paid listing is enough to link to the store page.
++        # Native-app purchase checks and actual payment remain separate gates.
++        public_paid = (state.get("status") == "public_paid_listing"
++                       and state.get("public") is True
++                       and state.get("approved") is True
++                       and isinstance(state.get("price_usd"), (int, float))
++                       and state["price_usd"] > 0)
++        buyable = (state.get("status") == "buyable"
++                   and state.get("purchase_verified") is True)
++        if ((public_paid or buyable)
+                 and clean(state.get("verified_at")) and parsed.scheme == "https"
+                 and parsed.hostname == host and parsed.path.startswith(path)):
+             links.append({"store": store, "label": label, "url": url})
+@@ -186,8 +195,8 @@
+         "readAloudMinutes": reading_minutes,
+         "storeLinks": public_store_links(dist),
+         "priceEbookUsd": dist.get("list_price_usd"),
+-        "descriptionHtml": kdp["description_html"],
+-        "backBlurb": pb.get("back_blurb"),
++        "descriptionHtml": kdp["description_html"] if mode == "full" else None,
++        "backBlurb": pb.get("back_blurb") if mode == "full" else None,
+         "keywords": kdp.get("keywords", []),
+         "categories": kdp.get("categories", []),
+         "glossaryHeading": pb.get("glossary_heading") if mode == "full" else None,
