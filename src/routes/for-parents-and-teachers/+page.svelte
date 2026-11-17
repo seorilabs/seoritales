@@ -81,7 +81,7 @@
 		safe.
 	</p>
 	<p>
-		Say the Korean words out loud. Complete story pages list the words inside them — <i>tteok</i>,
+		Say the Korean words out loud. The paperbacks introduce words from the stories — <i>tteok</i>,
 		<i>hanbok</i>,
 		<i>gotgam</i> — with a short gloss. Getting them slightly wrong together is fine and is usually the
 		part children remember.

@@ -1,0 +1,105 @@
+{
+	"source_root": "/Users/syous/Workspace/folktales",
+	"command": "uv run --no-project --with pillow python pipeline/export_web.py",
+	"books": [
+		{
+			"number": 1,
+			"source": "/Users/syous/Workspace/folktales/books/01-sun-and-moon/book.json",
+			"source_sha256": "632850c6e428e4447d0ab969c880f5080847f2fb47b614d5b953bda40d155e34",
+			"web_publication": {
+				"mode": "preview",
+				"reason": "Apple Books and Google Play Books direct-sale pilot; opening scene only"
+			}
+		},
+		{
+			"number": 2,
+			"source": "/Users/syous/Workspace/folktales/books/02-rabbit-dragon-king/book.json",
+			"source_sha256": "138fe9ef523375430ed88e484066b802eb3fcc2aff6198a7e24fd219b8b0a630",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		},
+		{
+			"number": 3,
+			"source": "/Users/syous/Workspace/folktales/books/03-heungbu-nolbu/book.json",
+			"source_sha256": "17f0fe25d6dfa7b38315b6894f04e250c6978f040370f1bd783bdc66da15bb0b",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		},
+		{
+			"number": 4,
+			"source": "/Users/syous/Workspace/folktales/books/04-fairy-woodcutter/book.json",
+			"source_sha256": "e5a23a37b3a3e7692f24c2c7d92aa9a759d99738ccad0f14347161bcec631a46",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		},
+		{
+			"number": 5,
+			"source": "/Users/syous/Workspace/folktales/books/05-kongjwi-patjwi/book.json",
+			"source_sha256": "760e649861f92fbbf55a35fd43cd16e5ac65f6616fc892696156b58838b7a474",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		},
+		{
+			"number": 6,
+			"source": "/Users/syous/Workspace/folktales/books/06-golden-axe/book.json",
+			"source_sha256": "2d486e76cf5596c2c67596fe7d585717ed7d8bc050b10315a199fb3ef7ea499d",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		},
+		{
+			"number": 7,
+			"source": "/Users/syous/Workspace/folktales/books/07-tiger-and-persimmon/book.json",
+			"source_sha256": "09a6cea2f9d925adfc280658db00bc341013d71dab5730695b72306ba7fa583b",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		},
+		{
+			"number": 8,
+			"source": "/Users/syous/Workspace/folktales/books/08-goblins-and-hazelnut/book.json",
+			"source_sha256": "51032c7a0b1aa82a989013a14b1ac1ffbf7c543d81ca23d2c8f0256283e7e50e",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		},
+		{
+			"number": 9,
+			"source": "/Users/syous/Workspace/folktales/books/09-granny-and-tiger/book.json",
+			"source_sha256": "90e083e66856f15fca3e296098d12605207caba41e5b771ce6c87b5667ce9d58",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		},
+		{
+			"number": 10,
+			"source": "/Users/syous/Workspace/folktales/books/10-red-blue-fan/book.json",
+			"source_sha256": "d5a6b6a6e2b91822d3f4ed03ba22a1e0b1676fb3425ad2ba9370db6b459c16b5",
+			"web_publication": {
+				"mode": "preview",
+				"preview_spreads": ["spread-01"],
+				"reason": "Apple Books and Google Play Books distribution approved by owner 2026-11-17"
+			}
+		}
+	]
+}

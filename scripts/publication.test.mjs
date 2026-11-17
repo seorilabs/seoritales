@@ -55,3 +55,9 @@ test('공개된 새 서점 링크는 그림책 페이지에 연결한다', () =>
 		}
 	}
 });
+
+test('교사용 안내는 미리보기에서 제거한 용어 풀이를 찾도록 안내하지 않는다', () => {
+	const guide = readFileSync('build/for-parents-and-teachers/index.html', 'utf8');
+	assert.doesNotMatch(guide, /Complete story pages list the words/);
+	assert.match(guide, /The paperbacks introduce words/);
+});
