@@ -4,7 +4,6 @@
 	import { metaDescription, ogImage } from '$lib/seo/urls';
 	import {
 		bookPath,
-		buyUrl,
 		isPublished,
 		isPreview,
 		ogPath,
@@ -22,7 +21,6 @@
 	const tale = $derived(data.tale);
 
 	const path = $derived(storyPath(tale));
-	const buy = $derived(buyUrl(tale));
 	const note = $derived(teachingNotes[tale.slug]);
 	const preview = $derived(isPreview(tale));
 	const spreads = $derived(visibleStory(tale));
@@ -32,14 +30,16 @@
 	const description = $derived(
 		metaDescription(
 			preview
-				? `${tale.title} (${tale.koreanTitle}) — a classic Korean folktale for ages ${tale.ageRange}, with an opening scene and discussion questions.`
+				? `${tale.title} (${tale.koreanTitle}) — a classic Korean folktale for ages ${tale.ageRange}, preview the opening scene and find the complete illustrated edition.`
 				: `Read ${tale.title} (${tale.koreanTitle}) in full, free. A classic Korean folktale retold for ages ${tale.ageRange} — about ${readAloudMinutes(tale)} minutes to read aloud.`
 		)
 	);
 </script>
 
 <Seo
-	title="{note.searchName ?? tale.title} — Read Aloud | Seori Tales"
+	title="{note.searchName ?? tale.title} — {preview
+		? 'Opening Preview'
+		: 'Read Aloud'} | Seori Tales"
 	{description}
 	{path}
 	type="article"
@@ -95,9 +95,8 @@
 			This is the opening scene of {tale.title}. The complete story is available in the illustrated
 			edition.
 		</p>
-		<p>{tale.backBlurb}</p>
-		{#if buy}
-			<p><a class="buy" href={buy} rel="noopener">Find the illustrated edition</a></p>
+		{#if isPublished(tale)}
+			<p><a class="buy" href={bookPath(tale)}>Choose a store</a></p>
 		{/if}
 		<p class="meta">
 			Full colour, ages {tale.ageRange}.
@@ -106,11 +105,11 @@
 			<a href="/">see all {tales.length} stories</a>.
 		</p>
 	</div>
-{:else if buy}
+{:else if isPublished(tale)}
 	<div class="panel prose">
 		<h2>Read it as a picture book</h2>
 		<p>{tale.backBlurb}</p>
-		<p><a class="buy" href={buy} rel="noopener">Get the illustrated edition</a></p>
+		<p><a class="buy" href={bookPath(tale)}>Choose a store</a></p>
 		<p class="meta">
 			{tale.interiorPages} pages, full colour, ages {tale.ageRange}. Also on the
 			<a href={bookPath(tale)}>book page</a>.
@@ -118,8 +117,8 @@
 	</div>
 {/if}
 
-<div class="prose">
-	{#if showsBookExtras(tale)}
+{#if showsBookExtras(tale)}
+	<div class="prose">
 		<h2>{tale.cultureNote.heading}</h2>
 		{#each tale.cultureNote.body as line}
 			<p>{line}</p>
@@ -132,22 +131,8 @@
 			{/each}
 		</ul>
 		<p class="meta">Say them out loud together.</p>
-	{/if}
-
-	<h2>What it is about</h2>
-	<p>{note.theme}.</p>
-
-	<h2>Questions worth asking</h2>
-	<ul>
-		{#each note.questions as question}
-			<li>{question}</li>
-		{/each}
-	</ul>
-	<p class="meta">
-		More questions for all {tales.length} stories in the
-		<a href="/for-parents-and-teachers/">parents and teachers guide</a>.
-	</p>
-</div>
+	</div>
+{/if}
 
 <h2>More Korean folktales</h2>
 <ul class="grid">

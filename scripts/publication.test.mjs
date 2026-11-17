@@ -61,3 +61,26 @@ test('교사용 안내는 미리보기에서 제거한 용어 풀이를 찾도�
 	assert.doesNotMatch(guide, /Complete story pages list the words/);
 	assert.match(guide, /The paperbacks introduce words/);
 });
+
+test('공개 유료 상품이 확인된 1권의 Apple과 Google 링크만 제공한다', () => {
+	const first = books.find((book) => book.number === 1);
+	assert.deepEqual(first.storeLinks.map((store) => store.store).sort(), [
+		'apple_books',
+		'google_play_books'
+	]);
+	assert.equal(
+		first.storeLinks.find((store) => store.store === 'apple_books').url,
+		'https://books.apple.com/us/book/id6834414435'
+	);
+	for (const book of books.filter((book) => book.number !== 1)) {
+		assert.deepEqual(book.storeLinks, [], book.title);
+	}
+});
+
+test('미리보기의 구매 안내는 모든 서점을 고를 수 있는 책 페이지를 연다', () => {
+	for (const book of books) {
+		const html = readFileSync(`build/stories/${book.slug}/index.html`, 'utf8');
+		assert.match(html, new RegExp(`class="buy" href="/books/${book.slug}/"`), book.title);
+		assert.doesNotMatch(html, /Questions worth asking/, book.title);
+	}
+});

@@ -22,7 +22,7 @@
 
 <Seo
 	title="Korean Folktales for Children — Stories and Previews | Seori Tales"
-	description={`${tales.length} Korean folktales in read-aloud English for ages 4–8. Explore opening previews${freeTales.length ? ` and ${freeTales.length} complete stories` : ''}, with questions for children.`}
+	description={`${tales.length} Korean folktales in read-aloud English for ages 4–8. Explore opening previews${freeTales.length ? ` and ${freeTales.length} complete stories` : ''}, and find the complete illustrated editions.`}
 	path="/"
 	jsonLd={[
 		organizationSchema(),
@@ -40,8 +40,8 @@
 
 <div class="prose">
 	<p>
-		Explore opening previews of {tales.length} tales below. Each preview shows the first scene, with questions
-		to discuss together. No sign-up is needed.
+		Explore opening previews of {tales.length} tales below. Each preview shows the first scene and one
+		illustration. Choose a book to find the complete illustrated story in your preferred store.
 		{#if freeTales.length}
 			There are also {freeTales.length} complete stories, with cultural notes and Korean words.
 		{/if}
@@ -55,16 +55,21 @@
 	<p>
 		If you are choosing for a classroom or a specific age, the
 		<a href="/for-parents-and-teachers/">parents and teachers guide</a> sorts the stories by theme and
-		length, with discussion questions.
+		length.
 	</p>
 </div>
 
-<h2>All {tales.length} stories</h2>
+<h2>All {tales.length} picture books</h2>
 
 <ol class="list">
 	{#each tales as tale (tale.slug)}
 		<li>
-			<a class="thumb" href={storyPath(tale)} aria-hidden="true" tabindex="-1">
+			<a
+				class="thumb"
+				href={isPublished(tale) ? bookPath(tale) : storyPath(tale)}
+				aria-hidden="true"
+				tabindex="-1"
+			>
 				<img
 					src={coverPath(tale)}
 					alt=""
@@ -74,18 +79,18 @@
 				/>
 			</a>
 			<div>
-				<h3><a href={storyPath(tale)}>{tale.title}</a></h3>
+				<h3><a href={isPublished(tale) ? bookPath(tale) : storyPath(tale)}>{tale.title}</a></h3>
 				<p class="sub">
 					{tale.koreanTitle} · ages {tale.ageRange} · about {readAloudMinutes(tale)} minutes to read aloud
 				</p>
 				<p>{teachingNotes[tale.slug].pick}</p>
 				<p class="links">
-					<a href={storyPath(tale)}>{isPreview(tale) ? 'Read the opening' : 'Read it free'}</a>
 					{#if isPublished(tale)}
-						· <a href={bookPath(tale)}>The picture book</a>
+						<a href={bookPath(tale)}>Get the picture book</a> ·
 					{:else}
-						· <span class="soon">picture book coming soon</span>
+						<span class="soon">picture book coming soon</span> ·
 					{/if}
+					<a href={storyPath(tale)}>{isPreview(tale) ? 'Read the opening' : 'Read it free'}</a>
 				</p>
 			</div>
 		</li>

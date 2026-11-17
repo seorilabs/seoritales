@@ -36,6 +36,11 @@
       "readAloudMinutes": 4,
       "storeLinks": [
         {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/id6834414435"
+        },
+        {
           "store": "google_play_books",
           "label": "Google Play Books",
           "url": "https://play.google.com/store/books/details?id=l6UsEgAAQBAJ"
