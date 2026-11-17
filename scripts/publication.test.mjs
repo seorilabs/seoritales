@@ -23,11 +23,21 @@ test('파일럿 공개 번들은 첫 장면과 허용 이미지 한 장만 제�
 		/currently exclusive to Kindle|full text.*returns|read.*in full, free/i
 	);
 });
-test('양쪽 파일럿 완료 전에는 후속 9권 공개 정책을 유지한다', () => {
-	assert.equal(books.filter((b) => b.webPublication?.mode === 'full').length, 9);
-	assert.ok(books.slice(1).every((b) => b.story.length === 14));
+test('확대 대상 10권은 첫 장면과 허용 이미지 한 장만 공개한다', () => {
+	assert.equal(books.length, 10);
+	for (const tale of books) {
+		assert.equal(tale.webPublication?.mode, 'preview', tale.title);
+		assert.equal(tale.story.length, 1, tale.title);
+		assert.deepEqual(tale.cultureNote, { heading: null, body: [] });
+		assert.deepEqual(tale.glossary, []);
+		assert.deepEqual(readdirSync(`build/images/${tale.slug}`).sort(), [
+			'cover.webp',
+			'og.jpg',
+			'spread-01.webp'
+		]);
+	}
 	const home = readFileSync('build/index.html', 'utf8');
-	assert.match(home, /9 complete stories/);
+	assert.doesNotMatch(home, /0 complete stories|9 complete stories/);
 	assert.match(home, /opening previews/);
 });
 test('공개된 새 서점 링크는 그림책 페이지에 연결한다', () => {
