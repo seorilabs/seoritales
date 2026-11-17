@@ -84,3 +84,26 @@ test('미리보기의 구매 안내는 모든 서점을 고를 수 있는 책 �
 		assert.doesNotMatch(html, /Questions worth asking/, book.title);
 	}
 });
+
+test('공개 미리보기 번들은 결말을 설명하는 기존 판매 소개를 담지 않는다', () => {
+	for (const book of books) {
+		assert.equal(book.backBlurb, null, book.title);
+		assert.equal(book.descriptionHtml, null, book.title);
+	}
+});
+
+test('홈의 구조화 목록은 화면의 기본 책 링크와 일치한다', () => {
+	const html = readFileSync('build/index.html', 'utf8');
+	const list = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+		.map((match) => JSON.parse(match[1]))
+		.find((schema) => schema['@type'] === 'ItemList');
+	assert.ok(list);
+	for (const book of books) {
+		assert.ok(
+			list.itemListElement.some(
+				(item) => item.url === `https://seoritales.com/books/${book.slug}/`
+			),
+			book.title
+		);
+	}
+});

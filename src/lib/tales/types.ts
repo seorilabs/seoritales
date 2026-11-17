@@ -38,9 +38,9 @@ export type Tale = {
 	readAloudMinutes: number;
 	storeLinks: { store: 'apple_books' | 'google_play_books'; label: string; url: string }[];
 	priceEbookUsd: number;
-	/** KDP 상품 설명 원문(HTML). 심사를 통과한 문구라 새로 쓰지 않는다. */
-	descriptionHtml: string;
-	backBlurb: string;
+	/** 전문 공개 책만 KDP 설명을 포함한다. 미리보기는 짧은 공개 편집 소개를 쓴다. */
+	descriptionHtml: string | null;
+	backBlurb: string | null;
 	keywords: string[];
 	categories: string[];
 	glossaryHeading: string | null;

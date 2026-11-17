@@ -108,7 +108,7 @@
 {:else if isPublished(tale)}
 	<div class="panel prose">
 		<h2>Read it as a picture book</h2>
-		<p>{tale.backBlurb}</p>
+		<p>{note.pick}</p>
 		<p><a class="buy" href={bookPath(tale)}>Choose a store</a></p>
 		<p class="meta">
 			{tale.interiorPages} pages, full colour, ages {tale.ageRange}. Also on the

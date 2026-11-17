@@ -37,6 +37,7 @@ cp -R /tmp/seoritales-web/images/. static/images/
 - `kdpSelect`: 확인된 독점 등록 상태. 등록 중이면 exporter가 첫 장면만 내보낸다.
 - `webPublication.mode`: 원본 `meta.web_publication.mode`에서 생성한 `full` 또는 `preview`. Select 해제만으로 `preview`가 전문으로 바뀌지 않는다.
 - `storeLinks`: 확인 시각과 공식 URL을 갖춘 `buyable` 및 `purchase_verified: true` 상품, 또는 `public_paid_listing` 및 공개·승인·양수 가격이 확인된 상품의 Apple·Google 링크다. 네이티브 앱 구매·실제 결제·정산 완료로 해석하지 않는다.
+- `descriptionHtml`, `backBlurb`: 미리보기에서는 `null`로 내보내고 짧은 공개 편집 소개를 사용한다. 서점에 제출한 긴 소개와 출판 원본은 보존한다.
 - `readAloudMinutes`: 미리보기 제한 전 전체 원본의 읽기 시간.
 
 2026-11-13 공개 정책 변경은 `docs/design/2026-11-13-wide-preview/source-export.patch`에 기록했다. 이전 원본 패치를 먼저 적용한 상태에서 새 패치를 적용한다. 생성 뒤 사이트 이미지 폴더에도 비공개로 바뀐 삽화가 남지 않게 삭제한다. 출판 EPUB과 표지는 다시 만들지 않는다.

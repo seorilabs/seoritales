@@ -18,3 +18,14 @@
                  and clean(state.get("verified_at")) and parsed.scheme == "https"
                  and parsed.hostname == host and parsed.path.startswith(path)):
              links.append({"store": store, "label": label, "url": url})
+@@ -186,8 +195,8 @@
+         "readAloudMinutes": reading_minutes,
+         "storeLinks": public_store_links(dist),
+         "priceEbookUsd": dist.get("list_price_usd"),
+-        "descriptionHtml": kdp["description_html"],
+-        "backBlurb": pb.get("back_blurb"),
++        "descriptionHtml": kdp["description_html"] if mode == "full" else None,
++        "backBlurb": pb.get("back_blurb") if mode == "full" else None,
+         "keywords": kdp.get("keywords", []),
+         "categories": kdp.get("categories", []),
+         "glossaryHeading": pb.get("glossary_heading") if mode == "full" else None,

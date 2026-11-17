@@ -2,6 +2,7 @@
 	import Seo from '$lib/seo/Seo.svelte';
 	import { bookSchema, breadcrumbSchema } from '$lib/seo/jsonld';
 	import { metaDescription, ogImage } from '$lib/seo/urls';
+	import { teachingNotes } from '$lib/tales/teaching';
 	import {
 		bookPath,
 		coverPath,
@@ -17,6 +18,7 @@
 
 	let { data } = $props();
 	const tale = $derived(data.tale);
+	const synopsis = $derived(tale.backBlurb ?? teachingNotes[tale.slug].pick);
 
 	const path = $derived(bookPath(tale));
 	const ebook = $derived(editionUrl(tale, 'ebook'));
@@ -28,7 +30,7 @@
 
 <Seo
 	title="{tale.title} — Korean Picture Book | Seori Tales"
-	description={metaDescription(tale.backBlurb)}
+	description={metaDescription(synopsis)}
 	{path}
 	type="book"
 	image={ogImage(ogPath(tale), `Cover of ${tale.title}`)}
@@ -54,7 +56,7 @@
 	<div>
 		<h1>{tale.title}</h1>
 		<p class="lede">{tale.subtitle}</p>
-		<p>{tale.backBlurb}</p>
+		<p>{synopsis}</p>
 		{#if ebook}
 			<p><a class="buy" href={ebook} rel="noopener">Kindle eBook on Amazon</a></p>
 		{/if}
@@ -75,9 +77,10 @@
 </div>
 
 <div class="prose">
-	<h2>About this book</h2>
-	<!-- KDP 상품 설명 원문. 심사를 통과한 문구라 사이트에서 새로 쓰지 않는다. -->
-	{@html tale.descriptionHtml}
+	{#if tale.descriptionHtml}
+		<h2>About this book</h2>
+		{@html tale.descriptionHtml}
+	{/if}
 
 	<h2>Details</h2>
 	<dl>
