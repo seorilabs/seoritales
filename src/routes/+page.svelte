@@ -22,7 +22,7 @@
 
 <Seo
 	title="Korean Folktales for Children — Stories and Previews | Seori Tales"
-	description={`${tales.length} Korean folktales in read-aloud English for ages 4–8. Explore ${freeTales.length} complete stories and opening previews, with questions for children.`}
+	description={`${tales.length} Korean folktales in read-aloud English for ages 4–8. Explore opening previews${freeTales.length ? ` and ${freeTales.length} complete stories` : ''}, with questions for children.`}
 	path="/"
 	jsonLd={[
 		organizationSchema(),
@@ -40,9 +40,11 @@
 
 <div class="prose">
 	<p>
-		Explore {tales.length} tales below: {freeTales.length} complete stories and opening previews of the
-		other books. No sign-up is needed. Each page includes questions to discuss together; complete stories
-		also include cultural notes and Korean words.
+		Explore opening previews of {tales.length} tales below. Each preview shows the first scene, with questions
+		to discuss together. No sign-up is needed.
+		{#if freeTales.length}
+			There are also {freeTales.length} complete stories, with cultural notes and Korean words.
+		{/if}
 	</p>
 	<p>
 		A child in Ohio can name three European fairy tales before breakfast and has probably never met

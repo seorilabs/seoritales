@@ -132,7 +132,7 @@ test('원본 전문과 판형별 출간 상태가 정적 페이지에 반영된�
 	}
 });
 
-test('10권 전문과 확인된 8, 9권 판본만 제공한다', () => {
+test('확인된 KDP 판본과 10권의 미리보기를 제공한다', () => {
 	const { books } = JSON.parse(readFileSync('src/lib/tales/tales.json', 'utf8'));
 	const eighth = books.find((book) => book.number === 8);
 	const ninth = books.find((book) => book.number === 9);
@@ -141,8 +141,10 @@ test('10권 전문과 확인된 8, 9권 판본만 제공한다', () => {
 	assert.deepEqual([ninth.statusEbook, ninth.asinEbook], ['live', 'B0HQ6ZCWD8']);
 	assert.deepEqual([ninth.statusPaperback, ninth.asinPaperback], ['live', 'B0HQBXG9V3']);
 	assert.equal(tenth.kdpSelect.enrolled, false);
-	assert.equal(tenth.story.length, 14);
-	assert.ok(tenth.cultureNote.body.some((line) => line.includes('Min as a woodcutter')));
-	assert.ok(tenth.glossary.every((entry) => !entry.includes('Which fan')));
-	assert.equal(existsSync(`build/books/${tenth.slug}/index.html`), false);
+	assert.equal(tenth.story.length, 1);
+	assert.deepEqual(tenth.cultureNote.body, []);
+	assert.deepEqual(tenth.glossary, []);
+	assert.deepEqual([tenth.statusEbook, tenth.asinEbook], ['live', 'B0HR5ZXMXZ']);
+	assert.deepEqual([tenth.statusPaperback, tenth.asinPaperback], ['live', 'B0HR8NYP58']);
+	assert.equal(existsSync(`build/books/${tenth.slug}/index.html`), true);
 });

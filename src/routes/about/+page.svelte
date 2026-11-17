@@ -60,9 +60,12 @@
 
 	<h2>Stories and previews</h2>
 	<p>
-		There are {freeTales.length} complete stories to read free on this site, alongside opening previews
-		of the other books. Each preview shows the first scene. Published editions are linked from the book
-		pages; new stores appear after we verify that the book is available to buy.
+		This site offers opening previews of {tales.length} stories. Each preview shows the first scene.
+		{#if freeTales.length}
+			There are also {freeTales.length} complete stories to read free.
+		{/if}
+		Published editions are linked from the book pages; new stores appear after we verify that the book
+		is available to buy.
 	</p>
 
 	<h2>Contact</h2>

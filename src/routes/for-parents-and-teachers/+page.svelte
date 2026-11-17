@@ -9,7 +9,7 @@
 
 <Seo
 	title="Korean folktales for kids — a guide for parents and teachers | Seori Tales"
-	description={`${tales.length} Korean folktales for ages 4–8, sorted by theme and read-aloud length, with discussion questions and ${freeTales.length} complete stories and opening previews.`}
+	description={`${tales.length} Korean folktales for ages 4–8, sorted by theme and read-aloud length, with discussion questions and opening previews${freeTales.length ? ` and ${freeTales.length} complete stories` : ''}.`}
 	{path}
 	jsonLd={[
 		breadcrumbSchema([
@@ -34,9 +34,11 @@
 		coming. Most take under ten minutes.
 	</p>
 	<p>
-		There are {freeTales.length} complete stories to read free on this site, with no sign-up. Opening
-		previews show the first scene of other books. Published illustrated editions are linked from their
-		story pages.
+		Opening previews show the first scene of each story, with no sign-up.
+		{#if freeTales.length}
+			There are also {freeTales.length} complete stories to read free.
+		{/if}
+		Published illustrated editions are linked from their story pages.
 	</p>
 
 	<h2>Choosing a story</h2>
@@ -79,7 +81,7 @@
 		safe.
 	</p>
 	<p>
-		Say the Korean words out loud. Complete story pages list the words inside them — <i>tteok</i>,
+		Say the Korean words out loud. The paperbacks introduce words from the stories — <i>tteok</i>,
 		<i>hanbok</i>,
 		<i>gotgam</i> — with a short gloss. Getting them slightly wrong together is fine and is usually the
 		part children remember.
