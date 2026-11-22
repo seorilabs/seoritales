@@ -62,18 +62,33 @@ test('교사용 안내는 미리보기에서 제거한 용어 풀이를 찾도�
 	assert.match(guide, /The paperbacks introduce words/);
 });
 
-test('공개 유료 상품이 확인된 1권의 Apple과 Google 링크만 제공한다', () => {
-	const first = books.find((book) => book.number === 1);
-	assert.deepEqual(first.storeLinks.map((store) => store.store).sort(), [
-		'apple_books',
-		'google_play_books'
-	]);
-	assert.equal(
-		first.storeLinks.find((store) => store.store === 'apple_books').url,
-		'https://books.apple.com/us/book/id6834414435'
-	);
-	for (const book of books.filter((book) => book.number !== 1)) {
-		assert.deepEqual(book.storeLinks, [], book.title);
+test('확인된 Apple 도서 10권과 Google 도서 1권만 연결한다', () => {
+	const appleIds = [
+		'6834414435',
+		'6835827216',
+		'6835833444',
+		'6835834776',
+		'6835833434',
+		'6835837398',
+		'6835837336',
+		'6835837339',
+		'6835837953',
+		'6835839262'
+	];
+	for (const [index, book] of books.entries()) {
+		assert.equal(book.number, index + 1);
+		assert.deepEqual(
+			book.storeLinks.map((link) => link.store).sort(),
+			index === 0 ? ['apple_books', 'google_play_books'] : ['apple_books'],
+			book.title
+		);
+		const apple = book.storeLinks.find((link) => link.store === 'apple_books');
+		const appleUrl = new URL(apple.url);
+		assert.equal(appleUrl.origin, 'https://books.apple.com', book.title);
+		assert.match(appleUrl.pathname, new RegExp(`^/us/book/(?:[^/]+/)?id${appleIds[index]}$`));
+		assert.equal(appleUrl.search, '', book.title);
+		const google = book.storeLinks.find((link) => link.store === 'google_play_books');
+		if (google) assert.equal(new URL(google.url).searchParams.get('id'), 'l6UsEgAAQBAJ');
 	}
 });
 

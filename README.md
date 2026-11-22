@@ -15,7 +15,7 @@ Seori Tales 그림책 시리즈의 영어 이야기와 도서 안내 사이트�
 | `/for-parents-and-teachers/` | 주제와 읽기 시간별 도서 선택 안내 |
 | `/about/`                    | 제작 방식과 연락처                |
 
-책 페이지는 판형별 Live 상태와 ASIN이 있거나, 공개 확인된 Apple·Google 상품 링크가 있을 때 만든다. 2026-11-17 공개 조회에서 1권 Apple·Google 유료 상품은 확인됐으며 추가 9권의 양쪽 주소는 404였다. 미공개 상품 주소는 구매 링크로 노출하지 않는다. Apple 네이티브 구매 버튼 확인과 실제 결제는 링크 연결 근거와 별개다.
+책 페이지는 판형별 Live 상태와 ASIN이 있거나, 공개 확인된 Apple·Google 상품 링크가 있을 때 만든다. Apple Books 미국 스토어에서 공개 유료 상품이 확인된 10권과 기존 Google Play Books 1권을 연결한다. Google Play Books 2–10권은 공개 상품을 확인하지 못해 연결하지 않는다. Apple 네이티브 구매 버튼 확인과 실제 결제는 링크 연결 근거와 별개다.
 
 ## 원본 가져오기
 
@@ -46,6 +46,8 @@ cp -R /tmp/seoritales-web/images/. static/images/
 Amazon Attribution 링크는 보존하며, 그 외 판본은 일반 상품 링크를 사용한다.
 
 공개 유료 상품의 링크 허용 변경은 `docs/design/2026-11-17-purchase-previews/source-export.patch`다. 현재 출판 원본 exporter에 이 패치를 적용한 격리 실행으로 생성했으며 사용자 출판 원본을 덮어쓰지 않았다. 과거 패치가 이미 적용된 원본에는 다시 적용하지 않는다.
+
+Apple Books 2–10권의 확인 기록과 원본 유통 객체 변경은 `docs/design/2026-11-22-apple-books-links/`에 있다. 원본 상태를 대조한 뒤 필요한 패치만 적용하고 1–10권으로 생성한다.
 
 ## 검색 정보와 검증
 
