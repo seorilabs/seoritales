@@ -1,0 +1,162 @@
+--- a/books/02-rabbit-dragon-king/book.json
++++ b/books/02-rabbit-dragon-king/book.json
+@@ -45 +45 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -47 +47 @@
+-          "url": "https://books.apple.com/us/book/id6835827216",
++          "url": "https://books.apple.com/us/book/the-rabbit-and-the-dragon-king/id6835827216",
+@@ -51,2 +51,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -57,2 +57,2 @@
+-          "verified_at": "2026-11-17T11:13:48.086627Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",
+--- a/books/03-heungbu-nolbu/book.json
++++ b/books/03-heungbu-nolbu/book.json
+@@ -46 +46 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -48 +48 @@
+-          "url": "https://books.apple.com/us/book/id6835833444",
++          "url": "https://books.apple.com/us/book/heungbu-and-nolbu/id6835833444",
+@@ -52,2 +52,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -58,2 +58,2 @@
+-          "verified_at": "2026-11-17T11:13:36.795068Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",
+--- a/books/04-fairy-woodcutter/book.json
++++ b/books/04-fairy-woodcutter/book.json
+@@ -46 +46 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -48 +48 @@
+-          "url": "https://books.apple.com/us/book/id6835834776",
++          "url": "https://books.apple.com/us/book/the-fairy-and-the-woodcutter/id6835834776",
+@@ -52,2 +52,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -58,2 +58,2 @@
+-          "verified_at": "2026-11-17T11:15:03.002062Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",
+--- a/books/05-kongjwi-patjwi/book.json
++++ b/books/05-kongjwi-patjwi/book.json
+@@ -47 +47 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -49 +49 @@
+-          "url": "https://books.apple.com/us/book/id6835833434",
++          "url": "https://books.apple.com/us/book/kongjwi-and-the-flower-shoe/id6835833434",
+@@ -53,2 +53,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -59,2 +59,2 @@
+-          "verified_at": "2026-11-17T11:15:17.609593Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",
+--- a/books/06-golden-axe/book.json
++++ b/books/06-golden-axe/book.json
+@@ -46 +46 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -48 +48 @@
+-          "url": "https://books.apple.com/us/book/id6835837398",
++          "url": "https://books.apple.com/us/book/the-golden-axe/id6835837398",
+@@ -52,2 +52,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -58,2 +58,2 @@
+-          "verified_at": "2026-11-17T11:15:31.527585Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",
+--- a/books/07-tiger-and-persimmon/book.json
++++ b/books/07-tiger-and-persimmon/book.json
+@@ -46 +46 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -48 +48 @@
+-          "url": "https://books.apple.com/us/book/id6835837336",
++          "url": "https://books.apple.com/us/book/the-tiger-and-the-dried-persimmon/id6835837336",
+@@ -52,2 +52,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -58,2 +58,2 @@
+-          "verified_at": "2026-11-17T11:15:43.821671Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",
+--- a/books/08-goblins-and-hazelnut/book.json
++++ b/books/08-goblins-and-hazelnut/book.json
+@@ -46 +46 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -48 +48 @@
+-          "url": "https://books.apple.com/us/book/id6835837339",
++          "url": "https://books.apple.com/us/book/the-goblins-and-the-hazelnut/id6835837339",
+@@ -52,2 +52,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -58,2 +58,2 @@
+-          "verified_at": "2026-11-17T11:15:58.088049Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",
+--- a/books/09-granny-and-tiger/book.json
++++ b/books/09-granny-and-tiger/book.json
+@@ -47 +47 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -49 +49 @@
+-          "url": "https://books.apple.com/us/book/id6835837953",
++          "url": "https://books.apple.com/us/book/granny-and-the-tiger/id6835837953",
+@@ -53,2 +53,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -59,2 +59,2 @@
+-          "verified_at": "2026-11-17T11:16:13.648243Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",
+--- a/books/10-red-blue-fan/book.json
++++ b/books/10-red-blue-fan/book.json
+@@ -54 +54 @@
+-          "status": "review_pending",
++          "status": "public_paid_listing",
+@@ -56 +56 @@
+-          "url": "https://books.apple.com/us/book/id6835839262",
++          "url": "https://books.apple.com/us/book/the-red-fan-and-the-blue-fan/id6835839262",
+@@ -60,2 +60,2 @@
+-          "approved": false,
+-          "public": false,
++          "approved": true,
++          "public": true,
+@@ -66,2 +66,2 @@
+-          "verified_at": "2026-11-17T11:16:29.486026Z",
+-          "remaining_gate": "Apple review approval and US public purchase availability",
++          "verified_at": "2026-11-22T04:44:32Z",
++          "remaining_gate": "Native checkout, completed purchase and settlement unverified.",

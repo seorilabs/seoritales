@@ -1,0 +1,80 @@
+{
+	"checkedAt": "2026-11-22T04:44:32Z",
+	"storefront": "US",
+	"catalog": "https://books.apple.com/us/author/seori-tales/id6834414557?see-all=books",
+	"scope": "Public title, exact product ID and paid listing only; not Apple administration, checkout, territory coverage, or settlement.",
+	"listings": [
+		{
+			"number": 2,
+			"title": "The Rabbit and the Dragon King",
+			"storeId": "6835827216",
+			"url": "https://books.apple.com/us/book/the-rabbit-and-the-dragon-king/id6835827216",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		},
+		{
+			"number": 3,
+			"title": "Heungbu and Nolbu",
+			"storeId": "6835833444",
+			"url": "https://books.apple.com/us/book/heungbu-and-nolbu/id6835833444",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		},
+		{
+			"number": 4,
+			"title": "The Fairy and the Woodcutter",
+			"storeId": "6835834776",
+			"url": "https://books.apple.com/us/book/the-fairy-and-the-woodcutter/id6835834776",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		},
+		{
+			"number": 5,
+			"title": "Kongjwi and the Flower Shoe",
+			"storeId": "6835833434",
+			"url": "https://books.apple.com/us/book/kongjwi-and-the-flower-shoe/id6835833434",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		},
+		{
+			"number": 6,
+			"title": "The Golden Axe",
+			"storeId": "6835837398",
+			"url": "https://books.apple.com/us/book/the-golden-axe/id6835837398",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		},
+		{
+			"number": 7,
+			"title": "The Tiger and the Dried Persimmon",
+			"storeId": "6835837336",
+			"url": "https://books.apple.com/us/book/the-tiger-and-the-dried-persimmon/id6835837336",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		},
+		{
+			"number": 8,
+			"title": "The Goblins and the Hazelnut",
+			"storeId": "6835837339",
+			"url": "https://books.apple.com/us/book/the-goblins-and-the-hazelnut/id6835837339",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		},
+		{
+			"number": 9,
+			"title": "Granny and the Tiger",
+			"storeId": "6835837953",
+			"url": "https://books.apple.com/us/book/granny-and-the-tiger/id6835837953",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		},
+		{
+			"number": 10,
+			"title": "The Red Fan and the Blue Fan",
+			"storeId": "6835839262",
+			"url": "https://books.apple.com/us/book/the-red-fan-and-the-blue-fan/id6835839262",
+			"currency": "USD",
+			"visiblePrice": 3.99
+		}
+	]
+}

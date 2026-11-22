@@ -111,7 +111,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 6,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/the-rabbit-and-the-dragon-king/id6835827216"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
@@ -178,7 +184,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 6,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/heungbu-and-nolbu/id6835833444"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
@@ -245,7 +257,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 9,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/the-fairy-and-the-woodcutter/id6835834776"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
@@ -312,7 +330,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 3,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/kongjwi-and-the-flower-shoe/id6835833434"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
@@ -377,7 +401,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 2,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/the-golden-axe/id6835837398"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
@@ -442,7 +472,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 2,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/the-tiger-and-the-dried-persimmon/id6835837336"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
@@ -507,7 +543,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 3,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/the-goblins-and-the-hazelnut/id6835837339"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
@@ -572,7 +614,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 2,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/granny-and-the-tiger/id6835837953"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
@@ -637,7 +685,13 @@
         "mode": "preview"
       },
       "readAloudMinutes": 2,
-      "storeLinks": [],
+      "storeLinks": [
+        {
+          "store": "apple_books",
+          "label": "Apple Books",
+          "url": "https://books.apple.com/us/book/the-red-fan-and-the-blue-fan/id6835839262"
+        }
+      ],
       "priceEbookUsd": 3.99,
       "descriptionHtml": null,
       "backBlurb": null,
